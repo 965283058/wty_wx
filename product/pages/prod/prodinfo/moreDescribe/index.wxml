@@ -1,0 +1,25 @@
+<view class="container">
+    <cell>
+        <text slot="label" class="cell-caption">商品描述</text>
+        <input slot="content"  class="cell-input" type="text" placeholder="请输入商品描述"/>
+    </cell>
+    <cell>
+        <text slot="label" class="cell-caption">商品规格</text>
+        <input slot="content"  class="cell-input" type="text" placeholder="请输入商品规格"/>
+    </cell>
+    <cell>
+        <text slot="label" class="cell-caption cell-caption--start">公司介绍</text>
+        <textarea slot="content"  class="cell-input" auto-height="true" maxlength="-1" placeholder="请输入公司介绍"/>
+    </cell>
+    <cell>
+        <text slot="label" class="cell-caption cell-caption--start">售后说明</text>
+        <textarea slot="content" class="cell-input" auto-height="true" maxlength="-1" placeholder="请输入售后说明"/>
+    </cell>
+    <cell>
+        <text slot="label" class="cell-caption cell-caption--start">其他说明</text>
+        <textarea slot="content" class="cell-input" auto-height="true" maxlength="-1" placeholder="请输入其他说明"/>
+    </cell>
+
+    <button class="cell-btn bg-green" bindtap="save">保存</button>
+    <button class="cell-btn bg-green" bindtap="save">放弃</button>
+</view>

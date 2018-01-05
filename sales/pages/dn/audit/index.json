@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "订单审核",
+  "usingComponents": {
+    "switch": "/component/switch/index"
+  }
+}

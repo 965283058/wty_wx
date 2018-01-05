@@ -1,0 +1,14 @@
+<scroll-view class="box">
+    <view class="list"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+        <view class="list__title">
+            <image class="list__icon--title" src="/assets/images/icon/category.png"></image>
+            <text class="list__title-text">XXXX餐厅</text>
+        </view>
+        <view class="list__content">
+            <text  wx:for="{{[1,23,4,5,6,7,8]}}" class="list__content-item {{item==1?'list__content-item--active':''}}" >豆芽</text>
+        </view>
+    </view>
+</scroll-view>
+
+
+

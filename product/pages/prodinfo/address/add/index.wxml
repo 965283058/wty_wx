@@ -1,0 +1,30 @@
+<view class="box">
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入名称"/>
+    </view>
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入收货人姓名"/>
+    </view>
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入收货人联系手机号"/>
+    </view>
+    <view class="input__box">
+        <picker value="{{po.address}}" range="{{vo.addressList}}" class="input">
+            <text wx:if="!po.address" class="select--placeholder">请选择所在地区</text>
+            <text wx:if="po.address">{{vo.addressList[po.address]}}</text>
+        </picker>
+    </view>
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入详细地址"/>
+    </view>
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入邮政编码"/>
+    </view>
+    <view class="input__box">
+        <view class="input--switch">
+            <text class="select--placeholder">请选择是否设为默认</text>
+            <switch bindchange="changeDefault"/>
+        </view>
+    </view>
+    <button class="cell-btn button--add bg-green"  size="default" bindtap="add">保 存</button>
+</view>

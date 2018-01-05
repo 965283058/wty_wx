@@ -1,0 +1,27 @@
+<view class='page'>
+    <form action="">
+    <scroll-view class="scroll-box" scroll-y="true" style="height:500px;">
+        <view class='title_bottom'>
+            <text class='item_title'>油</text>
+        </view>
+        <view class='item'>
+            <button class='item_btn'>鲁花</button>
+            <button class='item_btn'>张江</button>
+        </view>
+
+        <view class='title_bottom'>
+            <text class='item_title'>蔬菜</text>
+        </view>
+        <view class='item'>
+            <button class='item_btn'>品牌1</button>
+            <button class='item_btn'>品牌2</button>
+            <button class='item_btn'>品牌3</button>
+        </view>
+
+        <view class='end'>
+            <button  class='btn reset'>重置</button>
+            <button  class='btn' bindtap='w'>确定</button>
+        </view>
+        </scroll-view>
+    </form>
+</view>

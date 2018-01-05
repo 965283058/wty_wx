@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商品标签",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index"
+  }
+}

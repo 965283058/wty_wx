@@ -1,0 +1,80 @@
+@import "../../../assets/styles/common.wxss";
+.box{
+    background: #eff0f2;
+}
+.product__checkbox{
+    margin: 20rpx;
+    margin-left: 0;
+    float: left;
+}
+.order__day{
+    height: 85rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:20rpx;
+    padding-right: 40rpx;
+    background: #f7f8f9;
+    position: relative;
+    border-top: 1rpx solid #e0e1e1;
+}
+.order__day:after{
+    content: "";
+    display: block;
+    width: 15rpx;
+    height: 15rpx;
+    border: 4rpx solid #a5a5a5;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 20rpx;
+    top:35rpx;
+    z-index: 1;
+}
+.order__company{
+    font-size: 30rpx;
+    line-height: 100rpx;
+    border-top: 1rpx solid #e0e1e1;
+    border-bottom: 3rpx solid #09bb07;
+    position: relative;
+    padding-left: 20rpx;
+    background: #ffffff;
+}
+.order__company:after{
+    content: "";
+    display: block;
+    width: 25rpx;
+    height: 25rpx;
+    border: 4rpx solid #a5a5a5;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 30rpx;
+    top:30rpx;
+    z-index: 1;
+}
+
+
+.buttons{
+    display: flex;
+    padding: 100rpx 50rpx;
+}
+.button{
+    height: 55rpx;
+    line-height: 55rpx;
+    font-size: 24rpx;
+    margin: 0 13rpx;
+    flex: 1;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+.button--no-bg{
+    background: #ffffff;
+    border: 2rpx solid #008E40;
+    box-shadow: 0 3rpx 10rpx 0 #94ef93;
+    color: #636363;
+}

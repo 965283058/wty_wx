@@ -1,0 +1,35 @@
+.box{
+  background-color: #fafafa;
+}
+.input__box{
+  height: 95rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom:1rpx solid  #dde0e0;
+  padding: 0 50rpx 0 30rpx;
+}
+.input__box:nth-child(even){
+  background-color: #f9f9f9;
+}
+.input{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  border:1rpx solid  #dde0e0;
+  border-radius: 10rpx;
+  padding:0 25rpx;
+  font-size: 26rpx;
+}
+.select--placeholder{
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color: #808080;
+}
+.input--switch{
+  width: 100%;
+  text-align: left;
+}
+.input--switch switch{
+  margin-left: 20rpx;
+}

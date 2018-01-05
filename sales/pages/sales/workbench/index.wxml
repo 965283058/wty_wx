@@ -1,0 +1,206 @@
+<scroll-view scroll-y class='page'>
+    <view class="nav__bg">
+        <view class="nav">
+            <view class="nav__box" bindtap="toAccount">
+                <image class="logo" src="/assets/images/logo_icon.png"></image>
+                <view class="text__box">
+                    <text class="text"><text class="big__text">abo</text></text>
+                    <text>曾玉博</text>
+                </view>
+            </view>
+            <view class="nav__box" bindtap="toViewCompMore">
+                <image class="logo" src="/assets/images/logo_icon.png"></image>
+                <view class="text__box">
+                    <text class="text"><text class="big__text"></text></text>
+                    <text>百度K1快客利餐厅</text>
+                </view>
+            </view>
+            <view class="img">
+                <image class="ewm" src="/assets/images/pic.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="box">
+        <view class="box__top">
+            <text class="title" bindtap="toSwitchComp">北京XXX商贸公司-采购部-采购经理</text>
+        </view>
+        
+    </view>
+  
+    <view class="box common">
+        <view class="box__top">
+            <text class="title">我的定价</text>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/soprice/list/index" >
+                    <text class="list__title-text">我的定价</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/soprice/basket/index" >
+                    <text class="list__title-text">我要定价</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/soprice/audit/index" >
+                <text class="list__title-text">待审核</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/soprice/rec/index" >
+                    <text class="list__title-text">接收定价</text>
+                </navigator>
+            </view>
+
+        </view>  
+    </view>
+    <view class="box common">
+        <view class="box__top">
+            <text class="title">我的订单</text>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/so/list/index" >
+                    <text class="list__title-text">我的订单</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/so/rec/index" >
+                    <text class="list__title-text">待接收</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/so/review/index" >
+                    <text class="list__title-text">待收货</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/dnissue/list/index" >
+                    <text class="list__title-text">收货问题</text>
+                </navigator>
+            </view>
+        
+        </view>
+     </view>
+     
+    <view class="box common">
+        <view class="box__top">
+            <text class="title">加减货</text>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/soc/list/index" >
+                    <text class="list__title-text">我的加减货</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/soc/list/index" >
+                    <text class="list__title-text">待接收</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/soc/list/index" >
+                    <text class="list__title-text">已生效</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/soc/list/index" >
+                    <text class="list__title-text">已退回</text>
+                </navigator>
+            </view>
+        </view>  
+    </view>
+    <view class="box common">
+        <view class="box__top">
+            <text class="title">未出帐单</text>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/sales/ar/unbill/index" >
+                    <text class="list__title-text">未出帐单</text>
+                </navigator>
+            </view>
+        
+        </view>
+     </view>  
+     <view class="box common">
+        <view class="box__top">
+            <text class="title">我的往来账</text>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">待发布</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">待确认</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">有异议</text>
+                </navigator>
+            </view>
+                        <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">无异议</text>
+                </navigator>
+            </view>
+
+        
+        </view>
+     </view>     
+     
+     <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/prod/distribution/list/index" >
+                    <text class="list__title-text">我的送货方</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">供应商商品</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">客户商品</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">仓库管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">经营数据</text>
+                </navigator>
+            </view>
+        </view>     
+  </scroll-view>

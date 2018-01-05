@@ -1,0 +1,13 @@
+.weui-cell{
+    height: 85rpx;
+    width:670rpx;
+    border: 1px solid #e4e4e4;
+    border-radius: 10rpx;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 66rpx;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    margin-top: 30rpx;
+}

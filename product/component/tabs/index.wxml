@@ -1,0 +1,15 @@
+<view class="tabs">
+    <view class="tabs__head">
+        <view class="head__item {{index==currIndex?'head__item--active':''}}" wx:for="{{data}}" wx:for-index="currIndex"
+              bind:tap="select" data-index="{{currIndex}}">
+            {{item}}
+        </view>
+    </view>
+    <view class="tabs__context">
+        <block wx:for="{{data}}" wx:for-index="currIndex" wx:if="{{currIndex==index}}">
+            <view >
+                <slot name="{{currIndex}}"></slot>
+            </view>
+        </block>
+    </view>
+</view>

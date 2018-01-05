@@ -1,0 +1,8 @@
+<view class="container">   
+    <cell>
+        <text slot="label" class="cell-caption">商品标签</text>
+        <input type="text" slot="content" class="cell-input" placeholder="请输入"/>
+    </cell>
+    <button class="cell-btn bg-green" size="default" bindtap="save">提交</button>
+</view>
+

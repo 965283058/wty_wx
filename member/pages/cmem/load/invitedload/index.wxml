@@ -1,0 +1,16 @@
+<view class="box">
+    <form bindsubmit="formSubmit" style="width: 100%">
+        <view class="text1">
+            <text class="text-title">手机号</text>
+            <text class="text-right">13311028679</text>
+        </view>
+        <view class="input__box">
+            <text class="text"> 密码</text>
+            <input class="input" type="password" placeholder="请输入密码"/>
+        </view>
+         <text class="text_title" bindtap='losepwd'> 忘记密码</text>
+        <button class="next__btn" formType="submit" size="default" bindtap='invitload'>登陆</button>
+       
+    </form>
+</view>
+

@@ -1,0 +1,18 @@
+<view class="box">
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入采购超交率 %"/>
+    </view>
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入最小补货量"/>
+    </view>
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入最小补货倍数"/>
+    </view>
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入采购提前期"/>
+    </view>
+    <view class="input__box">
+        <input class="input" type="text" placeholder="请输入采购最高限价"/>
+    </view>
+    <button class="cell-btn button--add bg-green" size="default" bindtap="add">确 定</button>
+</view>

@@ -1,0 +1,75 @@
+<view class="box">
+    <view class="item">
+        <view class="item__head">
+            <text class="text- -name">北京XXX商贸公司</text>
+            <text class="text--status text--orange">待接收</text>
+        </view>
+        <view class="item__content">
+            <view class="text--val">
+                <text class="text--num">单 编 号</text>
+                <text class="text--con">IQ20170327002</text>
+            </view>
+            <view class="text--val">
+                <text class="text--num">至供应商</text>
+                <text class="text--con">G00001 北京市裕农优质农产品种植公司</text>
+            </view>
+            <view class="text--val">
+                <text class="text--num">询价日期</text>
+                <text class="text--con">2017年4月3日</text>
+            </view>
+            <view class="text--val">
+                <text class="text--num">有效区间</text>
+                <text class="text--con">2017年06月04日~2017年6月11日</text>
+            </view>
+        </view>
+    </view>
+    <block wx:for="{{[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5]}}">
+        <view class="item item--product" wx:if="{{index<2||vo.showMore}}">
+            <view class="product__head">
+                <text class="text-bold">订货号：1231231321</text>
+            </view>
+            <view class="product__content">
+                <image class="product__img" src="/assets/images/meet.png"></image>
+                <view class="product__text">
+                    <text class="product__item--text">得利斯土豆丝（首农裕农）A级土豆丝（首农裕农）A级土豆丝....</text>
+                    <view class="product__tags">
+                        <text class="product__text--tag">去皮</text>
+                        <text class="product__text--tag">切丝</text>
+                        <text class="product__text--tag">0.2*0.2*3-6cm</text>
+                        <text class="product__text--tag">2.5Kg/包</text>
+                    </view>
+                    <view class="product__price">
+                        <text class="price--old">本周价:￥66.00</text>
+                        <text class="text-red margin-left30">本周价:￥60.00</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="item item--more" bind:tap="showMore">
+        <text class="icon__more {{vo.showMore?'icon__more--active':''}} "></text>
+        <text class="text-succ">更多明细  </text>
+        <text>共100件</text>
+    </view>
+
+    <view class="item item--cell margin-top20 item--top-boder">
+        <text class="cell__caption">商品总数量</text>
+        <text class="cell__val">100.0件 999.0kg</text>
+    </view>
+    <view class="item item--cell">
+        <text class="cell__caption">总价格</text>
+        <text class="cell__val">￥ 12330.00</text>
+    </view>
+    <view class="item item--cell">
+        <text class="cell__caption cell__caption--start">说明</text>
+        <text class="cell__val cell__val--wrap"> 文字可以折行文字可以折行文字可以折行文字可以折行</text>
+    </view>
+    <view class="buttons">
+        <button class="bg-orange text-white">报价单退回</button>
+        <button class="bg-green text-white">报价单接收确认</button>
+    </view>
+
+</view>
+
+
+

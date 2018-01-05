@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "未出账单列表",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index",
+    "switch": "/component/switch/index"
+  }
+}

@@ -1,0 +1,15 @@
+.switch{
+    width: 45rpx;
+    height: 45rpx;
+    border: 1rpx solid #cccccc;
+    border-radius: 50%;
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.switch--active{
+    border-color: #008E40;
+    background: #008E40;
+}

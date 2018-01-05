@@ -1,0 +1,101 @@
+<view class="box">
+   <view class="list__title">
+    <image class="icon" src="/assets/images/icon.png"></image>
+         <text >北京快客利餐饮公司/华北大区/百度餐厅</text>
+   </view> 
+  <form bindsubmit="formSubmit" style="width: 100%">
+    <scroll-view class="scroll-box" scroll-y="true" style="">
+      <view class="tree__class">
+        <view class='company__box'>
+          <view class="company__name">
+            <text class="title">采购部</text>
+            <text class="number">有效</text>
+          </view>
+          <view class="bottom">
+              <text class="bottom__text">无效</text>
+            <navigator url="/pages/bmem/department/add/index">
+              <text class="bottom__text">新增下级</text>
+            </navigator>
+          </view>
+        </view>
+        <view class="box">
+          <view class='hb__company'>
+            <view class="company__name">
+              <text class="title">采购一组</text>
+              <text class="number">有效</text>
+            </view>
+            <view class="bottom">
+              <navigator  url="/pages/unfinish/index" >
+                <text class="bottom__text">无效</text>
+              </navigator>
+              <navigator url="/pages/bmem/orga/addBranch/index">
+                <text class="bottom__text">新增下级</text>
+              </navigator>
+            </view>
+          </view>
+        </view>
+        <view class="box">
+          <view class='hb__company'>
+            <view class="company__name">
+              <text class="title">采购二组</text>
+              <text class="number">有效</text>
+            </view>
+            <view class="bottom">
+                <text class="bottom__text">无效</text>
+              <navigator url="/pages/bmem/orga/addBranch/index">
+                <text class="bottom__text">新增下级</text>
+              </navigator>
+            </view>
+          </view>
+        <view class='company__box'>
+          <view class="company__name">
+            <text class="title">仓库管理部</text>
+            <text class="number">有效</text>
+          </view>
+          <view class="bottom">
+              <text class="bottom__text">无效</text>
+            <navigator url="/pages/bmem/department/add/index">
+              <text class="bottom__text">新增下级</text>
+            </navigator>
+          </view>
+        </view>
+          <view class="box">
+          <view class='hb__company'>
+            <view class="company__name">
+              <text class="title">蔬菜部</text>
+              <text class="number">有效</text>
+            </view>
+            <view class="bottom">
+              <navigator  url="/pages/unfinish/index" >
+                <text class="bottom__text">无效</text>
+              </navigator>
+              <navigator url="/pages/bmem/orga/addBranch/index">
+                <text class="bottom__text">新增下级</text>
+              </navigator>
+            </view>
+          </view>
+        </view>
+         <view class="box">
+          <view class='hb__company'>
+            <view class="company__name">
+              <text class="title">肉品部</text>
+              <text class="number">有效</text>
+            </view>
+            <view class="bottom">
+              <navigator  url="/pages/unfinish/index" >
+                <text class="bottom__text">无效</text>
+              </navigator>
+              <navigator url="/pages/bmem/orga/addBranch/index">
+                <text class="bottom__text">新增下级</text>
+              </navigator>
+            </view>
+          </view>
+        </view>
+        </view>
+      </view>
+    </scroll-view>
+        <view class='btn'>
+      <button class="next__btn" formType="submit" size="default" bindtap='addDept'>新增部门</button>
+      </view>
+  </form>
+</view>

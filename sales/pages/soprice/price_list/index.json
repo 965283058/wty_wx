@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "日常报价清单",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index",
+    "switch": "/component/switch/index"
+  }
+}

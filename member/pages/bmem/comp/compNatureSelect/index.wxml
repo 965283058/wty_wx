@@ -1,0 +1,21 @@
+<view class='page'>
+    <form action="">
+    <scroll-view class="scroll-box" scroll-y="true" style="height:500px;">
+        <view class='title_bottom'>
+            <text class='item_title'>公司性质</text>
+        </view>
+        <view class='item'>
+            <button class='item_btn'>政府机关</button>
+            <button class='item_btn'>国营</button>
+            <button class='item_btn'>私营</button>
+            <button class='item_btn'>合资</button>
+            <button class='item_btn'>外商独资</button>
+        </view>
+
+        <view class='end'>
+            <button  class='btn reset'>重置</button>
+            <button  class='btn'>确定</button>
+        </view>
+        </scroll-view>
+    </form>
+</view>

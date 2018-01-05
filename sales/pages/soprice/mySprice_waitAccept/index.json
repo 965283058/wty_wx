@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的定价",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index"
+  }
+}

@@ -1,0 +1,34 @@
+<view class="box">
+    <view class="head">
+        <image class="head__icon" src="/assets/images/icon/block.png"></image>
+        <text class="head__text">S5000321 土豆丝 1箱 </text>
+    </view>
+    <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="list margin-bottom20"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <view class="list__title">
+                <text>1箱=24包</text>
+                <view class="list__title--default">
+                    <text class="text-succ">有效</text>
+                </view>
+            </view>
+            <view class="list__content">
+                <view class="list__button">
+                    <image class="list__icon--btn" src="/assets/images/icon/close.png"></image>
+                    <text>无效</text>
+                </view>
+                <view class="list__button">
+                    <image class="list__icon--btn" src="/assets/images/icon/edit.png"></image>
+                    <text>编辑</text>
+                </view>
+                <view class="list__button">
+                    <image class="list__icon--btn" src="/assets/images/icon/del.png"></image>
+                    <text>删除</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <button class="cell-btn button--add bg-green" size="default" bindtap="add">新建单位转换</button>
+</view>
+
+
+

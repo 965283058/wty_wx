@@ -1,0 +1,26 @@
+<view class="box">
+    <view class="logo">
+        <image class="logo__image" src="/assets/images/icon/submitSucc.png"></image>
+        <view class="text-succ">订单提交成功!</view>
+    </view>
+    <view class="item" wx:for="{{[1,2]}}">
+        <view class="item__cell">
+            <text>订单编号</text>
+            <text class="text-bold margin-left20">SO-20170327001</text>
+        </view>
+        <view class="item__cell">
+            <text>至供货商</text>
+            <text class="text-bold margin-left20">G00029 北京中瑞食品有限公司</text>
+        </view>
+        <view class="item__cell">
+            <text>应付金额</text>
+            <text class="text-bold text-red margin-left20">￥ 12,500.00</text>
+        </view>
+    </view>
+
+
+    <button class="cell-btn bg-green">直接再次购买</button>
+</view>
+
+
+

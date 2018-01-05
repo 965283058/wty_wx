@@ -1,0 +1,144 @@
+page{
+background: #f3f5f7;
+}
+.box{
+  height: 100%;
+   background: #f3f5f7;
+   margin-top: 20rpx;
+}
+.data {
+  width: 100%;
+  height: 85rpx;
+  line-height: 85rpx;
+  border-bottom: 1rpx solid #d8dddc;
+  color: #666;
+  font-size: 26rpx;
+  padding-left: 28rpx;
+  background: #fff;
+}
+.data {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bill__data {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.data__box{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  right: 50rpx;
+  padding-right: 30rpx;
+  color: #333;
+}
+
+/* view:nth-child(odd) {
+  background: #fff;
+} */
+
+.save__btn {
+  background: #008e40;
+  color: #fff;
+  margin-top: 30rpx;
+  width: 94%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+}
+
+.data__box:after {
+  content: "";
+  display: block;
+  width: 20rpx;
+  height: 20rpx;
+  border: 3rpx solid #8c8e91;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  top: 30rpx;
+  z-index: 1;
+}
+.name1 {
+ color: #333;
+  width: 100%;
+  background: #fff;
+  height: 65rpx;
+  padding-top: 25rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  justify-content: space-between;
+ 
+  position: relative;
+}
+
+.name,.name3{
+  display: flex;
+  width: 100%;
+  background: #f3f5f7;
+  height: 85rpx;
+  line-height: 85rpx;
+  justify-content: space-between;
+  position: relative;
+}
+.company__title {
+  color: 	#A9A9A9;
+  font-size: 26rpx;
+  height: 65rpx;
+  padding-left: 30rpx;
+  position: relative;
+  width: 94%;
+}
+.list_bd{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 85rpx;
+  line-height: 85rpx;
+  padding-left: 22rpx;
+  border-bottom: 1rpx solid #e3e3e3;
+  font-size: 26rpx;
+  position: relative;
+  color: #333;
+  background: #fff;
+}
+.list_bd1{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 85rpx;
+  line-height: 85rpx;
+  padding-left: 22rpx;
+  border-bottom: 1rpx solid #e3e3e3;
+  font-size: 26rpx;
+  position: relative;
+  color: #333;
+ background-color: #f9f9f9;
+}
+.list_title1:after {
+  content: "";
+  display: block;
+  width: 20rpx;
+  height: 20rpx;
+  border: 3rpx solid #8c8e91;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 40rpx;
+  top: 35rpx;
+  z-index: 1;
+}
+.name_1{
+  background-color: #f9f9f9;
+  margin-right: 75rpx;
+}
+.name_2{
+  background-color: #f9f9f9;
+   margin-right: 75rpx;
+}

@@ -1,0 +1,26 @@
+@import "../../../../assets/styles/common.wxss";
+.buttons{
+   width: 690rpx;
+   margin: 30rpx auto;
+   display: flex;
+   justify-content: space-between;
+}
+.button{
+    line-height: 80rpx;
+    text-align: center;
+    flex: 1;
+    border: 0;
+    border-radius: 0;
+    box-sizing: content-box;
+}
+.button--photo {
+    border-top-left-radius:10rpx;
+    border-bottom-left-radius:10rpx;
+    border: 1rpx solid #09bb07;
+    box-shadow: 0 3rpx 7rpx 0 #94ef93;
+}
+.button--goods {
+    border-top-right-radius:10rpx;
+    border-bottom-right-radius:10rpx;
+}
+

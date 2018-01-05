@@ -1,0 +1,11 @@
+<view class='page'>
+  <view class='welcome_hd'>
+    <icon class='welcome_icon' type="success" size="60" />
+    <text class='welcome_icon-text'>欢迎13311028679</text>
+    <view class="text__box">
+     <button class='btn1'  bindtap="regCompany">继续注册公司</button>
+     <button class='btn2' formType="submit" bindtap="toMyAccount">进入我的个人账户</button>
+    </view>
+
+  </view>
+</view>

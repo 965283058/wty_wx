@@ -1,0 +1,43 @@
+<view class='page'>
+ <view class="nav">
+    <view class="nav__box">
+        <image class="logo" src="/assets/images/logo_icon.png" bindtap='information'></image>
+        <view class="text__box">
+            <text class="text"><text class="big__text">代用名</text>下午好!\n</text>
+        </view>
+    </view>
+    <view class="img">
+        <image class="ewm" src="/assets/images/pic.png"></image>
+    </view>
+ </view>
+ <view class='list_bd1'>
+    <text class='list_title1'>会员级别</text>
+    <text class='list_title1-right1'>未填写</text>
+  </view>
+<view class="list__box">
+    <view class='list_bd'>
+        <text class='list_title1'>实名验证</text>
+        <text class='list_title1-right1'>XX花</text>
+    </view>
+</view>
+<view class="list__box">
+    <view class='list_bd'>
+        <text class='list_title1'>密码修改(暂不提供)</text>
+    </view>
+</view>
+<view class="list__box">
+    <view class='list_bd'>
+        <text class='list_title1'>关联账号</text>
+    </view>
+</view>
+<view class="list__box">
+    <view class='list_bd'>
+        <text class='list_title1'>我的好友</text>
+    </view>
+</view>
+<view class="list__box">
+    <view class='list_bd'>
+        <text class='list_title1'>我的二维码</text>
+    </view>
+</view>
+</view>

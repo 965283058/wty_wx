@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的加减货",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index"
+  }
+}

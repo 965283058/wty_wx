@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商品详情预览",
+  "usingComponents": {
+    "tabs": "/component/tabs/index"
+  }
+}

@@ -1,0 +1,31 @@
+<view class="box">
+    <view class="page__info">
+        <text class="logo__text">北京XXX商贸公司</text>
+        <view class="image">
+            <image class="logo" src="/assets/images/logo.png"></image>
+        </view>
+    </view>
+    <view class="company__introduce">
+        <text class="logo__text">公司简介</text>
+        <textarea class="textarea" placeholder="公司简介" auto-focus />
+    </view>
+    <view class="publicity__info">
+        <text class="publicity__title">企业宣传图片</text>
+    </view>
+    <scroll-view class="scroll-box" scroll-y="true" style="">
+        <view class="list"  wx:for="{{vo.list}}"  wx:for-item="item">
+            <view class="page__info">
+                <text class="logo__text">企业宣传图</text>
+                <view class="image">
+                    <image class="logo" src="/assets/images/logo.png"></image>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    
+	 <view class='btn'>
+	      <button class="next__btn" size="default" bindtap='toView'>预览</button>
+	 </view>
+ 
+  </view>
+

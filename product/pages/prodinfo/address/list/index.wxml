@@ -1,0 +1,30 @@
+<scroll-view class="box">
+    <view class="list"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+        <view class="list__title">
+            <image class="list__icon--title" src="/assets/images/icon/block.png"></image>
+            <text>XXXX餐厅</text>
+            <text class="list__title--code">[ 12321321321 ]</text>
+            <text class="list__title--default" wx:if="{{item==1}}">默认地址</text>
+        </view>
+        <view class="list__content">
+            <text class="list__content--text list__content--bold">张某某 13910009898</text>
+            <text class="list__content--text">北京市海淀区西北旺路10号XXX大厦1号楼B1</text>
+            <text class="list__content--text">修改时间( 2016-08-21 15:37:06 )</text>
+            <view class="list__content--text list__content--right">
+                <text class="list__button">设为默认地址</text>
+                <view class="list__button">
+                    <image class="list__icon--btn" src="/assets/images/icon/edit.png"></image>
+                    <text>编辑</text>
+                </view>
+                <view class="list__button">
+                    <image class="list__icon--btn" src="/assets/images/icon/del.png"></image>
+                    <text>删除</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <button class="cell-btn button--add bg-green" size="default" bindtap="add">新建地址</button>
+</scroll-view>
+
+
+

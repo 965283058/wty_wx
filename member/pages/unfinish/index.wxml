@@ -1,0 +1,10 @@
+<view class='page'>
+  <view class='welcome_hd'>
+    <icon class='welcome_icon' type="success" size="60" />
+    <text class='welcome_icon-text'>该链接跳转未开发完成</text>
+    <view class="text__box">
+      <text class='welcome_text'>返回</text>
+    </view>
+
+  </view>
+</view>

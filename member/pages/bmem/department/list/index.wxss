@@ -1,0 +1,109 @@
+.box {
+  height: 100%;
+  width: 100%;
+  background: #f3f5f7;
+}
+.company__box{
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.title,.dining {
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.hb__company .title, .center .title{
+  margin-left: 50rpx;
+}
+.hb__company .dining, .center .dining{
+  margin-left: 90rpx;
+}
+
+.company__name{
+  display: flex;
+  justify-content: space-between;
+  height: 82rpx;
+  line-height: 82rpx;
+  width: 100%;
+  position: relative;
+  font-size: 26rpx;
+  color:#9d9d9d;
+  border-bottom: 1px dashed #bfbfbf;
+}
+.hb__company{
+  background: #f6f4f4;
+}
+
+.number,.text{
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  margin-right: 70rpx;
+  font-size: 26rpx;
+  color: #9d9d9d;
+}
+
+
+
+.bottom {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50rpx;
+  height: 70rpx;
+  border-bottom: 1rpx solid #cccdce;
+}
+
+.bottom__text{
+  text-align: center;
+  display: flex;
+  border: 1rpx solid #d9d9d9;
+  font-size: 24rpx;
+  color: #9d9d9d;
+  padding: 0 8rpx;
+  margin: 22rpx 25rpx 0 0;
+  height: 30rpx;
+  line-height: 30rpx;
+  background: #f5f4f4;
+}
+.bottom__text:active{
+  color:#e86828;
+  border: 1rpx solid #e86828;
+}
+navigator:hover{
+  background: none;
+}
+.center{
+  background: #e7e5e5;
+}
+.list__title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  height: 85rpx;
+  line-height: 85rpx;
+  font-size: 26rpx;
+  background: #fff;
+  padding-left: 28rpx;
+  color: #666;
+}
+.icon{
+  width: 22rpx;
+  height: 22rpx;
+  margin: 27rpx 5rpx 0 0;
+}
+.next__btn{
+  background: #008E40;
+  color: #fff;
+  margin-top: 40rpx;
+  width: 90%;
+  font-size: 33rpx;
+}
+.btn{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30rpx;
+}
+
+

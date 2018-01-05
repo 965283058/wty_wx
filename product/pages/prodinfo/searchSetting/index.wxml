@@ -1,0 +1,19 @@
+<view class="box">
+    <view class="head">
+        <image class="head__icon" src="/assets/images/icon/block.png"></image>
+        <text class="head__text">蔬菜</text>
+    </view>
+    <view class="item"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+        <view class="item__type item__type--active">{{item.type}}</view>
+        <view class="list__content">
+            <text  wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" class="list__content-item {{item==1?'list__content-item--active':''}}">豆芽</text>
+        </view>
+    </view>
+    <view class="button__warp">
+        <button class="bg-orange text-white">重 置</button>
+        <button class="bg-green text-white">确 定</button>
+    </view>
+</view>
+
+
+

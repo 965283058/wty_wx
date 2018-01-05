@@ -1,0 +1,32 @@
+@import "../../../assets/styles/common.wxss";
+.product__checkbox{
+    margin: 20rpx;
+    margin-left: 0;
+    float: left;
+}
+.product{
+    width: 710rpx;
+}
+
+
+.buttons{
+    display: flex;
+    padding: 100rpx 50rpx;
+}
+.button{
+    height: 55rpx;
+    line-height: 55rpx;
+    font-size: 24rpx;
+    margin: 0 13rpx;
+    flex: 1;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+.button--no-bg{
+    background: #ffffff;
+    border: 2rpx solid #008E40;
+    box-shadow: 0 3rpx 10rpx 0 #94ef93;
+    color: #636363;
+}

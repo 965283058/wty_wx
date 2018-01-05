@@ -1,0 +1,90 @@
+<view class="box">
+    <!--<view class="nav">
+        <view class="nav__box" bindtap="toAccount">
+            <image class="logo" src="/assets/images/logo_icon.png"></image>
+            <view class="text__box">
+                <text class="text__box_txt"><text class="big__text">昵称</text>下午好!\n</text>
+                <text class="text__box_txt">用户名</text>
+            </view>
+        </view>
+        <view class="img">
+            <image class="ewm" src="/assets/images/sm.png"></image>
+        </view>
+    </view>-->
+    <form bindsubmit="formSubmit" style="width: 100%">
+   <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+      <view class='title'>被邀请信息</view>
+      <view class="details__info">
+        <text class="logo__text">公司名称</text>
+        <text class="time">被邀请公司名称</text>
+      </view>
+
+      <view class="details__info">
+        <text class="logo__text">统一编号</text>
+        <text class="time">987098789098888888</text>
+      </view>
+
+  
+
+     <view class='title'>邀请信息</view>
+      <view class="details__info">
+        <text class="logo__text">公司名称</text>
+        <text class="time">被邀请公司名称</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">统一编号</text>
+        <text class="time">987098789098888888</text>
+      </view>
+      <view class='title'>请仔细阅读如下交易规则</view>
+      <view class="details__info">
+        <text class="logo__text">停止接单</text>
+        <text class="time">23：59：59</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">付款条件</text>
+        <text class="time">30天</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">收款条件</text>
+        <text class="time">30天</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">出账单方式</text>
+        <text class="time">手动</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">出账单周期</text>
+        <text class="time">每月一号出上月账单</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">出账单方</text>
+        <text class="time">XXX供应商</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">对账日</text>
+        <text class="time">每月1号到5号</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">取价方式</text>
+        <text class="time">按送货日</text>
+      </view>
+       <view class='title'>我已注册的公司</view>
+      <view class="radio-group">
+           <radio-group bindchange="radioChange">
+              <label class="radio__text" wx:for="{{items}}">
+                  <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+              </label>
+           </radio-group>   
+      </view>  
+ 
+        <view>
+          <button class="next__btn" formType="submit" size="default" bindtap='toContinue'wx:if="{{vo.userisnew!='Y'}}">如已有公司接受邀请</button>
+          <button class="next__btn" formType="submit" size="default" bindtap='toCompany'>注册新公司并接受邀请</button>
+          <button class="next__btn" formType="submit" size="default" bindtap='toWorkbench'>退回</button>
+         </view> 
+    </scroll-view>
+
+
+    </form>
+</view>
+

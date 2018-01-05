@@ -1,0 +1,40 @@
+<view class="box">
+    <view class="search__condition">
+        <text class="search__item " bind:tap="filterStatus" data-status="">KH001-客户1</text>
+        <text class="search__item " bind:tap="filterStatus" data-status="">无异议</text>
+    </view>
+    <scroll-view class="list" scroll-y="true" style="max-height:{{vo.scrollViewHeight}}px;">
+        <view class="item" wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <view class="item__content">
+                <view class="content__text">
+                    <view>
+                        <text class="list__item--text text-bold">SO-010010001</text>
+                        <text class="content__text--link">001</text>
+                    </view>
+                    <view>2017年12月18日</view>
+                </view>
+                <view class="content__text margin-top40">
+                    <view>¥24,000.00</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="cells">
+         <view class="cell">
+            <text class="cell__caption">账单日期</text>
+            <text class="cell__val">2017年10月1日~2017年10月30日</text>
+        </view>
+        <view class="cell">
+            <text class="cell__caption">帐单月份</text>
+            <text class="cell__val">2017年10月</text>
+        </view>
+        <view class="cell">
+            <text class="cell__caption">总金额合计</text>
+            <text class="cell__val">¥24,000.00</text>
+        </view>
+        <view class="item--cell">
+        <text class="cell__caption cell__caption--start">备注：</text>
+        <textarea auto-height="true" maxlength="1" class="cell__input"/>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<view>
+    <view class="date__box">
+        <text class="date">30天</text>
+    </view>
+    <view class="date__box">
+        <text class="date">60天</text>
+    </view>
+    <view class="date__box">
+        <text class="date">90天</text>
+    </view>
+    <view class="date__box">
+        <text class="date">120天</text>
+    </view>
+
+</view>
+

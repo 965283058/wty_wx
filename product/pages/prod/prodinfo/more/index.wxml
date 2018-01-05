@@ -1,0 +1,55 @@
+<view class="box">
+    <view class="item">
+        <view class="item__cells">
+            <view class="item__cell">
+                <input type="text" placeholder="只读商品编号"/>
+            </view>
+            <view class="item__cell">
+                <input type="text" placeholder="只读商品名称"/>
+            </view>
+        </view>
+    </view>
+
+    <view class="item margin-top20">
+        <view class="item__head">
+            <text class="head__text">基本信息</text>
+            <text class="head__text--right"  bindtap='moreBase'>已设置</text>
+        </view>
+    </view>
+    <view class="item margin-top20">
+        <view class="item__head">
+            <text class="head__text">搜索维度设置</text>
+            <text class="head__text--right" bindtap='moreSearchSet'>已设置</text>
+        </view>
+    </view>
+    <view class="item margin-top20">
+        <view class="item__head">
+            <text class="head__text">商品图片</text>
+            <text class="head__text--right">已设置</text>
+        </view>
+    </view>
+    <view class="item margin-top20">
+        <view class="item__head">
+            <text class="head__text">商品描述</text>
+            <text class="head__text--right" bindtap='moreDesc'>已设置</text>
+        </view>
+    </view>
+    <view class="item margin-top20">
+        <view class="item__head">
+            <text class="head__text">采购信息</text>
+            <text class="head__text--right" bindtap='morePurchaseInfo'>已设置</text>
+        </view>
+    </view>
+    <view class="item margin-top20">
+        <view class="item__head">
+            <text class="head__text">销售信息</text>
+            <text class="head__text--right"bindtap='moreSaleInfo'>已设置</text>
+        </view>
+    </view>
+    <button class="cell-btn bg-green" bindtap="toList">返回列表</button>
+    <button class="cell-btn bg-green" bindtap="toAdd">继续新增</button>
+    
+</view>
+
+
+

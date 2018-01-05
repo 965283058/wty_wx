@@ -1,0 +1,39 @@
+<view class="box">
+    <view class="searchbar__box">
+        <searchbar></searchbar>
+    </view>
+    <view class="search__condition">
+        <text class="search__item {{po.status==''?'search__item--active':''}}" bind:tap="filterStatus" data-status="">按客户</text>
+    </view>
+    <scroll-view class="list" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="item" wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <switch class="margin-right10 margin-top10" checked="{{item}}"></switch>
+            <view class="item__content">
+                <view class="content__text">
+                    <view>
+                        <text class="list__item--text text-bold">SO-010010001</text>
+                        <text class="content__text--link">001</text>
+                    </view>
+                    <view>2017年12月18日</view>
+                </view>
+                <view class="content__text">
+                    <view>KH001-客户1</view>
+                    <view>¥24,000.00</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="box__foot">
+        <view class="foot__select">
+            <switch class="margin-right10" bind:change="selectAll"></switch>
+            <text class="text-bold">全选</text>
+        </view>
+        <view class="foot__content margin-left30">
+            <view>共10个客户，已选择5个客户</view>
+            <view>共30笔未出账单，金额 <text class="text-red">￥10,000,00.00</text></view>
+            <view>已选25笔未出账单，金额<text class="text-red">￥9,000.00</text></view>
+            <view>未选5笔未出账单，金额 <text class="text-red">￥1,000.00</text></view>
+        </view>
+        <button class="bg-green text-white margin-right30" size="mini" bindtap='submitbill'>生成对账单</button>
+    </view>
+</view>

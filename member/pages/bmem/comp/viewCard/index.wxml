@@ -1,0 +1,27 @@
+<view class="box">
+    <view class="company__title">
+        <image class="logo" src="/assets/images/logo.png"></image>
+        <text class="company__name">北京XXX农产品种植公司</text>
+    </view>
+    <view class="content">
+        <view class="text__bg">
+            <text class="company__introduce">我是企业我公司位于**，是一家经营企业供餐公司，欢迎各类筹备餐饮企业洽谈合作。我公司位于**，是一家经营企业供餐公司，欢迎各类筹备餐饮企业洽谈合作。我公司位于**，是一家经营企业供餐公司，欢迎各类筹备餐饮企业洽谈合作。我公司位于**，是一家经营企业供餐公司，欢迎各类筹备餐饮企业洽谈合作。我公司位于**，是一家经营企业供餐公司，欢迎各类筹备餐饮企业洽谈合作。</text>
+        </view>
+        <view class="img__bg">
+        <swiper indicator-dots='{{indicatorDots}}' vertical='{{vertical}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' >
+   <block wx:for='{{imgUrls}}'>
+    <swiper-item>
+   <image src='{{item}}' ></image>
+    </swiper-item>
+    </block>
+</swiper>
+        </view>
+    </view>
+    <view class="erm__box">
+        <image class="ewm" src="/assets/images/ewm.jpg"></image>
+    </view>
+    <text class="text">长按二维码，加伙伴关注！</text>
+</view>
+
+
+

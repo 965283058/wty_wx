@@ -1,0 +1,28 @@
+<view class="box">
+  <navigator url="/pages/prod/workbench/index" class="navigator-hover">我的工作台</navigator>
+
+  <navigator url="/pages/prod/distribution/list/index" class="navigator-hover">我的送货方</navigator>
+  <navigator url="/pages/prod/distribution/add/index" class="navigator-hover">新增送货方</navigator>
+  <navigator url="/pages/prod/prodinfo/list/index" class="navigator-hover">商品清单列表(新)</navigator>
+  <navigator url="/pages/prod/prodinfo/more/index" class="navigator-hover">商品完善(新)</navigator>
+  <navigator url="/pages/prod/rn/receCar/index" class="navigator-hover">收货篮</navigator>
+    <navigator url="/pages/prod/rn/list/index" class="navigator-hover">收货单列表</navigator>
+   
+   <text>以上串完，以下待整理</text>
+   
+    <navigator url="/pages/dn/deliveryInfo/index" class="navigator-hover">配送信息</navigator>
+
+    <navigator url="/pages/dn/submit/index" class="navigator-hover">订单提交(移到采购中心)</navigator>
+    <navigator url="/pages/dn/submitSucc/index" class="navigator-hover">订单提交成功(移到采购中心)</navigator>
+    <navigator url="/pages/dn/audit/index" class="navigator-hover">订单审核(移到采购中心)</navigator>
+    <navigator url="/pages/prodinfo/category/index" class="navigator-hover">商品分类(？)</navigator>
+    <navigator url="/pages/prodinfo/address/list/index" class="navigator-hover">地址管理(移到采购中心)</navigator>
+    <navigator url="/pages/prodinfo/address/add/index" class="navigator-hover">新增地址(移到采购中心)</navigator>
+    <navigator url="/pages/prodinfo/unitConver/index" class="navigator-hover">单位转换(暂不用)</navigator>
+    <navigator url="/pages/prodinfo/addUnitConver/index" class="navigator-hover">单位转换新增(暂不用)</navigator>
+
+
+</view>
+
+
+

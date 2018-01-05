@@ -1,0 +1,46 @@
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+            <image class="weui-search--btn" src="/assets/images/search_rec.png"></image>
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="16"></icon>
+            </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+
+        </label>
+    </view>
+    
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    <view class='weui-search_con' hidden="{{!inputShowed}}" bindtap="hideInput">
+        <text class='weui-search_hots'>热搜</text>
+        <view class='weui-search_list'>
+           <text class='weui-search_list_con'>五花肉</text>
+           <text class='weui-search_list_con'>土豆丝</text>
+           <text class='weui-search_list_con'>西红柿</text>
+           <text class='weui-search_list_con'>鸡蛋</text>
+           <text class='weui-search_list_con'>琵琶腿</text>
+           <text class='weui-search_list_con'>茶树菇</text>
+        </view>
+        <view class='weui-search_li'>
+          <text class='weui-search_history'>历史搜索</text>
+          <text class='weui-search_li_con'>土豆丝</text>
+          <text class='weui-search_li_con'>水晶梨</text>
+          <view class='weui-search_li_con'>五花肉
+                <text class='weui-search_list_con'>裕农</text>
+                <text class='weui-search_list_con'>中瑞</text>
+                <text class='weui-search_list_con'>宏都</text>
+          </view>
+          <text class='weui-search_li_con'>排骨
+                <text class='weui-search_list_con'>通排</text>
+                <text class='weui-search_list_con'>猪小排</text>
+          </text>
+          <text class='weui-search_li_con'>大葱</text>
+        </view>
+    </view>
+    
+</view>

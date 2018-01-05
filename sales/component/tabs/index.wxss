@@ -1,0 +1,22 @@
+.tabs {
+    min-height: 60rpx;
+}
+
+.tabs__head {
+    display: flex;
+}
+
+.head__item {
+    height: 85rpx;
+    font-size: 28rpx;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #646464;
+    color: #373737;
+}
+.head__item--active{
+    border-color: #dd3333;
+    color: #dd3333;
+}

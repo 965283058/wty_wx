@@ -1,0 +1,202 @@
+<scroll-view scroll-y class='page'>
+    <view class="nav">
+        <view class="nav__box" bindtap="toAccount">
+            <image class="logo" src="/assets/images/logo_icon.png"></image>
+            <view class="text__box">
+                <text class="text"><text class="big__text">昵称</text>下午好!\n</text>
+                <text class="text">用户名</text>
+            </view>
+        </view>
+       <view class="nav__box" bindtap="toViewCompMore">
+            <image class="logo" src="/assets/images/logo_icon.png"></image>
+
+           <text class="nickname">百度K1快客利餐厅</text>
+
+        </view>
+        <view class="img">
+            <image class="ewm" src="/assets/images/sm.png"></image>
+            <image class="info__btn" src="/assets/images/info.png"></image>
+            <text class="num">1</text>
+        </view>
+    </view>
+    <view class="box">
+        <view class="box__top">
+            <image class="icon" src="/assets/images/icon.png"></image>
+            <text class="company__title" bindtap="toSwitchComp">北京XXX商贸公司-采购部-采购经理</text>
+            <text class='zt'>审核中</text>
+        </view>
+        <view class="list">
+            <view class="list__box">
+               <navigator  url="/pages/bmem/orga/list/index" >
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <text class="list__title-text">组织机构</text>
+               </navigator>
+            </view>
+            <view class="list__box">
+               <navigator  url="/pages/bmem/employee/list/index" >
+                  <image class="list__img" src='/assets/images/list.png'></image>
+                  <text class="list__title-text">员工通讯录</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+               <navigator  url="/pages/bmem/ruleconfig/view/index" >
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <text class="list__title-text">交易规则</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <navigator  url="/pages/unfinish/index" >
+                  <image class="list__img" src='/assets/images/list.png'></image>
+                  <text class="list__title-text">权限浏览</text>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="box">
+        <view class="box__top">
+            <text class="title">我的商品</text>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <navigator  url="/pages/unfinish/index">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                    <text class="list__title-text">商品标签</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">商品分类</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                    <text class="list__title-text" bindtap="toProdInfoMgr">商品资料</text>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/unfinish/index" >
+                    <text class="list__title-text">库存查询</text>
+                </navigator>
+            </view>
+             <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                    <text class="list__title-text" bindtap="toDistrMgr">送货方</text>
+            </view>
+        </view>
+    </view>
+    <view class="box common">
+        <view class="box__top">
+            <text class="title">我的采购</text>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="box common">
+        <view class="box__top">
+            <text class="title">我的销售</text>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+        </view>
+        <view class="list">
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+            <view class="list__box">
+                <image class="list__img" src='/assets/images/list.png'></image>
+                <navigator  url="/pages/cmem/welcome/index" >
+                    <text class="list__title-text">公司管理</text>
+                </navigator>
+            </view>
+        </view>
+    </view>
+  </scroll-view>

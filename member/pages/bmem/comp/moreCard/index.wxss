@@ -1,0 +1,106 @@
+/**index.wxss**/
+.box{
+    background: #f3f5f7;
+    height: 100%;
+    padding-top: 20rpx;
+}
+.title{
+    padding-left: 22rpx;
+    font-size: 26rpx;
+    color: #666;
+    height: 85rpx;
+    line-height: 85rpx;
+    display: flex;
+}
+.page__info,.company__introduce{
+  display: flex;
+  background:#fff;
+  padding: 20rpx 0;
+    height: 100rpx;
+  border-top:1rpx solid #eeeff0;
+  border-bottom:1rpx solid #eeeff0;
+  width: 100%;
+  font-size:24rpx;
+    justify-content: space-between;
+}
+.company__introduce{
+    height: 130rpx;
+}
+
+.logo__text {
+  display: flex;
+  justify-content: flex-start;
+  padding-left:23rpx;
+  line-height: 95rpx;
+    color: #666;
+}
+.image{
+    display: flex;
+   justify-content: flex-end;
+    margin-top: 2rpx;
+    position: relative;
+}
+.logo{
+    width: 154rpx;
+    height: 99rpx;
+    margin-right: 65rpx;
+}
+.image:after {
+    content: "";
+    display: block;
+    width: 20rpx;
+    height: 20rpx;
+    border: 3rpx solid #8c8e91;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 25rpx;
+    top: 35rpx;
+    z-index: 1;
+}
+.publicity__title:after{
+    right: 15rpx;
+    top: 10rpx;
+}
+.publicity__info{
+    display: flex;
+    width: 100%;
+    background:#fff;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-top: 20rpx;
+    justify-content: space-between;
+    border-bottom:1rpx solid #008E40;
+}
+.publicity__title{
+    border-left: 1rpx solid #008E40;
+    color: #008E40;
+    font-size: 26rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    padding-left: 30rpx;
+    margin-top: 18rpx;
+    position: relative;
+
+    width: 94%;
+}
+.textarea{
+    width: 75%;
+    height: 120rpx;
+    margin: 0 30rpx 0 10rpx;
+    border: 1rpx solid #cecfd2;
+    color: #666;
+    padding: 5rpx;
+    line-height: 30rpx;
+    text-indent: 10rpx;
+}
+.next__btn{
+    background: #008E40;
+    font-size: 33rpx;
+    color: #fff;
+    width: 80%;
+    margin: 50rpx auto 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}

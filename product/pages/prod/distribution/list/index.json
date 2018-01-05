@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的送货方",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index"
+  }
+}

@@ -1,0 +1,13 @@
+<view class="box">
+    <view class="input__box">
+        默认销售价：<input class="input" type="text" placeholder="小数点两位"/>
+    </view>
+    <view class="input__box">
+        最高销售价：<input class="input" type="text" placeholder="小数点两位"/>
+    </view>
+    <view class="input__box">
+        最低销售价：<input class="input" type="text" placeholder="小数点两位"/>
+    </view>
+     <button class="cell-btn bg-green" bindtap="save">保存</button>
+    <button class="cell-btn bg-green" bindtap="save">放弃</button>
+</view>

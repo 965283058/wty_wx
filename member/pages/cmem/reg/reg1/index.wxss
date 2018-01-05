@@ -1,0 +1,87 @@
+/**index.wxss**/
+.box{
+  height:100%;
+  background: #f3f5f7;
+  padding-top: 20rpx;
+}
+.input__box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36rpx 30rpx;
+  position: relative;
+}
+.text{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 26rpx;
+  color: #666;
+  text-align: right;
+  margin-left: 17rpx;
+}
+.input,.input__bg{
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  height: 80rpx;
+  border:1rpx solid  #dde0e0;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  background: #fff;
+  color: #a5a5a5;
+  padding-left: 20rpx;
+}
+.input__bg .valide__input{
+  width: 70%;
+  height: 66rpx;
+  margin-top: 10rpx;
+  border-right:1rpx solid  #dde0e0;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  padding-left: 0;
+  border-radius: 0;
+}
+
+.next__btn{
+  background: #008E40;
+  color: #fff;
+  margin: 50rpx 50rpx 20rpx 50rpx;
+  width: 88%;
+  font-size: 33rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  
+}
+.sms{
+  position: absolute;
+  top: 20rpx;
+  right: 66rpx;
+  width: 90rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: block;
+  color: #000;
+  /*background: #ef99ca;*/
+  text-align: center;
+  z-index: 9;
+  font-size: 24rpx;
+}
+.number:after {
+  content: "";
+  display: block;
+  width: 18rpx;
+  height: 18rpx;
+  border: 3rpx solid #8c8e91;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(135deg);
+  position: absolute;
+  left: 110rpx;
+  top: 30rpx;
+  z-index: 1;
+}
+.checkbox{
+  font-size: 24rpx;
+  padding-left: 150rpx;
+}

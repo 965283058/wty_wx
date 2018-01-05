@@ -1,0 +1,41 @@
+<view class="box">
+    <view class="search__condition">
+        <text class="search__item " bind:tap="filterStatus" data-status="">按客户</text>
+        <text class="search__item " bind:tap="filterStatus" data-status="">KH001-客户1</text>
+    </view>
+    <scroll-view class="list" scroll-y="true" style="max-height:{{vo.scrollViewHeight}}px;">
+        <view class="item" wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <switch class="margin-right10 margin-top10" checked="{{item}}"></switch>
+            <view class="item__content">
+                <view class="content__text">
+                    <view>
+                        <text class="list__item--text text-bold">SO-010010001</text>
+                        <text class="content__text--link">001</text>
+                    </view>
+                    <view>2017年12月18日</view>
+                </view>
+                <view class="content__text margin-top40">
+                    <view>¥24,000.00</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="cells">
+        <view class="cell">
+            <text class="cell__caption">账单日期</text>
+            <text class="cell__val">2017年10月1日</text>
+        </view>
+        <view class="cell">
+            <text class="cell__caption">总价格</text>
+            <text class="cell__val">2017年10月</text>
+        </view>
+        <view class="cell">
+            <text class="cell__caption">余额</text>
+            <text class="cell__val">¥24,000.00</text>
+        </view>
+    </view>
+    <view class="button__warp">
+        <button class="bg-green text-white">有异议</button>
+        <button class="bg-green text-white">无异议</button>
+    </view>
+</view>

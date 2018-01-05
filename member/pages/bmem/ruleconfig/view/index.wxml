@@ -1,0 +1,118 @@
+<view class="box">
+    <form bindsubmit="formSubmit" style="width: 100%">
+        <view class="name1">
+            <text class='company_title'>北京XXX商贸公司</text>
+        </view>
+         <view class="name">
+            <text class='company__title'>基础设置</text>
+        </view>
+           <view class="data">
+            <text class="bill__data">取价方式</text>
+            <view class="data__box">
+                <text class="text">按送货日</text>
+            </view>
+        </view> 
+         
+        <view class="data">
+            <text class="bill__data">停止接单时间</text>
+            <view class="data__box">
+                <text class="text">23:59:59</text>
+            </view>
+        </view>
+         <view class="data">
+            <text class="bill__data">付款条件</text>
+            <view class="data__box">
+                <text class="text">30天</text>
+            </view>
+        </view>
+        
+         <!-- <view class='list_bd' >
+        <text class='list_title1'>付款条件</text>
+         <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="name_1">
+    {{array[index]}}
+    </view>
+  </picker>
+    </view>  -->
+     <view class="data">
+            <text class="bill__data"> 收款条件</text>
+            <view class="data__box">
+                <text class="text">30天</text>
+            </view>
+        </view>
+         <!-- <view class='list_bd1' >
+        <text class='list_title1'>收款条件</text>
+         <picker bindchange="bindcollectionChange" value="{{index1}}" range="{{array1}}">
+    <view class="name_2">
+    {{array1[index1]}}
+    </view>
+  </picker>
+    </view>  -->
+        <view class="data" bindtap='toProdTypeSelect'>
+            <text class="bill__data">采销品类</text>
+            <view class="data__box">
+                <text class="text">未设置</text>
+            </view>
+        </view>
+        <view class="name3">
+            <text class='company__title'>编码生成规则</text>
+        </view>
+         
+        <view class="data">
+            <text class="bill__data">商品编码</text>
+            <view class="data__box">
+                <text bindtap='toCodeRule'>系统默认</text>
+            </view>
+        </view>
+       <view class="data">
+            <text class="bill__data">客户编码</text>
+            <view class="data__box">
+                <text bindtap='toCodeRule'>系统默认</text>
+            </view>
+        </view>
+       <view class="data">
+            <text class="bill__data">供应商编码</text>
+            <view class="data__box">
+                <text bindtap='toCodeRule'>系统默认</text>
+            </view>
+        </view>
+        <view class="data">
+            <text class="bill__data">单据编码</text>
+            <view class="data__box">
+                <text bindtap='toCodeRule'>系统默认</text>
+            </view>
+        </view>          
+     
+         <view class="name3">
+            <text class='company__title'>往来账设置</text>
+        </view>
+     
+         <view class="data">
+            <text class="bill__data">出账单方式</text>
+            <view class="data__box">
+                <text>自动</text>
+            </view>
+        </view> 
+         <!-- <view class='data'  >
+        <text class='bill_data'>出账单方式</text>
+         <picker bindchange="bindwayChange" value="{{index2}}" range="{{array2}}">
+    <view class="data_box">
+    {{array2[index2]}}
+    </view>
+  </picker>
+    </view>  -->
+        <view class="data white__bg">
+            <text class="bill__data">出账单日(1-31)</text>
+            <view class="data__box">
+                <text>1号</text>
+            </view>
+        </view>
+        <view class="data" bindtap='toDayRangSelect'>
+            <text class="bill__data">对账日(期间)</text>
+            <view class="data__box">
+                <text>1号到5号</text>
+            </view>
+        </view>
+    </form>
+</view>
+

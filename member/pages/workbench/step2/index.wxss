@@ -1,0 +1,100 @@
+page{
+  background: #f3f5f7;
+  padding-top: 20rpx;
+}
+.details__info{
+  display: flex;
+  position: relative;
+  margin-right: 10rpx;
+  width: 100%;
+  height: 160rpx;
+  border-bottom: 1rpx solid #d8dddc;
+  color: #666;
+  font-size: 26rpx;
+  padding-left: 28rpx;
+  background: #fff;
+  flex-wrap:wrap;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #e2e6e5;
+  height: 85rpx;
+  line-height: 85rpx;
+  width: 86%;
+  position: relative;
+}
+
+.company__name{
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 15rpx;
+  line-height: 55rpx;
+  font-size: 26rpx;
+  color: #9d9d9d;
+}
+.checkbox{
+  margin: 18rpx 5rpx 0 5rpx;
+}
+.number{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 45rpx;
+}
+
+.company__name text.title{
+  font-size: 26rpx;
+  color: #666;
+}
+
+/* .details__info:nth-child(2n){
+  background: #f9f9f9;
+} */
+.number:after {
+  content: "";
+  display: block;
+  width: 20rpx;
+  height: 20rpx;
+  border: 3rpx solid #8c8e91;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 20rpx;
+  top: 35rpx;
+  z-index: 1;
+}
+.bottom{
+  display: flex;
+  padding-left: 78rpx;
+  font-size: 24rpx;
+}
+.bottom__text{
+  display: flex;
+  padding-right: 80rpx;
+}
+.btn{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50rpx;
+}
+.btn button{
+  width: 326rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 33rpx;
+  justify-content: center;
+}
+.add__btn{
+  display: flex;
+  justify-content: flex-start;
+  background:#008E40;
+}
+.build__btn{
+  display: flex;
+  justify-content: flex-end;
+  background: #fb972c;
+}

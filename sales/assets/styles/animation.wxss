@@ -1,0 +1,26 @@
+@keyframes bottom-shake {
+    0%{
+        left: 0%;
+        right: 30%;
+    }
+    20%{
+        left: 25%;
+        right: 5%;
+    }
+    40%{
+        left: 5%;
+        right: 20%;
+    }
+    60%{
+        left: 20%;
+        right: 10%;
+    }
+    80%{
+        left: 10%;
+        right: 15%;
+    }
+    100%{
+        left: 15%;
+        right: 15%;
+    }
+}

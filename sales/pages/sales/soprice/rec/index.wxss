@@ -1,0 +1,228 @@
+page{
+  height: 100%;
+}
+.box{
+  overflow: scroll;
+  background-color:#f1f2f3;
+  min-height: 100%;
+  border-top: 3rpx solid #008e40;
+  box-sizing: border-box;
+}
+.item{
+  font-size: 30rpx;
+  color: #5f5f5f;
+  border-bottom: 1rpx solid #e0e1e1;
+}
+
+.item__head{
+    height: 92rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left:30rpx;
+    padding-right:32rpx;
+    border-bottom: 3rpx solid #008e40;
+    background: #FFF;
+}
+.text--name{
+    font-size: 30rpx;
+    color:#666;
+}
+.text--status{
+    font-size: 26rpx;
+    float: right;
+}
+.item__content{
+    margin-bottom: 20rpx;
+}
+.text--val{
+    display: flex;
+    justify-content: space-between;
+    padding-left:19rpx;
+    padding-right:45rpx;
+    font-size: 22rpx;
+    line-height: 70rpx;
+    color: #686868;
+    border-bottom: 2rpx solid #d8dddc;
+    background: #fff;
+    position: relative;
+}
+.text--val:after{
+    content: '';
+    display: block;
+    width: 20rpx;
+    height: 20rpx;
+    border: 3rpx solid #c1c2c3;
+    border-left: 0;
+    border-bottom:0 ;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 20rpx;
+    top: 25rpx;
+}
+.text--val:nth-child(odd){
+    background: #f9f9f9;
+}
+.text--num{
+    font-size: 24rpx;
+    color: #666;
+}
+.text--con{
+    font-size: 26rpx;
+    color:#444;
+}
+.details{
+    margin-bottom: 20rpx;
+    border-bottom: 2px solid #d8dddc;
+}
+
+
+.product__head{
+    font-size: 23rpx;
+    line-height: 65rpx;
+    color: #333333;
+}
+.product__content{
+    display: flex;
+    flex-direction:row;
+    padding: 22rpx 0;
+    border-top: 1rpx dashed #a5a5a5;
+}
+.product__img{
+    width: 150rpx;
+    height: 150rpx;
+    border: 1rpx solid #a5a5a5;
+}
+.product__text{
+    padding: 0 20rpx;
+    font-size: 26rpx;
+    line-height:33rpx;
+    flex: 1;
+}
+.product__tags{
+    padding: 8rpx 0;
+}
+.product__text--tag{
+    display: inline-block;
+    font-size: 22rpx;
+    line-height: 40rpx;
+    color: #999999;
+    padding: 0 10rpx;
+    margin-left: 7rpx;
+    margin-top: 7rpx;
+    border: 1rpx dashed #999999;
+    border-radius: 10rpx;
+}
+.product__price{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 22rpx;
+    margin-top:20rpx;
+}
+.price--old{
+    margin-right: 26rpx;
+    color:#919191;
+    text-decoration: line-through;
+}
+
+.item--product{
+    padding:0 20rpx;
+    font-size: 23rpx;
+    color: #555555;
+    background: #ffffff;
+}
+.item--product:nth-child(odd){
+    background: #f9f9f9;
+}
+
+.item--more{
+    font-size: 24rpx;
+    text-align: center;
+    line-height:75rpx ;
+    background: #ffffff;
+}
+.icon__more{
+    display: inline-block;
+    position: relative;
+    width: 30rpx;
+    height: 30rpx;
+}
+.icon__more--active{
+    transform: rotate(180deg);
+    top: 10rpx;
+}
+.icon__more:after{
+    content: '';
+    display: inline-block;
+    width: 15rpx;
+    height: 15rpx;
+    border: 3rpx solid #008e40;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(135deg);
+    position: absolute;
+    left: 5rpx;
+    top: 5rpx;
+}
+.icon__more:before{
+    content: '';
+    display: inline-block;
+    width: 15rpx;
+    height: 15rpx;
+    border: 3rpx solid #008e40;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(135deg);
+    position: absolute;
+    left: 5rpx;
+    top: 15rpx;
+}
+
+.item--cell{
+    height: auto;
+    min-height: 72rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    padding-left:22rpx;
+    padding-right: 48rpx;
+    background: #fff;
+}
+.item--cell:nth-child(odd){
+    background: #f9f9f9;
+}
+.item--top-boder{
+    border-top:1rpx solid #e0e1e1;
+}
+
+.cell__caption{
+    font-size: 24rpx;
+    color: #666666;
+}
+.cell__caption--start{
+    align-self: flex-start;
+    margin: 20rpx 0;
+}
+.cell__val{
+    font-size: 26rpx;
+    color: #444444;
+}
+.cell__val--wrap{
+    max-width: 300px;
+    margin: 20rpx 0;
+}
+.buttons{
+   padding: 30rpx;
+   display: flex;
+}
+.buttons button{
+    margin: 10rpx;
+    height:82rpx;
+    line-height: 82rpx;
+    flex: 1;
+    font-size: 34rpx;
+}
+
+

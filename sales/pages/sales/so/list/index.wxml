@@ -1,0 +1,60 @@
+<view class="box">
+    <view class="searchbar__box">
+        <searchbar></searchbar>
+    </view>
+    <view class="search__condition">
+        <text class="search__item {{po.status==''?'search__item--active':''}}" bind:tap="filterStatus"  data-status="">全部订单</text>
+        <text class="search__item {{po.status==1?'search__item--active':''}}" bind:tap="filterStatus" data-status="1">待接收</text>
+        <text class="search__item {{po.status==2?'search__item--active':''}}" bind:tap="filterStatus" data-status="2">待发货</text>
+        <text class="search__item {{po.status==3?'search__item--active':''}}" bind:tap="filterStatus" data-status="3">待收货</text>
+        <text class="search__item {{po.status==4?'search__item--active':''}}" bind:tap="filterStatus" data-status="4">已完成</text>
+    </view>
+    <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="list"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <view class="list__title">
+                <image class="list__icon" src="/assets/images/icon/block.png"></image>
+                <text class="text-bold">客户：{{'北京快客利餐饮公司'}}</text>
+               <view class="list__title--default" wx:if="{{po.status==''}}">
+                    <text class="text--orange margin-right30" >已完成</text>
+                </view>
+                <view class="list__title--default" wx:if="{{po.status=='1'}}">
+                    <text class="text--orange margin-right30" bindtap='rec'>待接收</text>
+                </view>
+                <view class="list__title--default" wx:if="{{po.status=='2'}}">
+                    <text class="text--orange margin-right30" bindtap='review'>待发货</text>
+                </view>
+                <view class="list__title--default" wx:if="{{po.status=='3'}}">
+                    <text class="text--orange margin-right30"bindtap='review' >待收货</text>
+                </view>
+                <view class="list__title--default" wx:if="{{po.status=='4'}}">
+                    <text class="text--orange margin-right30"bindtap='review' >已完成</text>
+                </view>
+            </view>
+            <view class="item__content">
+                <view class="content__text">
+                    <text class="order">订单号：SO201704190001</text>
+                    <view class="item__time">配送日期:2017年4月26日 星期五</view>
+                </view>
+                <scroll-view scroll-x="true" class="content__prod"  >
+                    <view class="product"  wx:for="{{[1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9]}}" wx:key="i">
+                        <image src="/assets/images/meet.png" class="product__img"></image>
+                        <view class="product__name">土豆块</view>
+                        <view class="text-red">￥20.00/包</view>
+                    </view>
+                </scroll-view>
+
+                <view class="list__item--bottom">
+                     <button size="mini" class="button bg-green text-white" bindtap='rec' >接收</button>
+                     <button size="mini" class="button bg-green text-white" bindtap='dn'>发货</button>
+                     <button size="mini" class="button bg-green text-white" bindtap='close'>结束</button>
+                    <text class="text-bold margin-left20">共120件商品</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+
+
+</view>
+
+
+

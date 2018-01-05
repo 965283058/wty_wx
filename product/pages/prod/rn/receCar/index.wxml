@@ -1,0 +1,30 @@
+
+  <view class="search__condition">
+      <view class="search__item"><checkbox class='gwc_check'></checkbox>全选</view>
+      <text class="search__item">清空</text>
+      <text class="search__item">删除</text>
+  </view>
+  <view class='con_list' wx:for="{{[1,2,3,4]}}">
+    <checkbox class='con_list_check'></checkbox>
+    <image class="con_list_img" src="https://cloud.openbang.net/wtyunstatic/product/image/default.png"></image>
+    <view class='con_text'>
+      <text class='con_text_01'>R010010001/带皮五花肉（宏都）</text>
+      <text class='con_text_02'>真空冷鲜(2.5kg/包)</text>
+    </view>
+    <view class='add_con'>
+      <view class='add_con_raa'>
+        <navigator class='reduce'>-</navigator>
+        <input class='add_num'  placeholder='12'/>
+        <navigator class='add'>+</navigator>
+      </view> 
+    </view>
+  </view>
+  <view class='car_footer'>
+    <checkbox class='footer_check'></checkbox>
+    <text class='footer_all'>全选</text>
+    <view class='account__text'>
+        <text  class="account__pay">数量合计:</text>
+        <text class='bold'>700</text>
+    </view>
+     <button type='button'  class="go__total">去入库</button> 
+  </view>

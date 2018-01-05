@@ -1,0 +1,17 @@
+.box{
+  background-color: #fafafa;
+  border-top: 3rpx solid #008e40;
+}
+.input__box{
+  height: auto;
+  min-height: 95rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom:1rpx solid  #dde0e0;
+  padding: 0 50rpx 0 30rpx;
+  background: #ffffff;
+}
+.input__box:nth-child(even){
+  background-color: #f9f9f9;
+}

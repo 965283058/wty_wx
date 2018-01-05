@@ -1,0 +1,68 @@
+<view class="box">
+    <searchbar></searchbar>
+    <view class="search__condition">
+        <text class="search__item">最近购买</text>
+        <text class="search__item ">新品</text>
+        <text class="search__item">销量</text>
+        <text class="search__item search__item--active search__item--desc">价格</text>
+        <text class="search__item">筛选</text>
+    </view>
+    <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="list"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <view class="list__title">
+                <text class="text-bold">编码：P01233423423</text>
+                <view class="list__title--default">
+                    <text class="text-succ">有效</text>
+                    <text class="text-succ"> / 已上架</text>
+                </view>
+            </view>
+            <view class="list__item">
+                <view class="item__content">
+                    <image class="item__img" src="https://cloud.openbang.net/wtyunstatic/product/image/default.png"></image>
+                    <view class="item__text">
+                        <text class="list__item--text">得利斯土豆丝（首农裕农）A级土豆丝（首农裕农）A级土豆丝....</text>
+                        <view class="item__tags">
+                            <text class="item__text--tag">去皮</text>
+                            <text class="item__text--tag">切丝</text>
+                            <text class="item__text--tag">0.2*0.2*3-6cm </text>
+                            <text class="item__text--tag">2.5Kg/包</text>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="list__item--bottom text-right">
+                    <view class="list__button">
+                        <image class="list__icon--btn" src="/assets/images/icon/rackUp.png"></image>
+                        <text>上架</text>
+                    </view>
+                    <view class="list__button">
+                        <image class="list__icon--btn" src="/assets/images/icon/rackDown.png"></image>
+                        <text>下架</text>
+                    </view>
+                    <view class="list__button" bindtap=''>
+                        <image class="list__icon--btn" src="/assets/images/icon/list.png"></image>
+                        <text>放入收货篮</text>
+                    </view>
+                    <view class="list__button">
+                        <image class="list__icon--btn" src="/assets/images/icon/close.png"></image>
+                        <text>放入出货篮</text>
+                    </view>
+                    <view class="list__button"> 
+                        <image class="list__icon--btn" src="/assets/images/icon/edit.png"></image>
+                        <text  bindtap='edit'>编辑</text>
+                    </view>
+                     <view class="list__button"> 
+                        <image class="list__icon--btn" src="/assets/images/icon/edit.png"></image>
+                       <navigator  url="/pages/prod/prodinfo/preview/index" >
+                          <text>预览</text>
+                       </navigator>   
+                    </view>
+                </view>
+            </view>
+        </view>
+ <button class="cell-btn button--add bg-green" size="default" bindtap="add">新建商品</button>        
+    </scroll-view>
+</view>
+
+
+

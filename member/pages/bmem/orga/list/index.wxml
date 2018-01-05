@@ -1,0 +1,120 @@
+<view class="box">
+  <form bindsubmit="formSubmit" style="width: 100%">
+    <scroll-view class="scroll-box" scroll-y="true" style="">
+      <view class="tree__class">
+        <view class='company__box'>
+          <view class="company__name">
+            <text class="title">北京XXX商贸公司</text>
+            <text class="number">987098789098888888 </text>
+          </view>
+          <view class="bottom">
+            <navigator  url="/pages/bmem/employee/list/index" >
+              <text class="bottom__text">员工</text>
+            </navigator>
+            <navigator url="/pages/bmem/orga/addBranch/index">
+              <text class="bottom__text">新增下级</text>
+            </navigator>
+          </view>
+        </view>
+        <view class="box">
+          <view class='hb__company'>
+            <view class="company__name">
+              <text class="title">华北大区</text>
+              <text class="number">有效</text>
+            </view>
+            <view class="bottom">
+              <navigator  url="/pages/unfinish/index" >
+                <text class="bottom__text">无效</text>
+              </navigator>
+              <navigator  url="/pages/bmem/employee/list/index" >
+                <text class="bottom__text">员工</text>
+              </navigator>
+              <navigator url="/pages/bmem/orga/addBranch/index">
+                <text class="bottom__text">新增下级</text>
+              </navigator>
+            </view>
+          </view>
+          <view class="center">
+            <view class="company__name">
+              <text class="dining">XX餐厅</text>
+              <text class="text">有效</text>
+            </view>
+            <view class="bottom">
+              <navigator  url="/pages/unfinish/index" >
+                <text class="bottom__text">无效</text>
+              </navigator>
+              <navigator  url="/pages/bmem/employee/list/index" >
+                <text class="bottom__text">员工</text>
+              </navigator>
+            </view>
+
+          </view>
+          <view class="center">
+            <view class="company__name">
+              <text class="dining">XX餐厅</text>
+              <text class="text">有效</text>
+            </view>
+            <view class="bottom">
+              <navigator  url="/pages/unfinish/index" >
+                <text class="bottom__text">无效</text>
+              </navigator>
+              <navigator  url="/pages/bmem/employee/list/index" >
+                <text class="bottom__text">员工</text>
+              </navigator>
+            </view>
+
+          </view>
+        </view>
+        <view class="box">
+          <view class='hb__company'>
+            <view class="company__name">
+              <text class="title">华北大区</text>
+              <text class="number">有效</text>
+            </view>
+            <view class="bottom">
+              <navigator  url="/pages/unfinish/index" >
+                <text class="bottom__text">无效</text>
+              </navigator>
+              <navigator  url="/pages/bmem/employee/list/index" >
+                <text class="bottom__text">员工</text>
+              </navigator>
+              <navigator url="/pages/bmem/orga/addBranch/index">
+                <text class="bottom__text">新增下级</text>
+              </navigator>
+            </view>
+          </view>
+          <view class="center">
+            <view class="company__name">
+              <text class="dining">XX餐厅</text>
+              <text class="text">有效</text>
+            </view>
+            <view class="bottom">
+              <navigator  url="/pages/unfinish/index" >
+                <text class="bottom__text">无效</text>
+              </navigator>
+              <navigator  url="/pages/bmem/employee/list/index" >
+                <text class="bottom__text">员工</text>
+              </navigator>
+            </view>
+
+          </view>
+          <view class="center">
+            <view class="company__name">
+              <text class="dining">XX餐厅</text>
+              <text class="text">有效</text>
+            </view>
+            <view class="bottom">
+              <navigator  url="/pages/unfinish/index" >
+                <text class="bottom__text">无效</text>
+              </navigator>
+              <navigator  url="/pages/bmem/employee/list/index" >
+                <text class="bottom__text">员工</text>
+              </navigator>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </form>
+</view>

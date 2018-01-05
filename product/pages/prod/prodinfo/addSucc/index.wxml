@@ -1,0 +1,16 @@
+<view class="box">
+    <view class="logo">
+        <image class="logo__image" src="/assets/images/icon/submitSucc.png"></image>
+        <view class="text-succ">商品提交成功!</view>
+    </view>
+        <view class="item__cell">
+            <text>商品编号</text>
+            <text class="text-bold margin-left20">P20170327001</text>
+        </view>
+    <button class="cell-btn bg-green" bindtap="toList">返回列表</button>
+    <button class="cell-btn bg-green" bindtap="toAdd">继续新增</button>
+    <button class="cell-btn bg-green" bindtap="toMore">完善更多资料</button>
+</view>
+
+
+

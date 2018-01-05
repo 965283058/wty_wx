@@ -1,0 +1,68 @@
+<view class="box">
+    <swiper class="images" indicator-dots="true" circular="true" indicator-color="#ffffff" indicator-active-color="#00c8fa" autoplay="true" interval="3000" duration="500">
+        <block wx:for="{{vo.imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="image__item"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="item">
+         <text>￥</text>
+         <text class="text--price text-red">20.00</text>
+    </view>
+    <view class="item">
+        <text><text class="text-red">S010070006</text>  土豆丝（首农裕农）A级去皮，切丝，0.2*0.2*3-6cm     2.5kg/包</text>
+    </view>
+    <view class="item">
+        <text >供 应 商：</text>
+        <text class="text--val text--sup">G00001 北京市裕农优质农产品种植公司</text>
+    </view>
+    <view class="item">
+        <text >商品类别：</text>
+        <text class="text--val">蔬菜类</text>
+    </view>
+    <view class="item">
+        <text >品  牌：</text>
+        <text class="text--val">农夫山泉</text>
+    </view>
+    <view class="item">
+        <text >商品品号：</text>
+        <text class="text--val">012324322</text>
+    </view>
+    <view class="item">
+        <text >交易单位：</text>
+        <text class="text--val">包</text>
+    </view>
+
+    <tabs data="{{['商品详情','规格参数','包装售后']}}">
+        <view slot="0" class="product__content">
+            <view> 本产品质保期为：一年质保</view>
+           <view> 售后服务电话：400-888-1111</view>
+           <view> 品牌官方网站：</view>
+        </view>
+        <view  slot="1" class="product__content">
+            fadfds
+        </view>
+        <view  slot="2" class="product__content">
+            fdasfdas
+        </view>
+    </tabs>
+
+    <view class="buttons">
+        <view class="button button--small">
+            <image src="/assets/images/icon/follow.png" mode="aspectFit"></image>
+        </view>
+        <view class="button button--small">
+            <image src="/assets/images/icon/car.png" mode="aspectFit">
+                <text class="button__tip">12</text>
+            </image>
+
+        </view>
+        <view class="button button--big button--buy">加入购物车</view>
+        <view class="button button--big bg-green">直接购买</view>
+    </view>
+
+</view>
+
+
+

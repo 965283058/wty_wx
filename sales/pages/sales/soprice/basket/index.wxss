@@ -1,0 +1,114 @@
+@import "/assets/styles/animation.wxss";
+
+page{
+  height: 100%;
+}
+.box{
+  background-color:#f1f2f3;
+  min-height: 100%;
+  color:#848484;
+  background: #fff;
+  border-top:3rpx solid #008e40;
+  box-sizing: border-box;
+}
+.search__condition{
+  border-bottom: 1rpx solid #dbdbdb;
+  background-color: #fff;
+  display: flex;
+}
+.search__item{
+  flex: 1;
+  font-size: 22rpx;
+  line-height: 85rpx;
+  text-align: center;
+}
+
+.search__item--active{
+  color: #008e40;
+  position: relative;
+}
+
+.search__item--active:before{
+  animation: bottom-shake 0.4s ease-in;
+  content: "";
+  display: block;
+  height: 8rpx;
+  border-top-left-radius: 8rpx ;
+  border-top-right-radius: 8rpx ;
+  background: #008e40;
+  border-left: 0;
+  border-bottom: 0;
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom:0;
+  z-index: 1;
+}
+
+.select--all{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding-left:20rpx;
+    height: 80rpx;
+    font-size: 22rpx;
+    background:#FFFFFF;
+    border-bottom: 1rpx dashed #a5a5a5;
+}
+.list{
+    border-bottom: 1rpx solid #a5a5a5;
+    padding-left: 15rpx;
+}
+.item{
+  width: 100%;
+  padding: 20rpx;
+  padding-left: 0;
+  background: #FFF;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction:row;
+  border-top: 1rpx dashed #a5a5a5;
+}
+.item:first-child{
+    border: 0;
+}
+.item__img{
+  width: 150rpx;
+  height: 150rpx;
+  border: 1rpx solid #a5a5a5;
+}
+.item__content{
+  padding: 0 20rpx;
+  flex: 1;
+  font-size:24rpx;
+  line-height: 36rpx;
+}
+
+.content__text{
+  display: block;
+  color:#a5a5a5;
+  line-height: 42rpx;
+}
+
+.item__btn{
+  margin-top:40rpx;
+  width:98rpx;
+  height:56rpx;
+  border:1rpx solid #b9b9b9;
+  border-radius: 6rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+.button{
+  border-top:1rpx solid #dcdcdc;
+}
+.btn{
+  margin-top:64rpx;
+  width:90%;
+  background:#008e40;
+  color:#FFF;
+  box-shadow: 3px 5px 5px #b3e6b3;
+}

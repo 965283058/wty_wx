@@ -1,0 +1,31 @@
+<view class="box">
+    <searchbar></searchbar>
+    <view class="search__condition">
+        <text class="search__item {{po.status==''?'search__item--active':''}}" bind:tap="filterStatus"  data-status="">全部订单</text>
+        <text class="search__item {{po.status==1?'search__item--active':''}}" bind:tap="filterStatus" data-status="1">待审核</text>
+        <text class="search__item {{po.status==2?'search__item--active':''}}" bind:tap="filterStatus" data-status="2">待发货</text>
+        <text class="search__item {{po.status==3?'search__item--active':''}}" bind:tap="filterStatus" data-status="3">待收货</text>
+        <text class="search__item {{po.status==4?'search__item--active':''}}" bind:tap="filterStatus" data-status="4">已完成</text>
+    </view>
+    <view class="select--all">
+        <switch  class="margin-right10" bind:change="selectAll"></switch>
+        <text class="text-bold">全选</text>
+    </view>
+    <scroll-view class="list" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="item"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <switch class="margin-top50 margin-right10" checked="{{item}}"></switch>
+            <image class="item__img" src="/assets/images/meet.png"></image>
+            <view class="item__content">
+                <text class="list__item--text text-bold">R010010001/带皮五花肉（宏都) 真空冷鲜（2.5kg/包）</text>
+                <text class="content__text">G00029-北京中瑞食品有限公司</text>
+                <text class="text-red margin-right20">¥60.00</text>
+                <text class="list__item--text">¥24.00/kg</text>
+            </view>
+            <view class="item__btn">61.00</view>
+        </view>
+    </scroll-view>
+    <button class="cell-btn bg-green ">下一步向客户定价</button>
+</view>
+
+
+

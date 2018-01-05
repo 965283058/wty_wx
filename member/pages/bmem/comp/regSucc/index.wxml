@@ -1,0 +1,49 @@
+<view class='page'>
+  <view class='welcome_hd'>
+    <icon class='welcome_icon' type="success" size="60" />
+    <text class='welcome_icon-text'>欢迎注册北京XX农业科技有限公司!</text>
+    <view class="text__box">
+      <text class='welcome_text' bindtap="toWorkbench">企业工作台</text>
+      <text class='welcome_text' bindtap="toMoreCard">完善企业资料</text>
+      <text class='welcome_text1' bindtap="toMyAccount"> 我的账户</text>
+    </view>
+
+  </view>
+  <view class='welcome__status'>
+    <text class='welcome__status-text'>--您是普通会员，可以握手六家交易伙伴。\n下面是其他公司给你公司发起的握手信息，请及时处理--</text>
+  </view>
+  <view class="publicity__info">
+    <text class="publicity__title">我的客户</text>
+  </view>
+  <scroll-view class="scroll-box" scroll-y="true" style="">
+    <view class="details__info">
+      <view class="company__name">
+        <text class="title">北京XXX商贸公司\n</text>
+        <text class="number">987098789098888888 接受/已接受</text>
+      </view>
+    </view>
+    <view class="details__info">
+      <view class="company__name">
+        <text class="title">北京XXX商贸公司\n</text>
+        <text class="number">987098789098888888接受/已接受</text>
+      </view>
+      
+    </view>
+  <view class="publicity__info">
+    <text class="publicity__title">我的供应商</text>
+  </view>
+    <view class="details__info">
+      <view class="company__name">
+        <text class="title">北京XXX商贸公司\n</text>
+        <text class="number">987098789098888888  接受/已接受\n</text>
+      </view>
+     
+    </view>
+    <view class="details__info">
+      <view class="company__name">
+        <text class="title">北京XXX商贸公司\n</text>
+        <text class="number">987098789098888888接受/已接受</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

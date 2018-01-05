@@ -1,0 +1,32 @@
+  <view>
+      北京XXX商贸公司
+  </view>
+  <view class="box">
+    <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="list"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <view class="list__title">
+                <text>儿童营养</text>
+                <view class="list__title--default">
+                    <text class="text-succ">有效</text>
+                </view>
+            </view>
+            <view class="list__content">
+                <view class="list__content--text list__content--right">
+                    <view class="list__button">
+                        <image class="list__icon--btn" src="/assets/images/icon/close.png"></image>
+                        <text>无效</text>
+                    </view>
+                    <view class="list__button" bindtap="edit">
+                        <image class="list__icon--btn" src="/assets/images/icon/edit.png"></image>
+                        <text>编辑</text>
+                    </view>
+                    <view class="list__button">
+                        <image class="list__icon--btn" src="/assets/images/icon/del.png"></image>
+                        <text>删除</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+     <button class="bg-green cell-btn button--add" size="default" bindtap="add">新建商品标签</button>
+</view>

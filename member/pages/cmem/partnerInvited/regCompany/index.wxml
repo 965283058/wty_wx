@@ -1,0 +1,41 @@
+<view class="box">
+  <form bindsubmit="formSubmit" style="width: 100%">
+    <view class="input__box">
+      <text class="text">统一编号</text>
+      <input class="input" type="text" placeholder="有默认值,不可改" />
+    </view>
+    <view class="input__box">
+      <text class="text">公司全称</text>
+      <input class="input" type="tel" v-model="po.mobile" placeholder="有默认值,可改"></input>
+    </view>
+    <view class="input__box">
+      <text class="text">公司简称</text>
+      <input class="input" type="tel" v-model="po.mobile" placeholder="有默认值,可改"></input>
+    </view>
+     <view class='list_bd' >
+        <text class='list_title1'>公司性质</text>
+         <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="name">
+    {{array[index]}}
+    </view>
+  </picker>
+    </view>        
+     <view class='list_bd' bindtap="toCompIndustrySelect">
+        <text class='list_title1'>所属行业</text>
+    </view>
+    <view class='list'>
+      <text class='list_title'>营业执照</text>
+      <text class='logo'>已设置</text>
+      <!-- <image class='logo' src='/assets/images/logo.png'></image> -->
+    </view>    
+    <view class='list'>
+      <text class='list_title'>食品经营许可证</text>
+      <text class='logo'>已设置</text>
+      <!-- <image class='logo' src='/assets/images/logo.png'></image> -->
+    </view>
+    <view class='btn'>
+      <button class="next__btn" formType="submit" size="default" bindtap='toSave'>提交</button>
+      <button class="next__btn" formType="submit" size="default">返回</button>
+    </view>
+  </form>
+</view>

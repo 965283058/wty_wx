@@ -1,0 +1,18 @@
+<view class='page'>
+    <view class="scroll-box">
+        <block wx:for="{{vo.list}}">
+            <view class='title_bottom'>
+                <text class='item_title'>{{item.name}}</text>
+            </view>
+            <view class='item'>
+                <button bindtap="select" data-info="{{child}}" class='item_btn {{po.value.id==child.id?"item_btn--active":""}}'  wx:for="{{item.children}}"  wx:for-item="child">{{child.name}}</button>
+            </view>
+        </block>
+
+
+        <view class='end'>
+            <button class='btn reset' bindtap="reset">重置</button>
+            <button class='btn' bindtap="sure">确定</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,76 @@
+<view class="box">
+    <view class="info">
+        <view class="text--val">订单编号：SO20170327002</view>
+        <view class="text--val">发货批次：001</view>
+        <view class="text--val">至客户：KT1101101 百度K1快客利餐厅</view>
+        <view class="text--val">送达时间：2017年06月04日 星期一</view>
+        <view class="text--val">送达地址：北京市海淀区软件园西二路西北旺东路10号院东区6号楼</view>
+    </view>
+    <view class="product">
+        <view class="product__info">
+            <text class="margin-left50 padding-left50">商品详情</text>
+            <view class="product__content">
+                <image class="product__img" src="/assets/images/meet.png"></image>
+                <text class="product__item--text">土豆丝（首农裕农）A级土豆丝...</text>
+                <view class="margin-left30 margin-top10">
+                    <text class="text-red">￥60.00</text>
+                    <text class="price--old">(￥24.00)</text>
+                </view>
+            </view>
+        </view>
+        <view class="product__num">
+            <view>
+                发货量/实收量
+            </view>
+            <view class="margin-top50">
+                10/5
+            </view>
+        </view>
+    </view>
+
+    <view class="item--cell margin-top20">
+        <text class="cell__caption">图片上传：</text>
+        <view>
+            <image class="cell__image" src="/assets/images/icon/img.png"></image>
+            <image class="cell__image" src="/assets/images/icon/img.png"></image>
+            <image class="cell__image" src="/assets/images/icon/img.png"></image>
+            <image class="cell__image" src="/assets/images/icon/img.png"></image>
+            <image class="cell__image" src="/assets/images/icon/img.png"></image>
+            <image class="cell__image" src="/assets/images/icon/img.png"></image>
+            <image class="cell__image" src="/assets/images/icon/img.png"></image>
+            <image class="cell__image" src="/assets/images/icon/img.png"></image>
+            <image class="cell__image" src="/assets/images/icon/img.png"></image>
+            <view class="cell__camera">
+                <image class="cell__image cell__image--mini" src="/assets/images/icon/camera.png"></image>
+                <view>(最多9张)</view>
+            </view>
+        </view>
+    </view>
+    <view class="item--cell">
+        <text class="cell__caption">处理方式：</text>
+        <view>
+            <button size="mini" class="button bg-white">现场报废</button>
+            <button size="mini" class="button bg-orange text-white">入库待检</button>
+            <button size="mini" class="button bg-white">入库销售</button>
+        </view>
+    </view>
+    <view class="item--cell" wx:if="{{vo.mode!='done'}}">
+        <text class="cell__caption cell__caption--start">备注：</text>
+        <textarea auto-height="true" maxlength="-1" class="cell__input"/>
+    </view>
+        <view class="item item--cell" wx:if="{{vo.mode=='done'}}">
+        <text class="cell__caption">备注</text>
+        <text class="cell__val cell__val--wrap"> 文字可以折行文字可以折行文字可以折行文字可以折行</text>
+    </view>
+    <button wx:if="{{vo.mode=='add'}}" class="bg-green text-white margin-top50 margin-bottom50 margin-left50 margin-right50" bindtap='submit'>提 交</button>
+
+    <view class="buttons" wx:if="{{vo.mode=='audit'}}" >
+        <button class="bg-green text-white " bindtap='pass'>通    过</button>
+        <button class="bg-orange text-white " bindtap='refuse'>审核拒绝</button>
+        <button class="bg-green text-white " bindtap='next'>通过继续下一个</button>
+    </view>
+
+</view>
+
+
+

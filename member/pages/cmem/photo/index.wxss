@@ -1,0 +1,52 @@
+.page{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.list{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.list_1{
+  width: 100%;
+  height: 150rpx;
+  margin-top: 70rpx;
+}
+.list_btn{
+  width: 230rpx;
+  height: 230rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.list_image{
+  width: 230rpx;
+  height: 230rpx;
+   margin-left: 0rpx;
+  margin-top: 20rpx;
+  padding-left: 15rpx;
+}
+.list_btn1{
+  background: #FFA500;
+  width: 320rpx;
+display: inline-block;
+margin: 30rpx 25rpx;
+font-size: 33rpx;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.list_btn2{
+  display: inline-block;
+  width: 320rpx;
+  margin: 30rpx 25rpx;
+  background: #008E40;
+  font-size: 33rpx;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;  
+}
+.color{
+  width: 100%;
+  height: 100%;
+   background:	#f3f5f7;
+}

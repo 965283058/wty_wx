@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择商品进行定价",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index"
+  }
+}

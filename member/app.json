@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/funclist/index",
+    "pages/cmem/reg/reg1/index",
+    "pages/cmem/reg/reg2/index",
+    "pages/cmem/reg/reg3/index",
+    "pages/cmem/regInvited/open/index",
+    "pages/cmem/regInvited/reg2/index",
+    "pages/cmem/regInvited/reg3/index",
+    "pages/cmem/partnerInvited/open/index",
+    "pages/cmem/partnerInvited/reg2/index",
+    "pages/cmem/partnerInvited/reg3/index",
+    "pages/cmem/partnerInvited/regCompany/index",
+    "pages/cmem/partnerInvited/loadsucc/index",
+    "pages/cmem/load/invitedload/index",
+    "pages/bmem/department/list/index",
+
+    "pages/bmem/complist/index",
+    "pages/bmem/comp/viewCard/index",
+    "pages/bmem/ruleconfig/view/index",
+    "pages/bmem/ruleconfig/dayRangSelect/index",
+    "pages/bmem/ruleconfig/prodTypeSelect/index",
+    "pages/bmem/ruleconfig/payDayNum/index",
+    "pages/bmem/ruleconfig/coderule/index",
+    "pages/bmem/orga/list/index",
+    "pages/bmem/orga/addArea/index",
+    "pages/bmem/orga/addBranch/index",
+    "pages/bmem/employee/list/index",
+    "pages/bmem/employee/add/index",
+    "pages/bmem/comp/moreCard/index",
+    "pages/bmem/comp/more/index",
+    "pages/bmem/comp/regSucc/index",
+    "pages/bmem/comp/partnerInvited/invitSucc/index",
+    "pages/bmem/comp/compNatureSelect/index",
+    "pages/bmem/comp/compIndustrySelect/index",
+    "pages/workbench/step2/index",
+    "pages/workbench/step1/index",
+    "pages/cmem/password/index",
+    "pages/bmem/comp/selectedproducts/index",
+    "pages/cmem/information/index",
+    "pages/bmem/workbench/index",
+    "pages/cmem/account/index",
+    "pages/unfinish/index",
+    "pages/cmem/photo/index",
+    "pages/bmem/comp/reg/index",
+    "pages/bmem/department/add/index"
+
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#008E40",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "light"
+  }
+}

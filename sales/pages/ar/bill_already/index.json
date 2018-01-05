@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "已出账单列表",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index"
+  }
+}

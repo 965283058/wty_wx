@@ -1,0 +1,23 @@
+<view class="box">
+    <searchbar></searchbar>
+    <view class="search__condition">
+        <text class="search__item">供应商级别</text>
+        <text class="search__item search__item--active">新建日期</text>
+        <text class="search__item">修改日期</text>
+    </view>
+    <scroll-view class="scroll-box" scroll-y="true" style="max-height:{{vo.scrollViewHeight}}px;">
+        <view class="list"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <view class="list__title">
+                <image class="list__icon--title" src="/assets/images/icon/block.png"></image>
+                <text>餐厅1</text>
+                <text class="list__title--code">[ 12321321321 ]</text>
+                <text class="list__title--default text-succ">有效</text>
+            </view>
+            <view class="list__content">
+                <text class="list__content--text">A级别</text>
+                <text class="list__content--text">A000001</text>
+            </view>
+        </view>
+    </scroll-view>
+     <button class="cell-btn bg-green button--add"  size="default" bindtap="add">新建供应商</button>
+</view>

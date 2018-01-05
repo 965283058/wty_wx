@@ -1,0 +1,30 @@
+<view class='page'>
+  <view class='list'>
+    <text class='list_title'>头像</text>
+    <image class='logo' src='/assets/images/logo.png'></image>
+  </view>
+
+  <view class='list_bd'>
+    <text class='list_title1'>用户名</text>
+    <text class='list_title1-right1'>第一次修改</text>
+  </view>
+<view class='list_bd'>
+    <text class='list_title1'>姓名</text>
+    <text class='list_title1-right1'>XXXX</text>
+  </view>
+ <view class='list_bd'>
+    <text class='list_title1'>手机号</text>
+    <text class='list_title1-right1'>绑定手机号</text>
+  </view>
+<view class='list_bd'>
+    <text class='list_title1'>邮箱</text>
+    <text class='list_title1-right1'>XXXX@qq.com</text>
+  </view>
+ 
+<view class='list_bd'>
+    <text class='list_title1'>个性签名</text>
+    <text class='list_title1-right1'>未填写</text>
+  </view>
+ 
+    <button class="next__btn" formType="submit" size="default" >确定</button>
+</view>

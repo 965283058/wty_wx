@@ -1,0 +1,60 @@
+<view class="box">
+    <view class="cell cell--input">
+        <text class="cell__caption">条码编号</text>
+        <input type="text" placeholder="请输入条码编号"/>
+    </view>
+    <view class="cell cell--input">
+        <text class="cell__caption">包装规格</text>
+        <input type="text" placeholder="请输入商品包装规格"/>
+    </view>
+    <picker class="cell">
+        <view class="cell--select">
+            <text class="cell__caption">商品自定义类别</text>
+            <text class="cell--val"></text>
+        </view>
+    </picker>
+    <picker class="cell">
+        <view class="cell--select">
+            <text class="cell__caption">交易单位</text>
+            <text class="cell--val">Kg</text>
+        </view>
+    </picker>
+    <picker class="cell">
+        <view class="cell--select">
+            <text class="cell__caption">库存单位</text>
+            <text class="cell--val">Kg</text>
+        </view>
+    </picker>
+    <picker class="cell" range="{{['是','否']}}">
+        <view class="cell--select">
+            <text class="cell__caption">是否批号管理</text>
+            <text class="cell--val">否</text>
+        </view>
+    </picker>
+    <picker class="cell" range="{{['是','否']}}">
+        <view class="cell--select">
+            <text class="cell__caption">是否SN管理</text>
+            <text class="cell--val">否</text>
+        </view>
+    </picker>
+    <view class="cell cell--input">
+        <text class="cell__caption">出 成 率</text>
+        <input type="text" placeholder="请输入出成率（净菜特有属性）"/>
+    </view>
+    <view class="cell cell--input">
+        <text class="cell__caption">税 率</text>
+        <input type="text" placeholder="请输入税率"/>
+    </view>
+
+    <picker class="cell" range="{{['总仓','北京1号仓库']}}">
+        <view class="cell--select">
+            <text class="cell__caption">默认仓库</text>
+            <text class="cell--val">总仓</text>
+        </view>
+    </picker>
+    <button class="cell-btn bg-green" bindtap="save">保存</button>
+    <button class="cell-btn bg-green" bindtap="save">放弃</button>
+</view>
+
+
+

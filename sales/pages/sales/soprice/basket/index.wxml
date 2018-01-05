@@ -1,0 +1,28 @@
+<view class="box">
+    <searchbar></searchbar>
+    <view class="select--all">
+        <switch  class="margin-right10" bind:change="selectAll"></switch>
+        <text class="text-bold">全选/添加商品链接/清空/删除</text>
+    </view>
+    <view class="">
+    <text bindtap='chooseprod'>点我添加商品</text>
+    </view>
+
+    <scroll-view class="list" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="item"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <switch class="margin-top50 margin-right10" checked="{{item}}"></switch>
+            <image class="item__img" src="/assets/images/meet.png"></image>
+            <view class="item__content">
+                <text class="list__item--text text-bold">R010010001/带皮五花肉（宏都) 真空冷鲜（2.5kg/包）</text>
+                <text class="content__text">G00029-北京中瑞食品有限公司</text>
+                <text class="text-red margin-right20">¥60.00</text>
+                <text class="list__item--text">¥24.00/kg</text>
+            </view>
+            <view class="item__btn">61.00</view>
+        </view>
+    </scroll-view>
+    <button class="cell-btn bg-green " bindtap='add'>下一步向客户定价</button>
+</view>
+
+
+

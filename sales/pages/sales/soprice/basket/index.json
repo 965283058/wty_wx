@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我要定价",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index",
+    "switch": "/component/switch/index"
+  }
+}

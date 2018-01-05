@@ -1,0 +1,32 @@
+<view class="container">
+    <form bindsubmit="formSubmit" style="width: 100%">
+        <view class="name">
+            <text bindtap='toSave'>系统默认</text>
+        </view>
+        <view class="write_enter">
+            <text bindtap='toSave'>手动录入</text>
+        </view>
+        <picker slot="content" value="{{po.choose}}" range="{{vo.chooseList}}" class="select">
+            <text class="bill__data">自定义（暂不支持）</text>
+        </picker>
+        <view class="prefix">
+            <text class="prefix__text">前缀</text>
+            <input type="text" slot="content" class="input" placeholder="请输入前缀"/>
+        </view>
+        <view class="running">
+            <text class="running__data">流水周期</text>
+            <view class="data__box">
+                <text class="year">按年</text>
+            </view>
+        </view>
+        <view class="running">
+            <text class="running__data">流水</text>
+            <view class="data__box">
+                <text class="number">4位</text>
+            </view>
+        </view>
+
+        <button class="save__btn" formType="submit" size="default" bindtap='toSave'>保存</button>
+    </form>
+</view>
+

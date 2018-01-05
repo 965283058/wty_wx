@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/funclist/index",
+    "pages/unfinish/index",
+    "pages/prod/workbench/index",
+    "pages/prod/complist/index",
+
+    "pages/dn/deliveryInfo/index",
+    "pages/dn/submitSucc/index",
+    "pages/dn/submit/index",
+    "pages/dn/audit/index",
+    "pages/prodinfo/category/index",
+    "pages/prodinfo/address/list/index",
+    "pages/prodinfo/address/add/index",
+    "pages/prodinfo/shopMsg_cg/index",
+    "pages/prodinfo/unitConver/index",
+    "pages/prodinfo/addUnitConver/index",
+    
+    "pages/prod/distribution/add/index",
+    "pages/prod/distribution/addSucc/index",
+    "pages/prod/distribution/list/index",
+    
+    "pages/prod/prodinfo/list/index",
+    "pages/prod/prodinfo/add/index",
+    "pages/prod/prodinfo/prodTypeSelect/index",
+    "pages/prod/prodinfo/addSucc/index",
+    "pages/prod/prodinfo/preview/index",
+    "pages/prod/prodinfo/more/index",
+    "pages/prod/prodinfo/moreBase/index",
+    "pages/prod/prodinfo/moreDescribe/index",
+    "pages/prod/prodinfo/morePurchaseInfo/index",
+    "pages/prod/prodinfo/moreSaleInfo/index",
+    "pages/prod/prodinfo/moreSearchSetting/index",
+    
+     "pages/prod/prodtag/list/index",
+     "pages/prod/prodtag/add/index",
+    
+    "pages/prod/rn/list/index",
+    "pages/prod/rn/receCar/index"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

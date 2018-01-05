@@ -1,0 +1,23 @@
+<view class="box">
+    <view class="input__box">
+        <text class="text number">+86</text>
+        <input class="input" type="number" placeholder="请输入手机号" maxlength="11" value="{{po.mobile}}"
+               bindinput="mobileSync"/>
+    </view>
+    <view class="input__box">
+        <text class="text">验证码</text>
+        <view class="input__bg">
+            <input class="input valide__input" bindinput="codeSync" type="text" value="{{po.code}}" placeholder="请输入图片验证码"/>
+        </view>
+        <image class="sms" bindtap="updateImg" src="{{vo.codeUrl}}"></image>
+
+    </view>
+    <view class='checkbox'>
+        <!--<label for="">-->
+        <checkbox value="{{item.name}}" checked="{{vo.checked}}" bindtap="checkboxSync"/>
+        我已阅读并同意《旺客云注册协议》
+        <!--</label>-->
+    </view>
+    <button class="next__btn" bindtap='toValidPicCode'>下一步</button>
+</view>
+

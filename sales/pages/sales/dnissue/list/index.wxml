@@ -1,0 +1,41 @@
+<view class="box">
+    <view class="box__search-box">
+        <searchbar></searchbar>
+    </view>
+    <view class="search__condition">
+        <text class="search__item {{po.status==''?'search__item--active':''}}" bind:tap="filterStatus" data-status="">问题处理</text>
+        <text class="search__item {{po.status==1?'search__item--active':''}}" bind:tap="filterStatus" data-status="1">待审核</text>
+        <text class="search__item {{po.status==2?'search__item--active':''}}" bind:tap="filterStatus" data-status="2">已处理</text>
+    </view>
+    <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="list" wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <view class="list__title">
+                <text class="list-title__text">订货号：{{'S031232131221'}}</text>
+                <text class="list-title__text">发货批次：{{'001'}}</text>
+                <text class="list-title__text">配送时间：{{'2017年4月3日 星期一'}}</text>
+                <text class="list-title__text">客户：{{'KH001-客户1'}}</text>
+            </view>
+            <view class="item__content">
+                <view class="content__prod" wx:for="{{[1,2]}}" wx:key="i">
+                    <image src="/assets/images/meet.png" class="product__img"></image>
+                    <view class="product__content">
+                        <view class="product__name">土豆丝（首农裕农）裕农） A级土豆丝....</view>
+                        <view>
+                            <text class="text-red">￥20.00</text>
+                            <text class="margin-left10">(￥24.00/kg)</text>
+                        </view>
+                        <view class="">发货数量/实收数量：10/5</view>
+                    </view>
+                    <view class="product__handle text-succ" wx:if="{{po.status==''}}" ><text class="" bindtap="add">问题处理</text></view>
+                     <view class="product__handle text-succ" wx:if="{{po.status=='1'}}" ><text class="" bindtap="audit">待审核</text></view>
+                      <view class="product__handle text-succ" wx:if="{{po.status=='2'}}" ><text class="" bindtap="done">已处理</text></view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+
+
+</view>
+
+
+

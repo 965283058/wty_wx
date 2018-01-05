@@ -1,0 +1,25 @@
+<view class="box">
+    <form bindsubmit="formSubmit" style="width: 100%">
+
+        <view class="input__box">
+            <input class="input" type="tel" v-model="po.mobile" placeholder="请输入手机号"/>
+            <text class="sms">获取短信验证码</text>
+        </view>
+        <view class="input__box">
+            <input class="input" type="tel" v-model="po.mobile" placeholder="请输入手机号"/>
+            <text class="sms">重新获取</text>
+        </view>
+        <view class="input__box">
+            <input class="input" type="text" placeholder="请输入验证码"/>
+        </view>
+        <view class="input__box">
+            <input class="input" type="text" placeholder="设置密码"/>
+        </view>
+        <view class="input__box">
+            <input class="input" type="text" placeholder="确认密码"/>
+        </view>
+      
+        <button class="next__btn" formType="submit" size="default">确定</button>
+    </form>
+</view>
+

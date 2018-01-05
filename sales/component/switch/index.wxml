@@ -1,0 +1,3 @@
+<view class="switch {{checked?'switch--active':''}} {{disabled?'switch--disabled':''}}"  bind:tap="check">
+    <icon type="success_no_circle" color="#ffffff" size="15" wx:if="{{checked}}"></icon>
+</view>

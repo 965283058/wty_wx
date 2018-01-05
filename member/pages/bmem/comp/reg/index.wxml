@@ -1,0 +1,42 @@
+<view class="box">
+    <form bindsubmit="formSubmit" style="width: 100%" data-id="fff">
+        <view class="input__box">
+            <text class="text">统一编号</text>
+            <input class="input" bindinput="syncCode" bindblur="checkUnifyCode" type="text" placeholder="请输入统一社会信用代码或纳税人识别号"/>
+        </view>
+        <view class="input__box">
+            <text class="text">公司全称</text>
+            <input  class="input"   bindinput="syncName" placeholder="请填写公司全称"></input>
+        </view>
+        <view class="input__box">
+            <text class="text">公司简称</text>
+            <input  class="input"   bindinput="syncSubName" placeholder="请填写公司简称"></input>
+        </view>
+        <view class='list_bd'>
+            <text class='list_title1'>公司性质</text>
+            <picker name="industry" class="select" bindchange="bindPickerChange" value="{{po.corporationNatureIndex}}" range-key="name" range="{{vo.corporationNatureList}}">
+                <view class="name">
+                    {{vo.corporationNatureList[po.corporationNatureIndex].name}}
+                </view>
+            </picker>
+        </view>
+        <view class='list_bd' bindtap="toCompIndustrySelect">
+            <text class='list_title1'>所属行业</text>
+            <text class='logo'>{{vo.industryText}}</text>
+        </view>
+        <view class='list'>
+            <text class='list_title'>营业执照</text>
+            <text class='logo' bindtap="selectInstrumentImg">{{po.instrumentImg?'已设置':'请选择'}}</text>
+            <!-- <image class='logo' src='/assets/images/logo.png'></image> -->
+        </view>
+        <view class='list'>
+            <text class='list_title'>食品经营许可证</text>
+            <text class='logo'  bindtap="selectPermitImg">{{po.permitImg?'已设置':'请选择'}}</text>
+            <!-- <image class='logo' src='/assets/images/logo.png'></image> -->
+        </view>
+        <view class='btn'>
+            <button class="next__btn" formType="submit" size="default">提交</button>
+            <button class="next__btn" size="default">返回</button>
+        </view>
+    </form>
+</view>

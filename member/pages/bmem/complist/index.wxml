@@ -1,0 +1,21 @@
+<view class="container">
+    <form bindsubmit="formSubmit" style="width: 100%">
+        <view class="name">
+            <text>当前打开公司：北京XXX商贸公司</text>
+        </view>
+        <view class="data">
+            <text class="bill__data">北京1公司</text>
+            <view class="data__box">
+                <text class="text" bindtap="switchComp">已认证</text>
+            </view>
+        </view>
+        <view class="data">
+            <text class="bill__data">北京2公司</text>
+            <view class="data__box">
+                <text  bindtap="switchComp">审核中</text>
+            </view>
+        </view>
+        <button class="save__btn" formType="submit" size="default" bindtap="toReg">注册新公司</button>
+    </form>
+</view>
+

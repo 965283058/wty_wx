@@ -1,0 +1,73 @@
+<view class="box">
+    <view class="item">
+        <view class="item__name">
+            <text class="text-bold">XXX餐厅</text>
+            <text>[K2739043721]</text>
+        </view>
+        <view class="item__content">
+            <text class="text--status">待审核</text>
+            <view class="text--val"> 订单编号：SO-20170327001</view>
+            <view class="text--val"> 至供应商： G00001 北京市裕农优质农产品种植公司</view>
+            <view class="text--val"> 送达时间：2017年4月3日 星期一</view>
+            <view class="text--val"> 送达地址：北京市海淀区软件园西二路西北旺东路10号院东区6号楼</view>
+        </view>
+    </view>
+    <block  wx:for="{{[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5]}}">
+        <view class="item item--product" wx:if="{{index<2||vo.showMore}}">
+            <switch class="product__checkbox"></switch>
+            <view class="product">
+                <view class="product__head">
+                    <text>订货号：1231231321</text>
+                    <text class="text--orange text--del">删除</text>
+                </view>
+                <view class="product__content">
+                    <image class="product__img" src="/assets/images/meet.png"></image>
+                    <view class="product__text">
+                        <text class="product__item--text">得利斯土豆丝（首农裕农）A级土豆丝（首农裕农）A级土豆丝....</text>
+                        <view class="product__tags">
+                            <text class="product__text--tag">去皮</text>
+                            <text class="product__text--tag">切丝</text>
+                            <text class="product__text--tag">0.2*0.2*3-6cm</text>
+                            <text class="product__text--tag">2.5Kg/包</text>
+                        </view>
+                        <view class="product__price">
+                            ￥12.5 X 20
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+
+    <view class="item item--more" bind:tap="showMore">
+        <text class="icon__more {{vo.showMore?'icon__more--active':''}} "></text>
+        <text class="text-succ">更多明细  </text>
+        <text>共100件</text>
+    </view>
+    <view class="item item--cell">
+        <text class="cell__caption">商品总数量</text>
+        <text class="cell__val">100.0件 999.0kg</text>
+    </view>
+    <view class="item item--cell">
+        <text class="cell__caption">运费（1000.0Kg）</text>
+        <text class="cell__val">￥ 0.00</text>
+    </view>
+    <view class="item item--cell">
+        <text class="cell__caption">商品总价格</text>
+        <text class="cell__val">￥ 12330.00</text>
+    </view>
+    <view class="item item--cell">
+        <text class="cell__caption">应付金额</text>
+        <text class="cell__val">￥ 12330.00</text>
+    </view>
+    <view class="buttons">
+        <button class="button button--no-bg">取消订单</button>
+        <button class="button bg-orange">拒 绝</button>
+        <button class="button bg-green">通 过</button>
+        <button class="button button--no-bg">继 续</button>
+    </view>
+
+</view>
+
+
+

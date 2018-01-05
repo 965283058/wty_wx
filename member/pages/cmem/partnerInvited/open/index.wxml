@@ -1,0 +1,63 @@
+<view class="box">
+    <form bindsubmit="formSubmit" style="width: 100%">
+        <view class="input__box">
+        <text class='text'>北京XXX商贸公司邀请您的公司“XXXX”成为他的供应商\r\n客户伙伴规则如下</text>
+            
+        </view>
+   <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+      <view class="details__info">
+        <text class="logo__text">停止接单</text>
+        <text class="time">23：59：59</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">付款条件</text>
+        <text class="time">30天</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">收款条件</text>
+        <text class="time">30天</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">出账单方式</text>
+        <text class="time">手动</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">出账单周期</text>
+        <text class="time">每月一号出上月账单</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">出账单方</text>
+        <text class="time">XXX供应商</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">对账日</text>
+        <text class="time">每月1号到5号</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">取价方式</text>
+        <text class="time">按送货日</text>
+      </view>
+      <view class="details__info1">
+        <text class="logo__text">您的手机号</text>
+        <text class="time">13311028679</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">您的平台账号</text>
+        <text class="time">已注册/未注册</text>
+      </view>
+      <view class="details__info">
+        <text class="logo__text">您的公司账号</text>
+        <text class="time">已注册/未注册</text>
+      </view>
+    </scroll-view>   
+      <view class='checkbox'>
+         <checkbox  style='height:30rpx' value="{{item.name}}" checked="{{item.checked}}"/>我已阅读并同意《旺客云注册协议》
+       </view>
+       <!--
+       <button class="next__btn" formType="submit" size="default" bindtap='toWorkbench'>加入公司(用户和公司均已注册)</button>
+        <button class="next__btn" formType="submit" size="default" bindtap='toReg'>注册用户(账户未注册)</button>
+        -->
+        <button class="next__btn" formType="submit" size="default" bindtap='toCompany'>注册公司(账户已注册,公司未注册)</button>
+    </form>
+</view>
+

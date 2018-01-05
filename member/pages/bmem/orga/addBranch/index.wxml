@@ -1,0 +1,32 @@
+<view class="box">
+  <form bindsubmit="formSubmit" style="width: 100%">
+    <view class="input__box">
+      <text class="text">上级机构</text>
+      <input class="input" type="text" placeholder="" />
+    </view>
+    <view class="input__box">
+      <text class="text">机构编码</text>
+      <input class="input" type="tel" v-model="po.mobile" placeholder="请填写分支机构编码"></input>
+    </view>
+    <view class="input__box">
+      <text class="text">机构名称</text>
+      <input class="input" type="tel" v-model="po.mobile" placeholder="请填写分支机构名称"></input>
+    </view>
+    <view class="input__box">
+      <text class="text">负责人</text>
+      <input class="input" type="tel" v-model="po.mobile" placeholder=""></input>
+    </view>
+    <view class="input__box">
+      <text class="text">联系电话</text>
+      <input class="input" type="tel" v-model="po.mobile" placeholder=""></input>
+    </view>   
+    <view class="input__box">
+      <text class="text">地址</text>
+      <input class="input" type="tel" v-model="po.mobile" placeholder=""></input>
+    </view>   
+   
+    <view class='btn'>
+      <button class="next__btn" formType="submit" size="default" bindtap='toSave'>提交</button>
+    </view>
+  </form>
+</view>

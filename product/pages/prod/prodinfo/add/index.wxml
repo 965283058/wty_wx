@@ -1,0 +1,47 @@
+<view class="box">
+    <view class="item">
+        <view class="item__head">
+            <text class="head__text">商品分类</text>
+          <navigator  url="/pages/prod/prodinfo/prodTypeSelect/index">
+            <text class="head__text--right">油</text>
+          </navigator>
+        </view>
+        <view class="item__head">
+            <text class="head__text">商品品牌</text>
+            <text class="head__text--right">鲁花</text>
+        </view>
+        <view class="item__cells">
+            <view class="item__cell">
+                <input type="text" placeholder="请输入商品编号"/>
+            </view>
+            <view class="item__cell">
+                <input type="text" placeholder="请输入商品名称"/>
+            </view>
+            <view class="item__cell">
+                <input type="text" placeholder="请输入商品规格"/>
+            </view>
+        </view>
+    </view>
+    <view class="item margin-top20">
+        <view class="item__head">
+            <text class="head__text">交易单位</text>
+            <text class="head__text--right">pcs</text>
+        </view>
+    </view>
+    <view class="item margin-top20">
+        <view class="item__head">
+            <text class="head__text">库存单位</text>
+            <text class="head__text--right">公斤</text>
+        </view>
+    </view>
+    <view class="item margin-top20">
+       <view class="item__cell">
+            <text class="head__text">转换系数 1交易单位=</text>
+            <input type="text" placeholder="请输入库存单位数量"/><text class="head__text">库存单位</text>
+        </view>
+    </view>
+    <button class="cell-btn bg-green" bindtap="save">保 存</button>
+</view>
+
+
+

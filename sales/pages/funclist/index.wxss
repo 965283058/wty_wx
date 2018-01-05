@@ -1,0 +1,4 @@
+.navigator-hover{
+  color: blue;
+  margin-left: 30rpx;
+}

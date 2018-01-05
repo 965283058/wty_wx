@@ -1,0 +1,41 @@
+  <searchbar></searchbar>
+  <view class="search__condition">
+      <text class="search__item">全部商品</text>
+      <text class="search__item">净菜</text>
+      <text class="search__item">毛菜</text>
+  </view>
+
+  <view class='used_all'>
+    <checkbox></checkbox>
+    <text  class='all_text'>全选</text>
+  </view>
+  <view class='con_list' wx:for="{{[1,2,3,4]}}">
+    <checkbox class='con_list_check'></checkbox>
+    <image class="con_list_img" src="/assets/images/icon/con_img.jpg"></image>
+    <view class='con_text'>
+      <text class='con_text_01'>R010010001/带皮五花肉</text>
+      <text class='con_text_02'>真空冷鲜(2.5kg/包)</text>
+      <text class='con_text_03'>G00029-中瑞食品有限公司</text>
+      <view class='con_text_04'><text class='con_text_05'>￥<text class='bold'>60.00</text></text>  ￥24.00/kg</view>
+    </view>
+    <view class='add_con'>
+      <view class='gwc'>
+        <image class="gwc_img" src="/assets/images/icon/gwc.jpg"></image>
+      </view>
+      <view class='add_con_raa'>
+        <navigator class='reduce'>-</navigator>
+        <input class='add_num'  placeholder='1'/>
+        <navigator class='add'>+</navigator>
+      </view> 
+    </view>
+  </view>
+   <view class='buy_z'> <navigator class='buy_btn'>直接定价</navigator></view>
+  <view class='car_footer'>
+    <image class="car_img" src="/assets/images/icon/car.png"></image>
+    <text class='num'>3</text>
+    <view class='account__text'>
+        <text  class="account__pay">10件</text>
+        <text  class="account__money"><text class='bold'> 982.5kg</text></text>
+    </view>
+    <button type=''  class="go__total" bindtap='goprice'>去定价</button>
+  </view>

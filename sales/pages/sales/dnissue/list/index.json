@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "收货问题商品",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index"
+  }
+}

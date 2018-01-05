@@ -1,0 +1,47 @@
+<view class="box">
+
+ <navigator url="/pages/sales/workbench/index" class="navigator-hover">我的销售</navigator>
+    <!--  <navigator url="/pages/unfinish/index" class="navigator-hover">用工作台串就OK</navigator>
+  <navigator url="/pages/sales/soprice/list/index" class="navigator-hover">我的定价</navigator>
+  <navigator url="/pages/sales/so/list/index" class="navigator-hover">我的订单</navigator>
+  <navigator url="/pages/sales/so/rec/index" class="navigator-hover">接收订单</navigator>
+  <navigator url="/pages/sales/so/close/index" class="navigator-hover">结束订单</navigator>
+  <navigator url="/pages/unfinish/index" class="navigator-hover">订单发货链接</navigator>
+  <navigator url="/pages/sales/dnissue/list/index" class="navigator-hover">收货问题清单及发起</navigator>
+  <navigator url="/pages/sales/dnissue/deal/index?mode=audit" class="navigator-hover">收货问题处理（Add/audit/review)</navigator>
+  <navigator url="/pages/sales/soc/list/index" class="navigator-hover">我的加减货</navigator>
+  <navigator url="/pages/sales/soc/rec/index" class="navigator-hover">加减货处理（acc/refuse)</navigator>
+  <navigator url="/pages/sales/soc/review/index" class="navigator-hover">加减货查看</navigator>
+
+  <navigator url="/pages/sales/ar/bill/list/index" class="navigator-hover">我的往来帐</navigator>
+  <navigator url="/pages/sales/ar/unbill/index" class="navigator-hover">未出帐单</navigator>
+  <navigator url="pages/sales/ar/bill/pub/index" class="navigator-hover">待发布</navigator>
+  <navigator url="/pages/sales/ar/bill/rec/index" class="navigator-hover">待确认</navigator>
+  <navigator url="/pages/sales/ar/bill/review/index" class="navigator-hover">有异议/无异议</navigator>
+  <navigator url="/pages/unfinish/index" class="navigator-hover">未完成提示以下未整理</navigator>
+
+   <navigator url="/pages/soprice/my_sprice/index" class="navigator-hover">我的定价列表</navigator>
+    <navigator url="/pages/soprice/mySprice_waitAccept/index" class="navigator-hover">我的定价-接受{没用}</navigator>
+    <navigator url="/pages/soprice/price_details/index" class="navigator-hover">定价单-详情</navigator>
+       <navigator url="/pages/soprice/price_details/index" class="navigator-hover">定价单-接受</navigator>
+    <navigator url="/pages/soprice/price_list/index" class="navigator-hover">定价篮</navigator>
+    <navigator url="/pages/dn/submit/index" class="navigator-hover">订单提交</navigator>
+    <navigator url="/pages/dn/submitSucc/index" class="navigator-hover">订单提交成功</navigator>
+    <navigator url="/pages/dn/audit/index" class="navigator-hover">订单审核</navigator>
+    <navigator url="/pages/soprice/supplier_list/index" class="navigator-hover">供应商资料选择</navigator>
+    <navigator url="/pages/dnissue/receipt_question/index" class="navigator-hover">收货问题商品</navigator>
+    <navigator url="/pages/dnissue/question_product/index" class="navigator-hover">问题商品处理</navigator>
+    <navigator url="/pages/dnissue/question_product/index?mode=audit" class="navigator-hover">问题商品审核</navigator>
+    <navigator url="/pages/dnissue/question_product/index" class="navigator-hover">问题商品处理</navigator>
+
+    <navigator url="/pages/ar/bill/index" class="navigator-hover">未出账单列表</navigator>
+
+    <navigator url="/pages/ar/bill_already/index" class="navigator-hover">已经出账单列表</navigator>
+
+    <navigator url="/pages/ar/bill_wait_confirm/index" class="navigator-hover">待确认帐单详情</navigator>
+    <navigator url="/pages/unfinish/index" class="navigator-hover">未完成提示</navigator>
+-->
+</view>
+
+
+

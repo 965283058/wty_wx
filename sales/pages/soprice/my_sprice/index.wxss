@@ -1,0 +1,156 @@
+@import "/assets/styles/animation.wxss";
+page{
+  height: 100%;
+}
+.box{
+  background-color:#f1f2f3;
+  min-height: 100%;
+  border-top: 3rpx solid #008e40;
+  box-sizing: border-box;
+}
+.searchbar__box{
+  padding: 20rpx;
+}
+.search__condition{
+  background-color: #ffffff;
+  display: flex;
+  border-bottom: 1rpx solid #dde0e0;
+}
+.search__item{
+  flex: 1;
+  font-size: 22rpx;
+  line-height: 85rpx;
+  text-align: center;
+}
+
+.search__item--active{
+  color: #09bb07;
+  position: relative;
+}
+
+.search__item--active:before{
+  animation: bottom-shake 0.4s ease-in;
+  content: "";
+  display: block;
+  height: 8rpx;
+  border-top-left-radius: 8rpx ;
+  border-top-right-radius: 8rpx ;
+  background: #09bb07;
+  border-left: 0;
+  border-bottom: 0;
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom:0;
+  z-index: 1;
+}
+
+
+.list{
+  width: 100%;
+  padding: 20rpx;
+  padding-top: 0;
+  background: #FFF;
+  box-sizing: border-box;
+  border-bottom:1rpx solid  #dde0e0;
+}
+.list:nth-child(even){
+  background: #f1f2f3;
+}
+.list__icon{
+  width: 30rpx;
+  height: 22rpx;
+  margin-right: 28rpx;
+}
+.list__title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    height: 76rpx;
+    font-size: 22rpx;
+  }
+.list__title:after{
+  content: "";
+  display: block;
+  width: 15rpx;
+  height: 15rpx;
+  border: 4rpx solid #a5a5a5;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.list__icon--title{
+  width: 30rpx;
+  height: 22rpx;
+  margin-right: 30rpx;
+}
+.list__title--code{
+  font-size: 22rpx;
+  margin-left: 15rpx;
+  align-self: flex-end;
+  margin-bottom: 20rpx;
+}
+.list__title--default{
+  font-size: 22rpx;
+  color: #ff5500;
+  position: absolute;
+  right: 0rpx;
+}
+.list__item{
+  font-size: 22rpx;
+  color: #a2a2a2;
+}
+.list__item--bottom{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 20rpx;
+  padding: 16rpx;
+}
+
+.item__content{
+  margin-left: 40rpx;
+  border-top: 1rpx solid #a5a5a5;
+  border-bottom: 1rpx solid #a5a5a5;
+
+}
+.content__text{
+  font-size: 22rpx;
+  line-height: 40rpx;
+  color: #898989;
+  padding: 10rpx 5rpx;
+  border-bottom: 1rpx solid #a5a5a5;
+}
+.content__prod{
+  width: 100%;
+  height: 230rpx;
+  padding:20rpx 7rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border-bottom: 1rpx solid #a5a5a5;
+}
+.product{
+  display: inline-block;
+  text-align: center;
+  font-size: 22rpx;
+  margin-right: 30rpx;
+}
+.product__img{
+  width: 105rpx;
+  height: 105rpx;
+  border: 1rpx solid #a5a5a5;
+}
+.product__name{
+  margin: 5rpx 0;
+}
+.button{
+  box-sizing: border-box;
+  margin: 0 10rpx;
+}
+.button--del{
+  border:1px solid #09bb07;
+}

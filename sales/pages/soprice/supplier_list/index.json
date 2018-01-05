@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "供应商资料选择",
+  "usingComponents": {
+    "searchbar": "/component/searchbar/index"
+  }
+}

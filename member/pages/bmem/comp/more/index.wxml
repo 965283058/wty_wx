@@ -1,0 +1,63 @@
+<view class='box'>
+<scroll-view class="scroll-box" scroll-y="true" style="height:500px;">
+  <view class='details'>
+    <text class='list__title'>公司名称</text>
+    <text class='text'>北京XXX商贸公司</text>
+  </view>
+ 
+     <view class='details'>
+    <text class='list__title'>统一编号</text>
+    <text class='list__name'>8889898888888 </text>
+  </view> 
+  <view class='list' bindtap="toCard">
+    <text class='list_title'>企业名片</text>
+    <text class='list__name'>设置</text>
+  </view>
+  <view class='details'>
+    <text class='list__title'>法人</text>
+    <text class='text'>张三</text>
+  </view>
+  <view class='details'>
+    <text class='list__title'>联系电话</text>
+    <text class='text'>13878032698 </text>
+  </view>
+  <view class='details'>
+    <text class='list__title'>注册地址</text>
+    <text class='list__name'>北京市海淀区XX </text>
+  </view>
+  <view class='details'>
+    <text class='list__title'>营业执照</text>
+    <text class='list__name'>已上传</text>
+  </view>
+  <view class="details">
+  <view class="list__title">公司性质</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="name">
+    {{array[index]}}
+    </view>
+  </picker>
+</view>
+  <view class='details'>
+    <text class='list__title'>所属行业</text>
+    <navigator url="/pages/bmem/comp/compIndustrySelect/index">
+    <text class='list__name'>食品批发 </text>
+    </navigator>
+  </view>
+  <view class='details'>
+    <text class='list__title'>食品经营许可证</text>
+    <text class='list__name'>未上传</text>
+  </view>
+  <!-- <view class='details'>
+    <text class='list__title'>平台认证级别</text>
+    <text class='list__name'>普通/铂金/钻石 </text>
+  </view> -->
+   <view class="details">
+  <view class="list__title">平台认证级别</view>
+  <!-- <picker bindchange="bindgradleChange" value="{{index1}}" range="{{array1}}">
+    <view class="name">
+    {{array1[index1]}}
+    </view>
+  </picker> -->
+</view>
+  </scroll-view>
+</view>

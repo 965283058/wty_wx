@@ -1,0 +1,45 @@
+<view class="box">
+   <view class="list__title">
+         <text >北京快客利餐饮公司/华北大区/百度餐厅</text>
+   </view>               
+    <searchbar></searchbar>
+    <view class="search__condition">
+        <text class="search__item">员工姓名/部门/岗位</text>
+        <!--<text class="search__item search__item--active search__item--desc">修改日期</text>-->
+        <text class="search__item">状态</text>
+    </view>
+    <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="list"  wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+            <view class="list__title">
+                <text class="">李小龙/采购部/采购负责人</text>
+                <view class="list__title--default">
+                    <text class="text-succ">未激活/有效</text>
+                </view>
+            </view>
+            <view class="list__item">
+                <view class="list__item--bottom text-right">
+                    <view class="list__button">
+                        <image class="list__icon--btn" src="/assets/images/icon/edit.png"></image>
+                        <text>无效</text>
+                    </view>
+                    <view class="list__button">
+                        <image class="list__icon--btn" src="/assets/images/icon/edit.png"></image>
+                        <text>分享链接</text>
+                    </view>
+                    <view class="list__button" bindtap=''>
+                        <image class="list__icon--btn" src="/assets/images/icon/edit.png"></image>
+                        <text>消息邀请</text>
+                    </view>
+                    <view class="list__button"> 
+                        <image class="list__icon--btn" src="/assets/images/icon/edit.png"></image>
+                        <text  bindtap='edit'>编辑</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+ <button class="cell-btn button--add bg-green" size="default" bindtap="add">新建员工</button>        
+    </scroll-view>
+</view>
+
+
+

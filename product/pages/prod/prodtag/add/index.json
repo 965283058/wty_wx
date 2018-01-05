@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/index"
+  },
+  "navigationBarTitleText": "新增商品标签"
+}

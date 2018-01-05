@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商品资料-完善描述",
+  "usingComponents": {
+    "cell": "/component/cell/index"
+  }
+}

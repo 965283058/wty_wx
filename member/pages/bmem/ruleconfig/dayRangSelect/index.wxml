@@ -1,0 +1,17 @@
+<view class='page'>
+<view class='section'>
+<picker mode='date' value='{{date}}' start="2017-12-20" end="2080-12-21" bindchange='bindDateChange'>
+<view class='picker'>初始日期：{{date}}</view>
+
+</picker>
+</view>
+<view class='content'>到</view>
+
+<view class='section'>
+
+<picker mode='date' value='{{date}}' start="2017-12-20" end="2080-12-21" bindchange='bindDate1Change'>
+<view class='picker'>截止日期：{{date}}</view>
+
+</picker>
+</view>
+</view>

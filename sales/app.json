@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/funclist/index",
+    "pages/sales/workbench/index",
+    "pages/sales/complist/index",
+    "pages/sales/soprice/list/index",
+    "pages/sales/soprice/basket/index",
+    "pages/sales/soprice/rec/index",
+    "pages/sales/soprice/audit/index",
+    "pages/sales/soprice/review/index",
+    "pages/sales/soprice/add/index",
+    "pages/sales/soprice/succ/index",
+    "pages/sales/soprice/chooseprod/index",
+    
+    "pages/sales/so/list/index",
+    "pages/sales/so/rec/index",
+    "pages/sales/so/close/index",
+    "pages/sales/so/review/index",
+
+    "pages/sales/soc/list/index",
+    "pages/sales/soc/rec/index",
+    "pages/sales/soc/review/index",
+
+    "pages/sales/dnissue/list/index",
+    "pages/sales/dnissue/deal/index",
+    "pages/sales/dnissue/review/index",
+
+    "pages/sales/ar/unbill/index",
+    "pages/sales/ar/bill/add/index",   
+    "pages/sales/ar/bill/pub/index",
+    "pages/sales/ar/bill/rec/index",
+    "pages/sales/ar/bill/list/index",
+    "pages/sales/ar/bill/review/index",
+
+
+    "pages/sales/custprod/list/index",
+    "pages/sales/custtag/list/index",
+    "pages/sales/mycust/list/index",
+    "pages/dnissue/question_product/index",
+    "pages/dnissue/receipt_question/index",
+    "pages/soprice/mySprice_waitAccept/index",
+
+    "pages/soprice/my_sprice/index",
+    "pages/soprice/supplier_list/index",
+    "pages/soprice/price_details/index",
+    "pages/soprice/price_list/index",
+     
+
+    "pages/dn/deliveryInfo/index",
+    "pages/dn/submitSucc/index",
+    "pages/dn/submit/index",
+    "pages/dn/audit/index",
+
+    "pages/ar/bill_already/index",
+    "pages/ar/bill_wait_confirm/index",
+    "pages/ar/bill/index",
+    "pages/unfinish/index"
+
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

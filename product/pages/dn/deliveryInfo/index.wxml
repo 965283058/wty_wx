@@ -1,0 +1,24 @@
+<view class="box">
+    <view class="item">
+        <view class="item__head">
+            <text class="head__text">承运商</text>
+            <text class="head__text--right">自有物流</text>
+        </view>
+        <view class="item__cells">
+            <view class="item__cell">
+                <input type="text" placeholder="请输入物流单号"/>
+            </view>
+            <view class="item__cell">
+                <input type="text" placeholder="请输送货联系人"/>
+            </view>
+            <view class="item__cell">
+                <input type="text" placeholder="请输送货联系人电话"/>
+            </view>
+        </view>
+    </view>
+
+    <button class="cell-btn bg-green">确 定</button>
+</view>
+
+
+

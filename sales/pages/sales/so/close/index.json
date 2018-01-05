@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "订单结束",
+  "usingComponents": {
+    "switch": "/component/switch/index"
+  }
+}

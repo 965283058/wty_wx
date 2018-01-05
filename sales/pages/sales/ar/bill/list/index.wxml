@@ -1,0 +1,39 @@
+<view class="box">
+    <view class="searchbar__box">
+        <searchbar></searchbar>
+    </view>
+    <view class="search__condition">
+        <text class="search__item {{po.status==''?'search__item--active':''}}" bind:tap="filterStatus"  data-status="">全  部</text>
+        <text class="search__item {{po.status==1?'search__item--active':''}}" bind:tap="filterStatus" data-status="1">待发布</text>
+        <text class="search__item {{po.status==2?'search__item--active':''}}" bind:tap="filterStatus" data-status="2">待确认</text>
+        <text class="search__item {{po.status==3?'search__item--active':''}}" bind:tap="filterStatus" data-status="3">有异议</text>
+        <text class="search__item {{po.status==4?'search__item--active':''}}" bind:tap="filterStatus" data-status="4">无异议</text>
+    </view>
+    <scroll-view class="list" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
+        <view class="item" wx:for="{{vo.list}}" wx:for-index="idx" wx:for-item="item">
+        <view class="item__content">
+            <view class="content__text text-bold">
+                <text>KH001-客户1</text>
+                <view class='' wx:if="{{po.status==''}}">
+                <text >待确认</text></view>
+                <view class='' wx:if="{{po.status=='1'}}">
+                <text bindtap='pub'>待发布</text></view>
+                <view class='' wx:if="{{po.status=='2'}}">
+                <text bindtap='rec'>待确认</text></view>
+                <view class='' wx:if="{{po.status=='3'}}">
+                <text bindtap='review'>有异议</text></view>
+                <view class='' wx:if="{{po.status=='4'}}">
+                <text bindtap='review'>无异议</text></view>
+            </view>
+            <view class="content__text">
+                <text>账单月份</text>
+                <text>2017年12月</text>
+            </view>
+            <view class="content__text">
+                <text>账单金额</text>
+                <text class="text-red">￥10,000,00.00</text>
+            </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
