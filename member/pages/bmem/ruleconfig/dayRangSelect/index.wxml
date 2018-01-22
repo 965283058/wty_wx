@@ -1,17 +1,27 @@
 <view class='page'>
-<view class='section'>
-<picker mode='date' value='{{date}}' start="2017-12-20" end="2080-12-21" bindchange='bindDateChange'>
-<view class='picker'>初始日期：{{date}}</view>
-
-</picker>
+    <view class='section'>
+        <picker mode='date' value='{{date}}' start="2017-12-20" end="2080-12-21" bindchange='bindDateChange'>
+            <view class='picker'>初始日期：<text class="select">{{date}}</text></view>
+        </picker>
+    </view>
+    <view class='content'>到</view>
+    <view class='section'>
+        <picker mode='date' value='{{date}}' start="2017-12-20" end="2080-12-21" bindchange='bindDate1Change'>
+            <view class='picker'>截止日期：<text class="select">{{date}}</text></view>
+        </picker>
+    </view>
 </view>
-<view class='content'>到</view>
 
-<view class='section'>
-
-<picker mode='date' value='{{date}}' start="2017-12-20" end="2080-12-21" bindchange='bindDate1Change'>
-<view class='picker'>截止日期：{{date}}</view>
-
-</picker>
-</view>
+<view class='page'>
+    <view class='section'>
+        <picker mode='time' value='{{time}}' start="1" end="5" bindchange='bindDateChange'>
+            <view class='picker'>初始日期：<text class="select">{{time}}</text></view>
+        </picker>
+    </view>
+    <view class='content'>到</view>
+    <view class='section'>
+        <picker mode='time' value='{{time}}' start="1" end="5" bindchange='bindDate1Change'>
+            <view class='picker'>截止日期：<text class="select">{{time}}</text></view>
+        </picker>
+    </view>
 </view>

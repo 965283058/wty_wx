@@ -18,23 +18,23 @@ if (!Function.prototype.bind) {
 
 new class extends we.App {
     onLaunch() {
-        wx.login({
-            success: function (res) {
-                if (res.code) {
-                    console.warn("code:"+res.code)
-                } else {
-                    console.log('获取用户登录态失败！' + res.errMsg)
+        this.$checkSession().then(data=> {
+
+        }).catch(err=> {
+            console.warn("checkSession fail")
+            wx.login({
+                success: function (res) {
+                    if (res.code) {
+                        wx.setStorageSync("__sessionCode__", res.code)
+                    } else {
+                        this.$showModal({
+                            title: '提示',
+                            content: '获取用户登录态失败！' + res.errMsg,
+                            showCancel: false
+                        })
+                    }
                 }
-            }
-        })
-
-        wx.checkSession({
-            success: function () {
-                console.info("success")
-            },
-            fail: function () {
-
-            }
+            })
         })
     }
 }

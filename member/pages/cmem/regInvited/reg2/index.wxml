@@ -6,7 +6,7 @@
         </view>
         <view class="input__box">
             <text class="text"> 验证码</text>
-            <input class="input" type="tel" v-model="po.mobile" placeholder="请输入短信验证码"/>
+            <input class="input" type="number"   placeholder="请输入短信验证码"/>
             <text class="sms">重新获取</text>
         </view>
         <view class="input__box">

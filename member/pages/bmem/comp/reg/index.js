@@ -8,25 +8,26 @@ new class extends we.Page {
                 unifyCode: '',//统一编号
                 name: '',//名称
                 subName: '',// 简称
-                corporationNatureIndex: 0,//企业性质索引
                 corporationNature: '',//企业性质索引
                 industry: '',//行业类型
                 instrumentImg: '',//营业执照,
                 permitImg: '',//食品许可证,
-                userId: ''//用户id
+                //  userId: ''//用户id
             },
             vo: {
                 session: '',
                 industryText: '请选择',
+                corporationNatureIndex: 0,//企业性质索引
                 corporationNatureList: [{
                     "id": "",
-                    "name": "请选择"
+                    "name": '请选择'
                 }]
             }
         }
     }
 
-    onReady() {
+    onReady(options) {
+
         this.$getSession().then(sid=> {
             this.$post("/compAttr/findCompCorpNature.do", {"version": "0.0.1", "session": sid}).then(data=> {
                 data.obj.unshift({
@@ -38,6 +39,7 @@ new class extends we.Page {
                     'vo.corporationNatureList': data.obj
                 })
             })
+            this.$post("/compAttr/findCompCorpNature.do")
         })
         this.formValidate = new wxValidate({
             unifyCode: {
@@ -97,7 +99,7 @@ new class extends we.Page {
     onShow(options) {
         if (this.data.selectData) {
             this.setData({
-                'po.industry': this.data.selectData.id,
+                'po.industry': this.data.selectData.code,
                 'vo.industryText': this.data.selectData.name,
                 'selectData': null
             })
@@ -105,18 +107,20 @@ new class extends we.Page {
     }
 
     checkUnifyCode() {
-        this.$post("/company/checkCompUnifyCode.do", {
-            "version": "0.0.1",
-            "session": this.data.vo.session,
-            "firstVal": this.data.po.unifyCode
-        }).then(data=> {
-        }).catch(err=> {
-            this.$showModal({
-                title: '提示',
-                content: "公司统一编号已占用",
-                showCancel: false
+        if (this.data.po.unifyCode) {
+            this.$post("/company/checkCompUnifyCode.do", {
+                "version": "0.0.1",
+                "session": this.data.vo.session,
+                "firstVal":this.data.po.unifyCode
+            }).then(data=> {
+            }).catch(err=> {
+                this.$showModal({
+                    title: '提示',
+                    content: "公司统一编号已占用",
+                    showCancel: false
+                })
             })
-        })
+        }
 
     }
 
@@ -144,7 +148,7 @@ new class extends we.Page {
             count: 1,
         }).then(data=> {
             this.setData({
-                'po.instrumentImg': data.tempFiles[0].path
+                'po.instrumentImg': data.tempFilePaths[0]
             })
         })
     }
@@ -154,15 +158,15 @@ new class extends we.Page {
             count: 1,
         }).then(data=> {
             this.setData({
-                'po.permitImg': data.tempFiles[0].path
+                'po.permitImg': data.tempFilePaths[0]
             })
         })
     }
 
     bindPickerChange(e) {
         this.setData({
-            'po.corporationNatureIndex': e.detail.value,
-            'po.corporationNature': this.data.vo.corporationNatureList[e.detail.value].id
+            'vo.corporationNatureIndex': e.detail.value,
+            'po.corporationNature': this.data.vo.corporationNatureList[e.detail.value].value
         })
     }
 
@@ -181,14 +185,44 @@ new class extends we.Page {
                 showCancel: false
             })
         }
-
-        //AJAX保存公司信息
-        this.$post("/company/regComp.do", Object.assign({}, {
-            "version": "0.0.1",
-            "session": this.data.vo.session,
-        }, this.data.po)).then(data=> {
-            this.$navigateTo("/pages/bmem/comp/regSucc/index")//跳转保存成功页面
+        Promise.all([
+            this.$post("/company/saveImg.do", {
+                "data": {"session": this.data.vo.session},
+                uploadFile: {'imgfile': this.data.po.instrumentImg}
+            }),
+            this.$post("/company/saveImg.do", {
+                "data": {"session": this.data.vo.session},
+                uploadFile: {'imgfile': this.data.po.permitImg}
+            })
+        ]).then((values)=> {
+            this.setData({
+                'po.instrumentImg': values[0].stringVal,
+                'po.permitImg': values[1].stringVal
+            })
+            //AJAX保存公司信息
+            this.$post("/company/regComp.do", Object.assign({}, {
+                "version": "0.0.1",
+                "session": this.data.vo.session,
+            }, this.data.po)).then(data=> {
+                wx.reLaunch({url: `/pages/bmem/comp/regSucc/index?name=${this.data.po.name}`})//跳转保存成功页面
+            }).catch(err=> {
+                this.$showModal({
+                    title: '错误',
+                    content: err.message,
+                    showCancel: false
+                })
+            })
+        }, errs=> {
+            this.$showModal({
+                title: '错误',
+                content: '上传图片错误：' + errs.message,
+                showCancel: false
+            })
         })
+    }
+
+    bank() {
+        wx.navigateBack()
     }
 
 

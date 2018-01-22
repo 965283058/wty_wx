@@ -1,5 +1,4 @@
 .box{
-  height:100%;
   background: #f3f5f7;
   padding-top: 20rpx;
 }

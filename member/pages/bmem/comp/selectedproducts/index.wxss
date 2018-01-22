@@ -1,7 +1,6 @@
 /**index.wxss**/
 .container{
   background: #fafafa;
-  height: 100%;
 }
 .name,.data,.write_enter,.select{
   width: 100%;

@@ -1,5 +1,4 @@
 .box {
-  height: 100%;
   width: 100%;
   background: #f3f5f7;
 }
@@ -91,7 +90,7 @@ navigator:hover{
 .icon{
   width: 22rpx;
   height: 22rpx;
-  margin: 27rpx 5rpx 0 0;
+  margin-right: 5rpx;
 }
 .next__btn{
   background: #008E40;

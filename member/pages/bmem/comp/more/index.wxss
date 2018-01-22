@@ -1,6 +1,5 @@
 .box {
   width: 100%;
-  height: 100%;
   padding-top: 20rpx;
   background: #f3f5f7;
 }
@@ -12,6 +11,7 @@
 .text{
   padding-right: 50rpx;
   color: #333;
+  flex: 1;
 }
 .list,.details {
   display: flex;
@@ -27,11 +27,15 @@
   height: 85rpx;
   line-height: 85rpx;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .list__title {
   display: flex;
   justify-content: flex-start;
+  width: 200rpx;
 }
 .logo{
   width: 150rpx;
@@ -45,7 +49,7 @@
 }
 .list__name{
   margin-right: 75rpx;
-  line-height: 75rpx;
+  line-height: 80rpx;
   color: #333;
 }
 .name{

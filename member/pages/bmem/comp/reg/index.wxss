@@ -1,13 +1,9 @@
 
 .box{
-  height:100%;
   background: #f3f5f7;
   padding-top: 20rpx;
 }
-.input__box{
-
-
-  
+.input__box{ 
   display: flex;
   align-items: center;
   position: relative;

@@ -1,5 +1,6 @@
 {
   "pages": [
+
     "pages/funclist/index",
     "pages/cmem/reg/reg1/index",
     "pages/cmem/reg/reg2/index",
@@ -14,7 +15,6 @@
     "pages/cmem/partnerInvited/loadsucc/index",
     "pages/cmem/load/invitedload/index",
     "pages/bmem/department/list/index",
-
     "pages/bmem/complist/index",
     "pages/bmem/comp/viewCard/index",
     "pages/bmem/ruleconfig/view/index",
@@ -27,6 +27,8 @@
     "pages/bmem/orga/addBranch/index",
     "pages/bmem/employee/list/index",
     "pages/bmem/employee/add/index",
+    "pages/bmem/employee/invited/index",
+
     "pages/bmem/comp/moreCard/index",
     "pages/bmem/comp/more/index",
     "pages/bmem/comp/regSucc/index",
@@ -44,13 +46,10 @@
     "pages/cmem/photo/index",
     "pages/bmem/comp/reg/index",
     "pages/bmem/department/add/index"
-
-    
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#008E40",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "light"
+    "navigationBarTitleText": "WeChat"
   }
 }

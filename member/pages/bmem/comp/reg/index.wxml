@@ -14,9 +14,9 @@
         </view>
         <view class='list_bd'>
             <text class='list_title1'>公司性质</text>
-            <picker name="industry" class="select" bindchange="bindPickerChange" value="{{po.corporationNatureIndex}}" range-key="name" range="{{vo.corporationNatureList}}">
+            <picker name="industry" class="select" bindchange="bindPickerChange" value="{{vo.corporationNatureIndex}}" range-key="name" range="{{vo.corporationNatureList}}">
                 <view class="name">
-                    {{vo.corporationNatureList[po.corporationNatureIndex].name}}
+                    {{vo.corporationNatureList[vo.corporationNatureIndex].name}}
                 </view>
             </picker>
         </view>
@@ -36,7 +36,7 @@
         </view>
         <view class='btn'>
             <button class="next__btn" formType="submit" size="default">提交</button>
-            <button class="next__btn" size="default">返回</button>
+            <button class="next__btn" size="default" bindtap="bank">返回</button>
         </view>
     </form>
 </view>

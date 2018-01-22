@@ -12,7 +12,6 @@
         </view>
     </view>-->
     <form bindsubmit="formSubmit" style="width: 100%">
-   <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
       <view class='title'>被邀请信息</view>
       <view class="details__info">
         <text class="logo__text">公司名称</text>
@@ -82,9 +81,6 @@
           <button class="next__btn" formType="submit" size="default" bindtap='toCompany'>注册新公司并接受邀请</button>
           <button class="next__btn" formType="submit" size="default" bindtap='toWorkbench'>退回</button>
          </view> 
-    </scroll-view>
-
-
     </form>
 </view>
 

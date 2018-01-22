@@ -1,6 +1,5 @@
 /**index.wxss**/
 .box{
-  height:100%;
   background: #f3f5f7;
   padding-top: 20rpx;
   
@@ -23,6 +22,7 @@
 }
 
 .list_bd__input{
+  width: 500rpx;
   text-align: left;
   padding: 15rpx 0 0 55rpx;
   color: #333;

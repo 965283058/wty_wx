@@ -1,7 +1,6 @@
 /**index.wxss**/
 .box{
     background: #f3f5f7;
-    height: 100%;
     padding-top: 20rpx;
 }
 .title{
@@ -15,7 +14,6 @@
 .page__info,.company__introduce{
   display: flex;
   background:#fff;
-  padding: 20rpx 0;
     height: 100rpx;
   border-top:1rpx solid #eeeff0;
   border-bottom:1rpx solid #eeeff0;
@@ -23,15 +21,27 @@
   font-size:24rpx;
     justify-content: space-between;
 }
+.company__box{
+    height: 85rpx;
+    line-height: 85rpx;
+}
+.company__box .logo{
+    width: 126rpx;
+    margin: 7rpx 65rpx 0 3rpx;
+}
+.company__box .logo__text{
+    line-height: 85rpx;
+}
 .company__introduce{
     height: 130rpx;
+    padding: 20rpx 0;
 }
 
 .logo__text {
   display: flex;
   justify-content: flex-start;
   padding-left:23rpx;
-  line-height: 95rpx;
+  line-height: 100rpx;
     color: #666;
 }
 .image{
@@ -41,9 +51,9 @@
     position: relative;
 }
 .logo{
-    width: 154rpx;
-    height: 99rpx;
-    margin-right: 65rpx;
+    width: 124rpx;
+    height: 69rpx;
+    margin: 15rpx 65rpx 0 0;
 }
 .image:after {
     content: "";
@@ -66,23 +76,16 @@
 .publicity__info{
     display: flex;
     width: 100%;
-    background:#fff;
-    height: 70rpx;
-    line-height: 70rpx;
-    margin-top: 20rpx;
+    background:#f3f5f7;
+    height:85rpx;
+    line-height:85rpx;
     justify-content: space-between;
-    border-bottom:1rpx solid #008E40;
 }
 .publicity__title{
-    border-left: 1rpx solid #008E40;
-    color: #008E40;
+    color:#A9A9A9;
     font-size: 26rpx;
-    height: 36rpx;
-    line-height: 36rpx;
-    padding-left: 30rpx;
-    margin-top: 18rpx;
+    padding-left: 20rpx;
     position: relative;
-
     width: 94%;
 }
 .textarea{

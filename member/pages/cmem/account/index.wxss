@@ -1,6 +1,7 @@
 
 page{
     background:	#f3f5f7;
+    height: auto;
 }
 .nav{
   display:flex;

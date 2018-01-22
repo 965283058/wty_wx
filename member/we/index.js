@@ -7,11 +7,13 @@ let Application = require('./application.js')
 
 let config = {
     http: {
-        root: 'https://cloud.openbang.net/wt-gate',
+        root: 'https://api.ionelink.com/wt-gate',
         header: {},
         duration: 1,
         timestamp: false,
-        error: (message) => we.showModal({content: '', title: message})
+        error: (message) => {
+            we.showModal({content: message, title: "网络错误", showCancel: true})
+        }
     },
     router: {
         maps: {}
@@ -24,53 +26,30 @@ function we(obj = {}) {
     we.redirectTo = redirectTo(Object.assign({}, config.router, obj.router))
     Pages.prototype.$post = http('POST')
     Pages.prototype.$get = http('GET')
-    Pages.prototype.$uploadFile = http('GET')
-
-
-    Pages.prototype.$getSession = ()=> {
-        return new Promise((rev, rej)=> {
-            let sessionData = wx.getStorageSync("__session__")
-            if (sessionData && sessionData.endDate && sessionData.endDate > Date.now()) {
-                rev(sessionData.session)
-            } else {
-                http('POST')('/reg/fetchSession.do', {
-                    "appId": "wtyun_wxapp",
-                    "md5": "NIU99JKDS86TY65",
-                    "version": "0.0.1",
-                    "osType": "iOS",
-                    "osVer": "11.1.2"
-                }).then(res=> {
-                    let data = res.obj
-                    data.endDate = Date.parse(data.endDate.substr(0, 4) + '-' + data.endDate.substr(4, 2) + '-' + data.endDate.substr(6))
-                    wx.setStorageSync("__session__", data)
-                    rev(data.session)
-                }).catch(err=> {
-                    wx.showModal({
-                        title: "建立Session出错",
-                        content: err.message
-                    })
-                })
+    Pages.prototype.$getSession = getSession
+    Pages.prototype.$getEnumName = function (enumName, enumValue) {
+        let allEnums = wx.getStorageSync("__allEnums__")
+        let name = null
+        for (let enumItem of allEnums) {
+            if (enumItem.type == enumName) {
+                for (let item of enumItem.values) {
+                    if (item.value == enumValue) {
+                        name = item.name
+                    }
+                }
+                break
             }
-
-        })
+        }
+        return name
     }
-    /*
-     Pages.prototype.$toBase64 = (file)=> {
-     console.info(typeof file)
-     return new Promise((rev, rej)=> {
-     var reader = new FileReader()
-     reader.onload = function (e) {
-     var arrayBuffer = reader.result;
-     //  var base64 = wx.arrayBufferToBase64(arrayBuffer)
-     rev(arrayBuffer)
-     }
-     reader.onerror = function (e) {
-     rej(e)
-     }
-     reader.readAsDataURL(file)
-     })
-     }*/
+
+    Application.prototype.$post = http('POST')
+    Application.prototype.$get = http('GET')
+    Application.prototype.$getSession = getSession
+
+
 }
+
 
 utils.toPromise(we, wx)
 we.request = request(config.http)
@@ -86,16 +65,58 @@ Application.global = we
 
 module.exports = we
 
+let getSession = ()=> {
+    return new Promise((rev, rej)=> {
+        let sessionData = wx.getStorageSync("__session__")
+        if (sessionData) {// && sessionData.endDate && sessionData.endDate > Date.now()
+            rev(sessionData)
+        } else {
+            wx.getSystemInfo({
+                success: function (systemInfo) {
+                    http('POST')('/session/fetchSession.do', {
+                        "appId": "miniapp_member",
+                        "md5": "NIU99JKDS86TY65",
+                        "version": "0.0.1",
+                        "osType": systemInfo.platform,
+                        "osVer": "11.1.2",
+                    }).then(res=> {
+                        let data = res.stringVal
+                        // data.endDate = Date.parse(data.endDate.substr(0, 4) + '-' + data.endDate.substr(4, 2) + '-' + data.endDate.substr(6))
+                        wx.setStorageSync("__session__", data)
+                        console.info("===========session=============", data, "========================")
+                        rev(data)
+                    }).catch(err=> {
+                        wx.removeStorage({key: '__sessionCode__'})
+                        wx.showModal({
+                            title: "建立Session出错",
+                            content: err.message,
+                            showCancel: true
+                        })
+                    })
+                }
+            })
+        }
+    })
+}
+
 let http = (method = 'GET') => {
     return (url, data = {}, header = {}) => {
         return we.request({
             url: url,
             header,
             method,
-            data: data
+            data: data,
+            duration: 1,
         }).then(res => {
+            if (typeof res.data == 'string') {
+                res.data = JSON.parse(res.data)
+            }
             if (res.data.code === 0) {
                 return Promise.resolve(res.data)
+            } else if (res.data.code === 2 || res.data.code === 3) {
+                wx.removeStorage({key: '__session__'})
+                wx.removeStorage({key: '__sessionCode__'})
+                return Promise.reject({message: 'session失效,请重启小程序'})
             } else {
                 return Promise.reject({message: res.data.msg})
             }

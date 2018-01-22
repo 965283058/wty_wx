@@ -1,5 +1,5 @@
 <view class="box">
-    <view class="page__info">
+    <view class="page__info company__box">
         <text class="logo__text">北京XXX商贸公司</text>
         <view class="image">
             <image class="logo" src="/assets/images/logo.png"></image>
@@ -12,17 +12,16 @@
     <view class="publicity__info">
         <text class="publicity__title">企业宣传图片</text>
     </view>
-    <scroll-view class="scroll-box" scroll-y="true" style="">
-        <view class="list"  wx:for="{{vo.list}}"  wx:for-item="item">
-            <view class="page__info">
-                <text class="logo__text">企业宣传图</text>
-                <view class="image">
-                    <image class="logo" src="/assets/images/logo.png"></image>
-                </view>
+
+    <view class="list"  wx:for="{{vo.list}}"  wx:for-item="item">
+        <view class="page__info">
+            <text class="logo__text">企业宣传图</text>
+            <view class="image">
+                <image class="logo" src="/assets/images/logo.png"></image>
             </view>
         </view>
-    </scroll-view>
-    
+    </view>
+  
 	 <view class='btn'>
 	      <button class="next__btn" size="default" bindtap='toView'>预览</button>
 	 </view>

@@ -1,6 +1,5 @@
 <view class="box">
     <form bindsubmit="formSubmit" style="width: 100%">
-        <scroll-view class="scroll-box" scroll-y="true" style="">
             <view class="details__info"  wx:for="{{vo.list}}"  wx:for-item="item">
                 <checkbox class="checkbox"></checkbox>
                 <view class="top">
@@ -14,9 +13,7 @@
                     <text class="bottom__text">岗位管理</text>
                     <text class="bottom__text">部门管理</text>
                 </view>
-
             </view>
-        </scroll-view>
         <view class="btn">
             <button class="add__btn" size="default">确 定</button>
             <button class="build__btn"  size="default">新申请公司</button>

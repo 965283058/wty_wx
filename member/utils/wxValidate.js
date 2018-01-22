@@ -128,8 +128,8 @@ class wxValidate {
             /**
              * 验证两个输入框的内容是否相同
              */
-            equalTo(value, param) {
-                return that.optional(value) || value === that.scope.detail.value[param]
+            equalTo(value, value2) {
+                return that.optional(value) || value === value2
             },
             /**
              * 验证是否包含某个值

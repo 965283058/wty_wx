@@ -1,6 +1,5 @@
 
 .box{
-  height:100%;
   background: #f3f5f7;
 }
 .nav{
@@ -182,6 +181,7 @@ text-align: center;
 .radio-group{
   padding: 15rpx 0 15px 28rpx;
   border-bottom: 1rpx solid #d8dddc;
+  background:#fff;
 }
 .details__info1{
   display: flex;

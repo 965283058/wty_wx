@@ -2,7 +2,6 @@ page{
 background: #f3f5f7;
 }
 .box{
-  height: 100%;
    background: #f3f5f7;
    margin-top: 20rpx;
 }

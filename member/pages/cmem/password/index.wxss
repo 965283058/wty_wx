@@ -1,6 +1,5 @@
 /**index.wxss**/
 .box{
-  height:100%;
   background: #f3f5f7;
   padding-top: 40rpx;
 }

@@ -1,15 +1,13 @@
 <view class="box">
-  <form bindsubmit="formSubmit" style="width: 100%">
-    <view class="input__box">
-      <text class="text">上级部门</text>
-      <text class="noinput">北京快客利餐饮公司/华北大区/百度餐厅/采购部</text>
-    </view>
-    <view class="input__box">
-      <text class="text">部门名称</text>
-      <input class="input" type="tel" v-model="po.mobile" placeholder="请填写部门名称"></input>
-    </view>
-    <view class='btn'>
-      <button class="next__btn" formType="submit" size="default" bindtap='saveRtn'>确认</button>
-    </view>
-  </form>
+  <view class="input__box">
+    <text class="text">上级部门</text>
+    <text class="noinput">{{vo.parentName}}</text>
+  </view>
+  <view class="input__box">
+    <text class="text">部门名称</text>
+    <input class="input" type="text" bindinput="syncName" placeholder="请填写部门名称"></input>
+  </view>
+  <view class='btn'>
+    <button class="next__btn"  size="default" bindtap='saveRtn'>确认</button>
+  </view>
 </view>

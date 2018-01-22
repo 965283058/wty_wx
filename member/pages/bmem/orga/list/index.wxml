@@ -1,120 +1,52 @@
 <view class="box">
-  <form bindsubmit="formSubmit" style="width: 100%">
-    <scroll-view class="scroll-box" scroll-y="true" style="">
-      <view class="tree__class">
+    <view class="tree__class">
         <view class='company__box'>
-          <view class="company__name">
-            <text class="title">北京XXX商贸公司</text>
-            <text class="number">987098789098888888 </text>
-          </view>
-          <view class="bottom">
-            <navigator  url="/pages/bmem/employee/list/index" >
-              <text class="bottom__text">员工</text>
-            </navigator>
-            <navigator url="/pages/bmem/orga/addBranch/index">
-              <text class="bottom__text">新增下级</text>
-            </navigator>
-          </view>
+            <view class="company__name">
+                <text class="title">{{vo.list.name}}</text>
+                <view class="right">
+                    <text class="number" >{{vo.list.unifyCode}}</text>
+                    <text class="toggle {{!vo.list.__open?'toggle--close':''}}"  bindtap="toggle" data-id="{{vo.list.id}}"></text>
+                </view>
+            </view>
+            <view class="bottom">
+                <navigator url='/pages/bmem/employee/list/index?compId={{vo.list.id}}'>
+                    <text class="bottom__text">员工</text>
+                </navigator>
+                <text class="bottom__text" bindtap="add" data-info="{{vo.list}}">新增下级</text>
+            </view>
         </view>
-        <view class="box">
-          <view class='hb__company'>
-            <view class="company__name">
-              <text class="title">华北大区</text>
-              <text class="number">有效</text>
+        <view class="box" hidden="{{!vo.list.__open}}" wx:for="{{vo.list.compList}}" wx:key="id">
+            <view class='hb__company'>
+                <view class="company__name">
+                    <text class="title">{{item.name}}</text>
+                    <view class="right">
+                        <text class="number" >{{item.status=='Y'?'有效':'无效'}}</text>
+                        <text class="toggle {{!item.__open?'toggle--close':''}}" bindtap="toggle" data-id="{{item.id}}"></text>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <text class="bottom__text" bindtap="changeStatus" data-info="{{item}}">{{item.status=='N'?'有效':'无效'}}</text>
+                    <navigator url="/pages/bmem/employee/list/index?compId={{item.id}}">
+                        <text class="bottom__text">员工</text>
+                    </navigator>
+                    <text class="bottom__text" bindtap="add" data-info="{{item}}">新增下级</text>
+                </view>
             </view>
-            <view class="bottom">
-              <navigator  url="/pages/unfinish/index" >
-                <text class="bottom__text">无效</text>
-              </navigator>
-              <navigator  url="/pages/bmem/employee/list/index" >
-                <text class="bottom__text">员工</text>
-              </navigator>
-              <navigator url="/pages/bmem/orga/addBranch/index">
-                <text class="bottom__text">新增下级</text>
-              </navigator>
+            <view class="center" hidden="{{!item.__open}}"  wx:for="{{item.compList}}" wx:for-item="child" wx:key="id" data-id="{{child.id}}">
+                <view class="company__name">
+                    <text class="dining">{{child.name}}</text>
+                    <view class="right">
+                        <text class="text" bindtap="toggle" data-id="{{child.id}}">{{child.status=='Y'?'有效':'无效'}}</text>
+                        <text>  </text>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <text class="bottom__text" bindtap="changeStatus" data-info="{{child}}">{{child.status=='N'?'有效':'无效'}}</text>
+                    <navigator url="/pages/bmem/employee/list/index?compId={{child.id}}">
+                        <text class="bottom__text">员工</text>
+                    </navigator>
+                </view>
             </view>
-          </view>
-          <view class="center">
-            <view class="company__name">
-              <text class="dining">XX餐厅</text>
-              <text class="text">有效</text>
-            </view>
-            <view class="bottom">
-              <navigator  url="/pages/unfinish/index" >
-                <text class="bottom__text">无效</text>
-              </navigator>
-              <navigator  url="/pages/bmem/employee/list/index" >
-                <text class="bottom__text">员工</text>
-              </navigator>
-            </view>
-
-          </view>
-          <view class="center">
-            <view class="company__name">
-              <text class="dining">XX餐厅</text>
-              <text class="text">有效</text>
-            </view>
-            <view class="bottom">
-              <navigator  url="/pages/unfinish/index" >
-                <text class="bottom__text">无效</text>
-              </navigator>
-              <navigator  url="/pages/bmem/employee/list/index" >
-                <text class="bottom__text">员工</text>
-              </navigator>
-            </view>
-
-          </view>
         </view>
-        <view class="box">
-          <view class='hb__company'>
-            <view class="company__name">
-              <text class="title">华北大区</text>
-              <text class="number">有效</text>
-            </view>
-            <view class="bottom">
-              <navigator  url="/pages/unfinish/index" >
-                <text class="bottom__text">无效</text>
-              </navigator>
-              <navigator  url="/pages/bmem/employee/list/index" >
-                <text class="bottom__text">员工</text>
-              </navigator>
-              <navigator url="/pages/bmem/orga/addBranch/index">
-                <text class="bottom__text">新增下级</text>
-              </navigator>
-            </view>
-          </view>
-          <view class="center">
-            <view class="company__name">
-              <text class="dining">XX餐厅</text>
-              <text class="text">有效</text>
-            </view>
-            <view class="bottom">
-              <navigator  url="/pages/unfinish/index" >
-                <text class="bottom__text">无效</text>
-              </navigator>
-              <navigator  url="/pages/bmem/employee/list/index" >
-                <text class="bottom__text">员工</text>
-              </navigator>
-            </view>
-
-          </view>
-          <view class="center">
-            <view class="company__name">
-              <text class="dining">XX餐厅</text>
-              <text class="text">有效</text>
-            </view>
-            <view class="bottom">
-              <navigator  url="/pages/unfinish/index" >
-                <text class="bottom__text">无效</text>
-              </navigator>
-              <navigator  url="/pages/bmem/employee/list/index" >
-                <text class="bottom__text">员工</text>
-              </navigator>
-            </view>
-
-          </view>
-        </view>
-      </view>
-    </scroll-view>
-  </form>
+    </view>
 </view>

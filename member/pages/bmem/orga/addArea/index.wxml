@@ -6,7 +6,7 @@
     </view>
     <view class="input__box">
       <text class="text">名称</text>
-      <input class="input" type="tel" v-model="po.mobile" placeholder="请填写名称"></input>
+      <input class="input" type="text" v-model="po.mobile" placeholder="请填写名称"></input>
     </view>
     <view class='btn'>
       <button class="next__btn" formType="submit" size="default" bindtap='toSave'>提交</button>

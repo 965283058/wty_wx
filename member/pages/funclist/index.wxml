@@ -1,11 +1,11 @@
 <view class="box">
-    <navigator url="/pages/bmem/employee/list/index" class="navigator-hover">1111</navigator>
-    <navigator url="/pages/cmem/reg/reg1/index" class="navigator-hover">用户注册第一步</navigator>
-    <navigator url="/pages/cmem/reg/reg2/index" class="navigator-hover">用户注册第二步</navigator>
-    <navigator url="/pages/cmem/reg/reg3/index" class="navigator-hover">用户注册第三步</navigator>
-    <navigator url="/pages/bmem/comp/reg/index" class="navigator-hover">注册新公司</navigator>
+    <!-- <navigator url="/pages/bmem/employee/list/index" class="navigator-hover">1111</navigator>
+     <navigator url="/pages/cmem/reg/reg1/index" class="navigator-hover">用户注册第一步</navigator>
+     <navigator url="/pages/cmem/reg/reg2/index" class="navigator-hover">用户注册第二步</navigator>
+     <navigator url="/pages/cmem/reg/reg3/index" class="navigator-hover">用户注册第三步</navigator>
+     <navigator url="/pages/bmem/comp/reg/index" class="navigator-hover">注册新公司</navigator>
 
-    <navigator url="/pages/bmem/workbench/index" class="navigator-hover">我的工作台(新)</navigator>
+     <navigator url="/pages/bmem/workbench/index" class="navigator-hover">我的工作台(新)</navigator>-->
     <navigator url="/pages/cmem/account/index" class="navigator-hover">我的账户</navigator>
     <navigator url="/pages/cmem/password/index" class="navigator-hover">修改密码</navigator>
     <navigator url="/pages/cmem/photo/index" class="navigator-hover">上传照片</navigator>
@@ -13,19 +13,19 @@
     <navigator url="/pages/bmem/comp/more/index" class="navigator-hover">公司资料完善</navigator>
     <navigator url="/pages/bmem/comp/moreCard/index" class="navigator-hover">公司资料完善-名片设置</navigator>
     <navigator url="/pages/bmem/comp/viewCard/index" class="navigator-hover">公司资料展示(预览)</navigator>
-    <navigator url="/pages/bmem/complist/index" class="navigator-hover">公司切换</navigator>
-    <navigator url="/pages/bmem/orga/list/index" class="navigator-hover">我的组织机构</navigator>
-        <navigator url="/pages/bmem/department/list/index" class="navigator-hover">部门列表</navigator>
+    <!--<navigator url="/pages/bmem/complist/index" class="navigator-hover">公司切换</navigator>-->
+    <!--<navigator url="/pages/bmem/orga/list/index" class="navigator-hover">我的组织机构</navigator>-->
+    <!--<navigator url="/pages/bmem/department/list/index" class="navigator-hover">部门列表</navigator>-->
 
-    <navigator url="/pages/cmem/regInvited/open/index" class="navigator-hover">受邀注册员工</navigator>
+    <!--<navigator url="/pages/cmem/regInvited/open/index" class="navigator-hover">受邀注册员工</navigator>-->
     <text>以下是受邀注册员工</text>
     <text>邀请企业为平台企业，接收分享链接为平台有效用户</text>
-    <navigator url="/pages/cmem/partnerInvited/loadsucc/index" class="navigator-hover">用户且已绑定手机号及微信手机号与微信号匹配自动登陆</navigator>
-        <navigator url="/pages/cmem/load/invitedload/index" class="navigator-hover">用户已绑定手机号微信手机号与微信号不匹配手机号密码登陆</navigator>
-    <navigator url="/pages/cmem/partnerInvited/reg2/index" class="navigator-hover">手机号不是平台有效用户帐号（未注册，是员工但帐号未激活）</navigator>
+    <navigator url="/pages/cmem/partnerInvited/loadsucc/index" class="navigator-hover">用户且已绑定手机号及微信手机号与微信号匹配自动登陆
+    </navigator>
+    <navigator url="/pages/cmem/load/invitedload/index" class="navigator-hover">用户已绑定手机号微信手机号与微信号不匹配手机号密码登陆</navigator>
+    <!--<navigator url="/pages/cmem/partnerInvited/reg2/index" class="navigator-hover">手机号不是平台有效用户帐号（未注册，是员工但帐号未激活）</navigator>-->
 
 
     <navigator url="/pages/workbench/step1/index" class="navigator-hover">工作台?</navigator>
-    <navigator url="/pages/bmem/comp/compNatureSelect/index" class="navigator-hover">我的工作台?</navigator>
-
+    <navigator url="/pages/bmem/comp/regSucc/index" class="navigator-hover">我的工作台?</navigator>
 </view>

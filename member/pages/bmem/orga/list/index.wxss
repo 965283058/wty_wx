@@ -1,6 +1,5 @@
 .box {
-  height: 100%;
-  width: 100%;
+ width: 100%;
   background: #f3f5f7;
 }
 .company__box{
@@ -38,25 +37,15 @@
 .number,.text{
   display: flex;
   justify-content: flex-end;
-  width: 20%;
-  margin-right: 70rpx;
+
   font-size: 26rpx;
   color: #9d9d9d;
 }
 
-.number:after,.title:after{
-  content: "";
-  display: block;
-  width: 20rpx;
-  height: 20rpx;
-  border: 3rpx solid #8c8e91;
-  border-left: 0;
-  border-bottom: 0;
-  transform: rotate(315deg);
-  position: absolute;
-  right: 20rpx;
-  top: 35rpx;
-  z-index: 1;
+.right{
+  display: flex;
+  flex-direction: row;
+  padding-right: 30rpx;
 }
 
 .bottom {
@@ -83,12 +72,32 @@
   color:#e86828;
   border: 1rpx solid #e86828;
 }
-navigator:hover{
-  background: none;
-}
+
 .center{
   background: #e7e5e5;
 }
 
+.toggle{
+  width: 20rpx;
+  position: relative;
+  padding-right: 40rpx;
+}
 
-
+.toggle:after{
+  content: "";
+  display: block;
+  width: 20rpx;
+  height: 20rpx;
+  border: 3rpx solid #8c8e91;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(315deg);
+  position: absolute;
+  left: 20rpx;
+  top: 35rpx;
+  z-index: 1;
+}
+.toggle--close:after{
+  top: 25rpx;
+  transform: rotate(135deg);
+}

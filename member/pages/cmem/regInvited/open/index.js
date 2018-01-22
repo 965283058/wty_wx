@@ -1,76 +1,85 @@
-// pages/cmem/login/login.js
-Page({
+let we = require('../../../../we/index.js')
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
+new class extends we.Page {
+    data() {
+        return {
+            po: {
+                checked: false,
+                session: '',
+                id: '',
+            },
+            vo: {}
+        }
+    }
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+    onLoad(options) {
+        if (options.id) {
+            this.$getSession().then(sid=> {
+                this.setData({
+                    'po.session': sid,
+                    'po.id': options.id
+                })
+                this.$post('/employee/fetchInviteEmployeeData.do', {
+                    "version": "0.0.1",
+                    "session": sid,
+                    "firstVal": options.id
+                }).then(data=> {
+                    this.setData({
+                        'vo': data.obj
+                    })
+                }).catch(err=> {
+                    this.$showModal({
+                        title: '错误',
+                        content: err.message,
+                        showCancel: false
+                    })
+                })
+            })
+        } else {
+            this.$showModal({
+                title: '提示',
+                content: "错误的邀请,未发现您的ID",
+                showCancel: false
+            })
+        }
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+    }
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+    checkboxSync() {
+        this.setData({
+            'po.checked': !this.data.po.checked
+        })
+    }
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+    toWorkbench() {
+        this.$post('/employee/joinCompany.do', {
+            "version": "0.0.1",
+            "session": this.data.po.session,
+            "firstVal": this.data.po.id
+        }).then(data=> {
+            wx.reLaunch({url: '/pages/bmem/workbench/index'})
+        }).catch(err=> {
+            this.$showModal({
+                title: '错误',
+                content: err.message,
+                showCancel: false
+            })
+        })
+    }
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
+    toReg() {
+        if (!this.data.po.checked) {
+            this.$showModal({
+                title: '提示',
+                content: "请同意注册协议",
+                showCancel: false
+            })
+            return false
+        }
+        wx.navigateTo({
+            url: `/pages/cmem/reg/reg1/index?employeeId=${this.data.po.id}`,
+        })
+    }
+}
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  },
-  toWorkbench(){
-    wx.navigateTo({
-      url: '/pages/bmem/workbench/index',
-    })
-  },
-  toReg(){
-	    wx.navigateTo({
-	      url: '/pages/cmem/regInvited/reg2/index',
-	    })
-	  }
-})

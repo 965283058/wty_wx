@@ -1,9 +1,7 @@
-page{
-  height: 100%;
-}
 .box{
+  width: 100%;
   background-color:#f1f2f3;
-  min-height: 100%;
+  overflow: hidden;
 }
 .search__condition{
   background-color: #f5f5f5;
@@ -63,7 +61,6 @@ page{
   align-items: center;
   position: relative;
   height: 85rpx;
-  line-height: 85rpx;
   font-size: 26rpx;
   background: #fff;
   padding-left: 28rpx;
@@ -82,6 +79,9 @@ page{
   margin-left: 15rpx;
   align-self: flex-end;
   margin-bottom: 20rpx;
+}
+.list__title--info{
+  max-width: 550rpx;
 }
 .list__title--default{
   font-size: 22rpx;

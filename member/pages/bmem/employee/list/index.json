@@ -2,5 +2,8 @@
   "navigationBarTitleText": "员工列表",
   "usingComponents": {
     "searchbar": "/component/searchbar/index"
-  }
+  },
+  "navigationBarTextStyle": "light",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
 }

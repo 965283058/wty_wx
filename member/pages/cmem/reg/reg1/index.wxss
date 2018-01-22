@@ -1,6 +1,5 @@
 /**index.wxss**/
 .box{
-  height:100%;
   background: #f3f5f7;
   padding-top: 20rpx;
 }
@@ -53,6 +52,11 @@
   line-height: 80rpx;
   
 }
+
+.text--invited{
+  text-align: left;
+  flex: 1;
+}
 .sms{
   position: absolute;
   top: 20rpx;
@@ -84,4 +88,14 @@
 .checkbox{
   font-size: 24rpx;
   padding-left: 150rpx;
+}
+
+.compBox{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36rpx 0 30rpx;
+  background: #fff;
+  margin-bottom: 30rpx;
 }

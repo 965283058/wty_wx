@@ -1,5 +1,4 @@
 .box{
-  height:100%;
   background: #f3f5f7;
   padding-top: 20rpx;
 }
@@ -18,20 +17,28 @@
   color: #666;
   width: 130rpx;
 }
+.text--mobile{
+  display: flex;
+  justify-content: flex-start;
+  width: 62%;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  padding-right: 100rpx;
+}
 .text1{
   font-size: 26rpx;
   color: #666;
- margin-top: 0rpx;
+  margin-top: 0rpx;
   width: 100%;
 
 }
 .text-title{
    color: #666;
- margin-left: 65rpx;
+   margin-left: 65rpx;
    font-size: 26rpx;
 }
 .text-right{
-text-align: center;
+  text-align: center;
   padding-left: 40rpx;
   color: #666;
   font-size: 26rpx;

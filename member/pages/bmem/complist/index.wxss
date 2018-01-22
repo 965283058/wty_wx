@@ -2,8 +2,7 @@ page{
   background: #f3f5f7;
 }
 .container{
-  height: 100%;
-   background: #f3f5f7;
+  background: #f3f5f7;
 }
 .name,.data{
   width: 100%;

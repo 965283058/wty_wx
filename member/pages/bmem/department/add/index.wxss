@@ -1,6 +1,5 @@
 /**index.wxss**/
 .box{
-  height:100%;
   background: #f3f5f7;
 }
 .input__box{
@@ -39,6 +38,7 @@
   color: #a5a5a5;
   align-items: center;
   position: relative;
+  margin-right: 20rpx;
 }
 
 .list{

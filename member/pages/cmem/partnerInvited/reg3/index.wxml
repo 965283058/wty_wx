@@ -6,6 +6,5 @@
      <button class='btn1'  bindtap="regCompany">继续注册公司</button>
      <button class='btn2' formType="submit" bindtap="toMyAccount">进入我的个人账户</button>
     </view>
-
   </view>
 </view>

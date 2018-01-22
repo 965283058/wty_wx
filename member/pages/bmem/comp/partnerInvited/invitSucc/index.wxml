@@ -6,7 +6,6 @@
       <text class='welcome_text' bindtap="toWorkbench">进入企业工作台</text>
       <text class='welcome_text' bindtap="toMyAccount">进入我个人账户</text>
     </view>
-
   </view>
   <view class='welcome__status'>
     <text class='welcome__status-text'>--您是普通会员，可以握手六家交易伙伴。\n\r我收到及发出的伙伴邀请，请及时处理--</text>
@@ -14,35 +13,32 @@
   <view class="publicity__info">
     <text class="publicity__title">我的客户</text>
   </view>
-  <scroll-view class="scroll-box" scroll-y="true" style="">
-    <view class="details__info">
-      <view class="company__name">
-        <text class="title">北京XXX商贸公司\n</text>
-        <text class="number">987098789098888888\n\r 接受/已接受</text>
-      </view>
+
+  <view class="details__info">
+    <view class="company__name">
+      <text class="title">北京XXX商贸公司\n</text>
+      <text class="number">987098789098888888\n\r 接受/已接受</text>
     </view>
-    <view class="details__info">
-      <view class="company__name">
-        <text class="title">北京XXX商贸公司\n</text>
-        <text class="number">987098789098888888\n\r 接受/已接受 </text>
-      </view>
-      
-    </view>
-  <view class="publicity__info">
-    <text class="publicity__title">我的供应商</text>
   </view>
-    <view class="details__info">
-      <view class="company__name">
-        <text class="title">北京XXX商贸公司\n</text>
-        <text class="number">987098789098888888  \n\r 接受/已接受</text>
-      </view>
-     
+  <view class="details__info">
+    <view class="company__name">
+      <text class="title">北京XXX商贸公司\n</text>
+      <text class="number">987098789098888888\n\r 接受/已接受 </text>
+    </view> 
+  </view>
+<view class="publicity__info">
+  <text class="publicity__title">我的供应商</text>
+</view>
+  <view class="details__info">
+    <view class="company__name">
+      <text class="title">北京XXX商贸公司\n</text>
+      <text class="number">987098789098888888  \n\r 接受/已接受</text>
     </view>
-    <view class="details__info">
-      <view class="company__name">
-        <text class="title">北京XXX商贸公司\n</text>
-        <text class="number">987098789098888888\n\r 接受/已接受</text>
-      </view>
+  </view>
+  <view class="details__info">
+    <view class="company__name">
+      <text class="title">北京XXX商贸公司\n</text>
+      <text class="number">987098789098888888\n\r 接受/已接受</text>
     </view>
-  </scroll-view>
+  </view>
 </view>

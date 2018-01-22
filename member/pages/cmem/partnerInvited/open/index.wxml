@@ -1,10 +1,8 @@
 <view class="box">
     <form bindsubmit="formSubmit" style="width: 100%">
         <view class="input__box">
-        <text class='text'>北京XXX商贸公司邀请您的公司“XXXX”成为他的供应商\r\n客户伙伴规则如下</text>
-            
+          <text class='text'>北京XXX商贸公司邀请您的公司“XXXX”成为他的供应商\r\n客户伙伴规则如下</text>  
         </view>
-   <scroll-view class="scroll-box" scroll-y="true" style="height:{{vo.scrollViewHeight}}px;">
       <view class="details__info">
         <text class="logo__text">停止接单</text>
         <text class="time">23：59：59</text>
@@ -48,8 +46,7 @@
       <view class="details__info">
         <text class="logo__text">您的公司账号</text>
         <text class="time">已注册/未注册</text>
-      </view>
-    </scroll-view>   
+      </view> 
       <view class='checkbox'>
          <checkbox  style='height:30rpx' value="{{item.name}}" checked="{{item.checked}}"/>我已阅读并同意《旺客云注册协议》
        </view>

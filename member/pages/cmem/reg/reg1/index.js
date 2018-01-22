@@ -6,36 +6,60 @@ new class extends we.Page {
             po: {
                 mobile: '',
                 code: ''
-
             },
             vo: {
                 checked: false,
                 codeUrl: '',
-                session: ''
+                session: '',
+                pageMode: '',//invited 受邀请注册
+                employeeId:'',
+                compInfo: {}
             }
         }
     }
 
-    onReady() {
-        this.$getSession().then(data=> {
+    onLoad(options) {
+        this.$getSession().then(sid=> {
             this.setData({
-                'vo.session': data,
-                'vo.codeUrl': `https://cloud.openbang.net/wt-gate/reg/fetchPicValidateUrl.do?session=${data}&t=${Date.now()}`
+                'vo.session': sid,
+                'vo.codeUrl': `https://api.ionelink.com/wt-gate/reg/fetchPicValidateUrl.do?session=${sid}&t=${Date.now()}`
             })
+            let employeeId = options.employeeId
+            if (employeeId) {
+                this.$post('/employee/inviteEmployeeInfo.do', {
+                    "version": "0.0.1",
+                    "session": sid,
+                    "firstVal": employeeId
+                }).then(data=> {
+                    wx.setStorageSync('invitedCompInfo',data.obj)
+                    this.setData({
+                        'vo.compInfo': data.obj,
+                        'vo.pageMode': 'invited',
+                        'vo.employeeId': employeeId,
+                        'po.mobile':data.obj.phoneNumber
+                    })
+                }).catch(err=>{
+                    this.$showModal({
+                        title: '错误',
+                        content: err.message,
+                        showCancel: false
+                    })
+                })
+            }
+
         })
     }
 
-    updateImg(){
+    updateImg() {
         this.setData({
             'vo.codeUrl': ''
         })
-        setTimeout(()=>{
+        setTimeout(()=> {
             this.setData({
-                'vo.codeUrl': `https://cloud.openbang.net/wt-gate/reg/fetchPicValidateUrl.do?session=${this.data.vo.session}&t=${Date.now()}`
+                'vo.codeUrl': `https://api.ionelink.com/wt-gate/reg/fetchPicValidateUrl.do?session=${this.data.vo.session}&t=${Date.now()}`
             })
-        },100)
+        }, 100)
     }
-
 
     mobileSync(e) {
         this.setData({
@@ -55,7 +79,6 @@ new class extends we.Page {
         })
 
     }
-
 
     valid() {
         if (!this.data.po.mobile.trim()) {
@@ -105,15 +128,15 @@ new class extends we.Page {
             }).then(data=> {
                 this.$navigateTo({
                     //跳转到第二步
-                    url: `/pages/cmem/reg/reg2/index?busiNo=${data.stringVal}&mobile=${this.data.po.mobile}`,
+                    url: `/pages/cmem/reg/reg2/index?mobile=${this.data.po.mobile}&mode=${this.data.vo.pageMode}&employeeId=${this.data.vo.employeeId}`,
                 })
-            }).catch(err=>{
-                console.info(err,"err")
+            }).catch(err=> {
                 this.$showModal({
                     title: '错误',
                     content: err.message,
                     showCancel: false
                 })
+                this.updateImg()
             })
         }
     }

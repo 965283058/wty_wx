@@ -1,24 +1,26 @@
 <view class="box">
-    <form bindsubmit="formSubmit" style="width: 100%">
-        <!-- <view class="text1">
-            <text class="text-title">手机号</text>
-            <text class="text-right">13311028679</text>
-        </view>
-        -->
-        <view class="input__box">
-            <text class="text">验证码</text>
-            <input class="input" type="tel" bindinput="codeSync" maxlength="6" placeholder="请输入短信验证码"/>
-            <text class="sms" bindtap="sendSms">重新获取</text>
-        </view>
-        <view class="input__box">
-            <text class="text"> 密码</text>
-            <input class="input" type="password"  bindinput="pwdSync"  placeholder="设置密码"/>
-        </view>
-        <view class="input__box">
-            <text class="text"> 确认密码</text>
-            <input class="input" type="password"  bindinput="pwdConfirmSync" placeholder="确认密码"/>
-        </view>
-        <button class="next__btn" formType="submit" size="default" bindtap='next'>下一步</button>
-    </form>
+    <view class="input__box">
+        <text class="text">手机号</text>
+        <text class="text text--mobile">{{po.mobile}}</text>
+    </view>
+    <view class="input__box">
+        <text class="text">验证码</text>
+        <input class="input" type="text" bindinput="codeSync" maxlength="6" placeholder="请输入短信验证码"/>
+        <text class="sms" bindtap="sendSms">重新获取</text>
+    </view>
+    <view class="input__box">
+        <text class="text"> 密码</text>
+        <input class="input" type="password" bindinput="pwdSync" placeholder="设置密码"/>
+    </view>
+    <view class="input__box">
+        <text class="text"> 确认密码</text>
+        <input class="input" type="password" bindinput="pwdConfirmSync" placeholder="确认密码"/>
+    </view>
+
+    <view class="input__box" wx:if="{{vo.pageMode=='invited'}}">
+        <text>{{vo.compInfo.compInfo}}/{{vo.compInfo.departmentName}}</text>
+        <text>{{vo.compInfo.unifyCode}}</text>
+    </view>
+    <button class="next__btn" formType="submit" size="default" bindtap='next'>下一步</button>
 </view>
 

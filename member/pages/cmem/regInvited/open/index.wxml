@@ -1,23 +1,21 @@
 <view class="box">
-    <form bindsubmit="formSubmit" style="width: 100%">
-        <view class="input__box">
-            <text class='text'>北京XXX商贸公司邀请您成为他的员工</text>
-        </view>
-        <view class="text1">
-            <text class="text-title">您的手机号</text>
-            <text class="text-right">13311028679</text>
-        </view>    
-        <view class="text1">
-            <text class="text-title">您的平台账户</text>
-            <text class="text-right">已注册/未注册</text>
-        </view>
-      <view class='checkbox'>
-         <checkbox  style='height:30rpx' value="{{item.name}}" checked="{{item.checked}}"/>我已阅读并同意《旺客云注册协议》
-       </view>
-        <view class='text__box'>
-          <button class="next__btn" formType="submit" size="default" bindtap='toWorkbench'>加入公司(已注册)</button>
-          <button class="next__btn" formType="submit" size="default" bindtap='toReg'>注册用户(未注册)</button>
-        </view>
-    </form>
+    <view class="input__box">
+        <text class='text'>{{vo.compName}}邀请您成为他的员工</text>
+    </view>
+    <view class="text1">
+        <text class="text-title">您的手机号</text>
+        <text class="text-right">{{vo.phoneNumber}}</text>
+    </view>
+    <view class="text1">
+        <text class="text-title">您的平台账户</text>
+        <text class="text-right">{{vo.code==1?'已注册':vo.code==0?'未注册':''}}</text>
+    </view>
+    <view class='checkbox' wx:if="{{vo.code==0}}">
+        <checkbox  style='height:30rpx' checked="{{po.checked}}" bindtap="checkboxSync"/>我已阅读并同意《旺客云注册协议》
+    </view>
+    <view class='text__box'>
+        <button class="cell-btn bg-green" wx:if="{{vo.code==1}}" size="default" bindtap='toWorkbench'>加入公司(已注册)</button>
+        <button class="cell-btn bg-green" wx:if="{{vo.code==0}}" size="default" bindtap='toReg'>注册用户(未注册)</button>
+    </view>
 </view>
 

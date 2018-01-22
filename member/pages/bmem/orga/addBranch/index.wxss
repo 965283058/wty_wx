@@ -1,6 +1,5 @@
 /**index.wxss**/
 .box{
-  height:100%;
   background: #f3f5f7;
 }
 .input__box{
@@ -27,7 +26,7 @@
   font-size: 26rpx;
   background: #fff;
   padding-left:24rpx;
-  color: #a5a5a5;
+  color: #000;
 }
 
 .list{

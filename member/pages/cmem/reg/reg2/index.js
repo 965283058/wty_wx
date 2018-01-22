@@ -11,16 +11,25 @@ new class extends we.Page {
                 pwdConfirm: '',
             },
             vo: {
-                session: ''
+                session: '',
+                pageMode: '',//invited 受邀请注册
+                compInfo: {},
+                employeeId: ''
             }
         }
     }
 
     onLoad(option) {
         this.setData({
-            'po.mobile': option.mobile,
-            'po.busiNo': option.busiNo
+            'po.mobile': option.mobile
         })
+        if (option.mode == 'invited') {  //如果是邀请
+            this.setData({
+                'vo.pageMode': option.mode,
+                'vo.compInfo': wx.getStorageSync('invitedCompInfo'),
+                'vo.employeeId': option.employeeId
+            })
+        }
     }
 
     onReady() {
@@ -31,14 +40,20 @@ new class extends we.Page {
             this.sendSms()
         })
     }
-    sendSms(){
+
+    sendSms() {
         this.$post('/reg/fetchValidSms.do', {
             "session": this.data.vo.session,
             "version": "0.0.1",
             "firstVal": this.data.po.mobile
         }).then(data=> {
+            this.setData({
+                'po.busiNo': data.stringVal.split(':')[0]
+            })
 
-        }).catch(err=>{
+            console.warn("==========短信验证码========", data, '========end========')
+
+        }).catch(err=> {
             this.$showModal({
                 title: '错误',
                 content: err.message,
@@ -112,26 +127,44 @@ new class extends we.Page {
 
     next() {
         if (this.valid()) {
-            this.$post('/reg/regUser.do', {
-                "version": "0.0.1",
-                "session": this.data.vo.session,
-                "firstVal": this.data.po.mobile,
-                "validSms": this.data.po.code,
-                "busiNo":  this.data.po.busiNo,
-                "passwd": this.data.po.pwd
-            }).then(data=> {
-                this.$navigateTo({
-                    url: '/pages/cmem/reg/reg3/index',
+            if (this.data.vo.pageMode != 'invited') { //如果是普通注册
+                this.$post('/reg/regUser.do', {
+                    "version": "0.0.1",
+                    "session": this.data.vo.session,
+                    "mobile": this.data.po.mobile,
+                    "validSms": this.data.po.code,
+                    "busiNo": this.data.po.busiNo,
+                    "passwd": this.data.po.pwd
+                }).then(data=> {
+                    wx.reLaunch({url: `/pages/cmem/reg/reg3/index?mobile=${this.data.po.mobile}`})
+                }).catch(err=> {
+                    this.$showModal({
+                        title: '错误',
+                        content: err.message,
+                        showCancel: false
+                    })
                 })
-            }).catch(err=>{
-                this.$showModal({
-                    title: '错误',
-                    content: err.message,
-                    showCancel: false
+            } else {
+                this.$post('/user/regInvitedEmployee.do', {
+                    "version": "0.0.1",
+                    "session": this.data.vo.session,
+                    "mobile": this.data.po.mobile,
+                    "validSms": this.data.po.code,
+                    "busiNo": this.data.po.busiNo,
+                    "passwd": this.data.po.pwd,
+                    "companyId": this.data.vo.compInfo.compId,
+                    "employeeId": this.data.vo.employeeId
+                }).then(data=> {
+                    wx.removeStorageSync('invitedCompInfo')
+                    wx.reLaunch({url: `/pages/cmem/regInvited/reg3/index?mobile=${this.data.po.mobile}`})
+                }).catch(err=> {
+                    this.$showModal({
+                        title: '错误',
+                        content: err.message,
+                        showCancel: false
+                    })
                 })
-            })
-
-
+            }
         }
     }
 }

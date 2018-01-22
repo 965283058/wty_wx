@@ -2,22 +2,51 @@ let we = require('../../../../we/index.js')
 new class extends we.Page {
     data() {
         return {
-          array:['私营', '国营', '政府机关', '合资', '外商独资'],
-          index:0,
-            po: {},
+            po: {
+                "name": "",
+                "companyId": '',
+                "parentId": 1
+            },
             vo: {
-                list: [{type:'品牌'},{type:'商标'},{type:'加工方式'},{type:'价格区间'}]
+                parentName: ''
             }
         }
     }
 
-    onReady() {
+    onLoad(option) {
+        this.setData({
+            'po.companyId': wx.getStorageSync('compInfo').id,
+            'po.parentId': option.id,
+            'vo.parentName': option.name
+        })
+    }
+
+    syncName(e) {
+        this.setData({
+            'po.name': e.detail.value
+        })
+    }
+
+    saveRtn() {
+        if (!this.data.po.name.trim()) {
+            return this.$showModal({
+                title: '提示',
+                content: '请输入部门名称',
+                showCancel: false
+            })
+        }
+        this.$getSession().then(sid=> {
+            this.$post('/department/saveDepartmentInfo.do', Object.assign({}, {"session": sid}, this.data.po)).then(data=> {
+                this.$navigateBack()
+            }).catch(err=> {
+                this.$showModal({
+                    title: '错误',
+                    content: err.message,
+                    showCancel: false
+                })
+            })
+        })
 
     }
-    saveRtn(){
-        //AJAX保存公司信息
-    	//跳转保存成功页面
-    	this.$navigateTo("/pages/bmem/employee/add/index")
-    }
-    
+
 }

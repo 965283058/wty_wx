@@ -1,101 +1,34 @@
 <view class="box">
    <view class="list__title">
     <image class="icon" src="/assets/images/icon.png"></image>
-         <text >北京快客利餐饮公司/华北大区/百度餐厅</text>
-   </view> 
-  <form bindsubmit="formSubmit" style="width: 100%">
-    <scroll-view class="scroll-box" scroll-y="true" style="">
-      <view class="tree__class">
+         <text >{{vo.compName}}</text>
+   </view>
+  <scroll-view scroll-y="true" class="tree__class" style="height: {{vo.scrollViewHeight}}px" >
+    <block wx:for="{{vo.list}}" wx:key="id">
         <view class='company__box'>
-          <view class="company__name">
-            <text class="title">采购部</text>
-            <text class="number">有效</text>
-          </view>
-          <view class="bottom">
-              <text class="bottom__text">无效</text>
-            <navigator url="/pages/bmem/department/add/index">
-              <text class="bottom__text">新增下级</text>
-            </navigator>
-          </view>
-        </view>
-        <view class="box">
-          <view class='hb__company'>
-            <view class="company__name">
-              <text class="title">采购一组</text>
-              <text class="number">有效</text>
+            <view class="company__name" bindtap="selectDept" data-info="{{item}}">
+                <text class="title">{{item.name}}</text>
+                <text class="number">{{item.status=='Y'?'有效':'无效'}}</text>
             </view>
             <view class="bottom">
-              <navigator  url="/pages/unfinish/index" >
-                <text class="bottom__text">无效</text>
-              </navigator>
-              <navigator url="/pages/bmem/orga/addBranch/index">
-                <text class="bottom__text">新增下级</text>
-              </navigator>
+                <text class="bottom__text" bindtap="changeStatus"  data-info="{{item}}">{{item.status=='N'?'有效':'无效'}}</text>
+                <text class="bottom__text" bindtap="addDept" data-info="{{item}}">新增下级</text>
             </view>
-          </view>
         </view>
-        <view class="box">
-          <view class='hb__company'>
-            <view class="company__name">
-              <text class="title">采购二组</text>
-              <text class="number">有效</text>
+        <view class="box" wx:for="{{item.departList}}" wx:for-item="child" wx:key="id">
+            <view class='hb__company'>
+                <view class="company__name" bindtap="selectDept"  data-info="{{child}}">
+                    <text class="title">{{child.name}}</text>
+                    <text class="number">{{child.status=='Y'?'有效':'无效'}}</text>
+                </view>
+                <view class="bottom">
+                    <text class="bottom__text" bindtap="changeStatus"  data-info="{{child}}">{{child.status=='N'?'有效':'无效'}}</text>
+                </view>
             </view>
-            <view class="bottom">
-                <text class="bottom__text">无效</text>
-              <navigator url="/pages/bmem/orga/addBranch/index">
-                <text class="bottom__text">新增下级</text>
-              </navigator>
-            </view>
-          </view>
-        <view class='company__box'>
-          <view class="company__name">
-            <text class="title">仓库管理部</text>
-            <text class="number">有效</text>
-          </view>
-          <view class="bottom">
-              <text class="bottom__text">无效</text>
-            <navigator url="/pages/bmem/department/add/index">
-              <text class="bottom__text">新增下级</text>
-            </navigator>
-          </view>
         </view>
-          <view class="box">
-          <view class='hb__company'>
-            <view class="company__name">
-              <text class="title">蔬菜部</text>
-              <text class="number">有效</text>
-            </view>
-            <view class="bottom">
-              <navigator  url="/pages/unfinish/index" >
-                <text class="bottom__text">无效</text>
-              </navigator>
-              <navigator url="/pages/bmem/orga/addBranch/index">
-                <text class="bottom__text">新增下级</text>
-              </navigator>
-            </view>
-          </view>
-        </view>
-         <view class="box">
-          <view class='hb__company'>
-            <view class="company__name">
-              <text class="title">肉品部</text>
-              <text class="number">有效</text>
-            </view>
-            <view class="bottom">
-              <navigator  url="/pages/unfinish/index" >
-                <text class="bottom__text">无效</text>
-              </navigator>
-              <navigator url="/pages/bmem/orga/addBranch/index">
-                <text class="bottom__text">新增下级</text>
-              </navigator>
-            </view>
-          </view>
-        </view>
-        </view>
-      </view>
-    </scroll-view>
-        <view class='btn'>
-      <button class="next__btn" formType="submit" size="default" bindtap='addDept'>新增部门</button>
-      </view>
-  </form>
+    </block>
+  </scroll-view>
+  <view class='btn'>
+    <button class="next__btn" formType="submit" size="default" bindtap='addDept'>新增部门</button>
+  </view>
 </view>
