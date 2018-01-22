@@ -1,0 +1,14 @@
+/**index.wxss**/
+.box{
+  background: #f3f5f7;
+  padding-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo{
+  width: 320rpx;
+  height: 364rpx;
+  margin: 50rpx 0;
+}

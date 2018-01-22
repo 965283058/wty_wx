@@ -1,0 +1,5 @@
+<view class="box">
+    <image class="logo" src="/assets/images/shield.png"></image>
+    <text>{{vo.pageMode==0?'员工':vo.pageMode==1?'1供货商':'客户'}} {{vo.name}}协同使用！</text>
+    <button wx:if="{{vo.code==1}}" class="cell-btn bg-green" open-type="share" size="default" bindtap='toSave'>分享链接</button>
+</view>

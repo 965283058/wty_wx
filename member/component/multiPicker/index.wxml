@@ -1,0 +1,20 @@
+<view class="multiPicker" style="height:{{height}}px" wx:if="{{show}}">
+    <view class="multiPicker-box">
+        <view class="box__header">
+            <text class="box__header-text box__header-text--grey" bindtap="cancel">取消</text>
+            <text class="box__header-text box__header-text--green" bindtap="sure">确定</text>
+        </view>
+        <scroll-view scroll-y="true" class="box__list">
+            <view class="list__item" wx:for="{{range}}" wx:key="id" bindtap="check" data-info="{{item}}">
+                <view class="item__switch {{item.__checked__?'item__switch--active':''}}">
+                    <icon type="success_no_circle" color="#ffffff" size="15" style="font-size: 32rpx" wx:if="{{item.__checked__}}"></icon>
+                </view>
+                <text>{{item[textField]}}</text>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+
+<view bindtap="showPicker">
+<slot></slot>
+</view>
